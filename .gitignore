@@ -112,7 +112,6 @@ _init
 firebase-private-key.json
 
 # env
-.env
 .env.build
 .env.local
 .env.development.local
