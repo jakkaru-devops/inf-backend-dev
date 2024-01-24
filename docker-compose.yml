@@ -1,0 +1,71 @@
+version: '3.4'
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: postgres
+    restart: always
+    expose:
+      - $DB_PORT
+    ports:
+      - $DB_PORT:$DB_PORT
+    volumes:
+      - ./dbdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=$DB_NAME
+      - POSTGRES_USER=$DB_USERNAME
+      - POSTGRES_PASSWORD=$DB_PASSWORD
+      - TZ=Europe/Moscow
+      - POSTGRES_INITDB_ARGS="--encoding=UTF8"
+    command: -p $DB_PORT
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U $DB_USERNAME -d $DB_NAME -h 127.0.0.1']
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 60s
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: '1'
+    #       memory: 4G
+
+  redis:
+    image: redis:7.0.7
+    container_name: redis
+    ports:
+      - 6379:6379
+    restart: unless-stopped
+    sysctls:
+      - net.core.somaxconn=65535
+    volumes:
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf", "--appendonly", "yes"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 2s
+      retries: 10
+
+  inf-backend-app:
+    image: inf-backend-app
+    container_name: inf-backend-app
+    build:
+      context: .
+      target: production
+      dockerfile: Dockerfile
+    volumes:
+      - /usr/src/app/node_modules
+      - type: bind
+        source: ./uploads
+        target: /usr/src/app/uploads
+    ports:
+      - $PORT:$PORT
+    restart: always
+    depends_on:
+      - postgres
+      - redis
+    env_file: .env
+
+volumes:
+  dbdata:

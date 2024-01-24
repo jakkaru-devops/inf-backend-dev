@@ -1,0 +1,2669 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "inf-backend docs",
+    "version": "1.0.0",
+    "description": "test"
+  },
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "servers": [{ "url": "http://78.24.217.176:2348" }, { "url": "http://localhost:2348" }],
+  "tags": [
+    {
+      "name": "Auth",
+      "description": "Authorization endpoints"
+    },
+    {
+      "name": "User",
+      "description": "User endpoints"
+    },
+    {
+      "name": "File",
+      "description": "File endpoints"
+    },
+    {
+      "name": "Catalog",
+      "description": "Catalog endpoints"
+    },
+    {
+      "name": "Digitization",
+      "description": "Digitization endpoints"
+    },
+    {
+      "name": "Organization",
+      "description": "Organization endpoints"
+    },
+    {
+      "name": "Orders",
+      "description": "Requests and orders"
+    },
+    {
+      "name": "Cart",
+      "description": "Cart endpoints"
+    },
+    {
+      "name": "Sale",
+      "description": "Распродажа (неликвиды)"
+    }
+  ],
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "User authorization",
+        "description": "Обрабатываются регистрация и логин/создание новой роли + логин для пользователя.<br>Сначала происходит поиск пользователя с указанным phone.<br>- Если пользователь НЕ найден и в запросе передан <b>role</b> - создается пользователь с переданным <b>role</b> и возвращается { success: true }, если <b>role</b> не передан - возвращается ошибка.<br>- Если пользователь найден и в запросе не передан <b>role</b> (только customer или seller) - сразу возвращается { success: true } , если <b>role</b> передан - возвращается тот же ответ, но перед этим, если у пользователя еще нет переданной <b>role</b>, эта роль создается.\nКогда { success: true } получен, пользователь должен получить СМС с кодом подтверждения, ввести и отправить запрос с phone и confirmCode - теперь в ответе вернется payload с токеном.",
+        "parameters": [],
+        "requestBody": {
+          "description": "Authorization's object",
+          "requried": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "oneOf": [
+                  { "$ref": "#/components/schemas/LoginRequestCreateUser" },
+                  { "$ref": "#/components/schemas/LoginRequestLogin" },
+                  { "$ref": "#/components/schemas/LoginRequestConfirmLogin" }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "oneOf": [
+                    { "$ref": "#/components/schemas/LoginResponseGetCodeSuccess" },
+                    { "$ref": "#/components/schemas/LoginResponseAuthSuccess" }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Если передан некорректный phone или неверный confrimCode",
+            "content": {
+              "application/json": {
+                "example": {
+                  "status": 400,
+                  "message": "Некорректный номер телефона"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Если пользователь с переданным phone найден, но заблокирован",
+            "content": {
+              "application/json": {
+                "example": {
+                  "status": 403,
+                  "message": "Пользователь с этим номером телефона заблокирован"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Если пользователь с переданным phone не найден и role параметр не передан",
+            "content": {
+              "application/json": {
+                "example": {
+                  "status": 404,
+                  "message": "Пользователь не найден"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user": {
+      "get": {
+        "tags": ["User"],
+        "summary": "Get user",
+        "description": "Возвращает пользователя по <b>id</b> или <b>phone</b>",
+        "security": [{ "Bearer": [] }],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "description": "User's id",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "phone",
+            "description": "User's phone",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "include",
+            "description": "Required joins to user",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "address",
+                  "requisites",
+                  "roles",
+                  "productCategories",
+                  "sellers",
+                  "sellers.rejections",
+                  "sellerRegisterFiles"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "user": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "example": {
+                    "status": "404",
+                    "message": "Пользователь не найден"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": ["User"],
+        "summary": "Get user",
+        "description": "Обновление пользователя по <b>id</b> или <b>phone</b>.<br>Покупатель, продавец и модератор могут редактировать только свой аккаунт.<br>Менеджер может редактировать покупателей и продавцов;<br>Админ - менеджеров и модераторов",
+        "security": [{ "Bearer": [] }],
+        "requestBody": {
+          "description": "User's data",
+          "requried": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserUpdateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "user": {
+                      "$ref": "#/components/schemas/User"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["User"],
+        "summary": "Delete user",
+        "description": "Удаление пользователя по <b>id</b>",
+        "security": [{ "Bearer": [] }],
+        "requestBody": {
+          "description": "User's id",
+          "requried": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "userId": {
+                    "type": "string",
+                    "example": "02814b2b-e51a-4fbf-89de-a631727eea27"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "userId": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/list": {
+      "get": {
+        "tags": ["User"],
+        "summary": "Get user list",
+        "description": "Получение списка пользователей<br>Доступно только для менеджера и админа.<br>Менеджер получает список покупателей и продавцов;<br>Админ получает список менеджеров и модераторов",
+        "security": [{ "Bearer": [] }],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "role",
+            "description": "Role of users",
+            "schema": {
+              "type": ["string", "array"],
+              "items": {
+                "type": "string",
+                "enum": ["customer", "seller", "manager", "operator", "moderator"]
+              }
+            }
+          },
+          {
+            "in": "query",
+            "name": "include",
+            "description": "Required joins to each user",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["address"]
+              }
+            }
+          },
+          {
+            "in": "query",
+            "name": "pageSize",
+            "description": "Quantity of items to get",
+            "schema": {
+              "type": "number",
+              "example": 12
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "Pagination page",
+            "schema": {
+              "type": "number",
+              "example": 1
+            }
+          },
+          {
+            "in": "query",
+            "name": "name",
+            "description": "Search by user's name (firstname, lastname, middlename) matching",
+            "schema": {
+              "type": "string",
+              "example": "Иван"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "schema": {
+                          "$ref": "#/components/schemas/User"
+                        }
+                      }
+                    },
+                    "count": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/profile": {
+      "get": {
+        "tags": ["User"],
+        "summary": "Get authorized user profile",
+        "security": [{ "Bearer": [] }],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "user": {
+                      "$ref": "#/components/schemas/AuthUser"
+                    },
+                    "currentRole": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "label": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/file/unknown": {
+      "post": {
+        "tags": ["File"],
+        "summary": "Upload unknown file",
+        "security": [{ "Bearer": [] }],
+        "consumes": ["multipart/form-data"],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "file",
+            "type": "file",
+            "description": "The file to upload"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "idInt": {
+                          "type": "number"
+                        },
+                        "userId": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "ext": {
+                          "type": "string"
+                        },
+                        "size": {
+                          "type": "number"
+                        },
+                        "path": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "string"
+                        },
+                        "updatedAt": {
+                          "type": "string"
+                        },
+                        "deletedAt": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["File"],
+        "summary": "Delete unknown file",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "fileId",
+            "description": "File's id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/product/category-type/list": {
+      "get": {
+        "tags": ["Catalog"],
+        "summary": "Get product category type list",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "include",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "example": ["categories"]
+            }
+          },
+          {
+            "in": "query",
+            "name": "nestingLevel",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "example": [1, 2]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "count": {
+                      "type": "number"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "idInt": {
+                            "type": "number"
+                          },
+                          "categorySectionId": {
+                            "type": "string"
+                          },
+                          "dependsOnCategoryTypeId": {
+                            "type": "string"
+                          },
+                          "parentId": {
+                            "type": "string"
+                          },
+                          "nestingLevel": {
+                            "type": "number"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "categories": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/components/schemas/ProductCategory"
+                            }
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "updatedAt": {
+                            "type": "string"
+                          },
+                          "deletedAt": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/product/category/favorites/list": {
+      "get": {
+        "tags": ["Catalog"],
+        "summary": "Get list of favorite product categories",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductCategory"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/product/list": {
+      "get": {
+        "tags": ["Catalog"],
+        "summary": "Get list of products from internal catalog",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "pageSize",
+            "description": "Quantity of items to get",
+            "schema": {
+              "type": "number",
+              "example": 12,
+              "required": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "page",
+            "description": "Pagination page",
+            "schema": {
+              "type": "number",
+              "example": 1,
+              "required": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "searchFields",
+            "description": "Fields to search products by",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["name", "article"]
+              },
+              "required": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "search",
+            "description": "Value to filter products by searchFields",
+            "schema": {
+              "type": "string",
+              "required": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "categoryTypes",
+            "description": "Set of product category types with listed product category ids to filter products by",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "categories": {
+                    "type": "array",
+                    "description": "List of product category ids to filter products by",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "in": "query",
+            "name": "orderBy",
+            "schema": {
+              "type": "string",
+              "enum": ["date", "name", "random"],
+              "required": false
+            }
+          },
+          {
+            "in": "query",
+            "name": "orderDirection",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"],
+              "required": false,
+              "default": "asc"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Product"
+                      }
+                    },
+                    "count": {
+                      "type": "number",
+                      "example": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/product": {
+      "get": {
+        "tags": ["Catalog"],
+        "summary": "Get product",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "description": "Id of a product",
+            "schema": {
+              "type": "string",
+              "required": true
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Product"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Catalog"],
+        "summary": "Create product<br>Role: moderator",
+        "security": [{ "Bearer": [] }],
+        "requestBody": {
+          "description": "Product's data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateProduct"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "product": {
+                      "$ref": "#/components/schemas/Product"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": ["Catalog"],
+        "summary": "Update product<br>Role: moderator",
+        "security": [{ "Bearer": [] }],
+        "requestBody": {
+          "description": "Product's data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateProduct"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Catalog"],
+        "summary": "Delete product",
+        "security": [{ "Bearer": [] }],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/product/translate": {
+      "post": {
+        "tags": ["Catalog"],
+        "summary": "Create product's translate",
+        "security": [{ "Bearer": [] }],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "languageId": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "desc": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "productTranslate": {
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "productId": {
+                          "type": "string"
+                        },
+                        "languageId": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "desc": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/product/list/cart": {
+      "get": {
+        "tags": ["Catalog"],
+        "summary": "Get product list by product ids",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "cartProducts": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "productId": {
+                          "type": "string"
+                        },
+                        "count": {
+                          "type": "number"
+                        },
+                        "createdAt": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "product": {
+                            "$ref": "#/components/schemas/Product"
+                          },
+                          "productId": {
+                            "type": "string"
+                          },
+                          "count": {
+                            "type": "number"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/product/product-offer": {
+      "get": {
+        "tags": ["Digitization", "Catalog"],
+        "summary": "Get organization by id",
+        "security": [{ "Bearer": [] }],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "description": "Product offer's id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "idInt": {
+                      "type": "number"
+                    },
+                    "sellerId": {
+                      "type": "number"
+                    },
+                    "productId": {
+                      "type": "number"
+                    },
+                    "product": {
+                      "$ref": "#/components/schemas/GetProductWithFilesAndLocales"
+                    },
+                    "sourceProductId": {
+                      "type": "number"
+                    },
+                    "status": {
+                      "type": "number"
+                    },
+                    "comment": {
+                      "type": "number"
+                    },
+                    "createdAt": {
+                      "type": "string"
+                    },
+                    "updatedAt": {
+                      "type": "string"
+                    },
+                    "deletedAt": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/organization": {
+      "get": {
+        "tags": ["Organization"],
+        "summary": "Get organization by id",
+        "security": [{ "Bearer": [] }],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "description": "Organization's id"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Organization"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Organization"],
+        "summary": "Create organization",
+        "security": [{ "Bearer": [] }],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "org": {
+                    "type": "object",
+                    "properties": {
+                      "priceBenefitPercent": {
+                        "type": "number",
+                        "description": "Percent of commission that organization gives to the project owner. Needed to calculate payments for sellers those work for an organization"
+                      },
+                      "hasNds": {
+                        "type": "boolean"
+                      },
+                      "shopName": {
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string",
+                        "format": "email"
+                      },
+                      "phone": {
+                        "type": "string",
+                        "format": "phone"
+                      },
+                      "directorFirstname": {
+                        "type": "string"
+                      },
+                      "directorLastname": {
+                        "type": "string"
+                      },
+                      "directorMiddlename": {
+                        "type": "string"
+                      },
+                      "juristicAddress": {
+                        "$ref": "#/components/schemas/CreateAddress"
+                      },
+                      "actualAddress": {
+                        "$ref": "#/components/schemas/CreateAddress"
+                      },
+                      "mailingAddress": {
+                        "$ref": "#/components/schemas/CreateAddress"
+                      },
+                      "entityType": {
+                        "type": "number",
+                        "description": "1 - Individual entrepreneur, 2 - OOO, 3 - PAO"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "inn": {
+                        "type": "string"
+                      },
+                      "kpp": {
+                        "type": "string"
+                      },
+                      "ogrn": {
+                        "type": "string"
+                      },
+                      "bankName": {
+                        "type": "string"
+                      },
+                      "bankInn": {
+                        "type": "string"
+                      },
+                      "bankBik": {
+                        "type": "string"
+                      },
+                      "bankKs": {
+                        "type": "string"
+                      },
+                      "bankRs": {
+                        "type": "string"
+                      },
+                      "branches": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "actualAddress": {
+                              "$ref": "#/components/schemas/CreateAddress"
+                            }
+                          }
+                        }
+                      },
+                      "files": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "file": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "strinig"
+                                }
+                              }
+                            },
+                            "label": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "org": {
+                      "$ref": "#/components/schemas/Organization"
+                    },
+                    "orgSeller": {
+                      "type": "object",
+                      "properties": {
+                        "user": {
+                          "$ref": "#/components/schemas/User"
+                        }
+                      }
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/organization/by-inn": {
+      "get": {
+        "tags": ["Organization"],
+        "summary": "Get organization by inn",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "inn",
+            "description": "Organization's INN"
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/orders/:orderId/offers/:offerId/receiving-date": {
+      "patch": {
+        "tags": ["Orders"],
+        "summary": "Update offer's receiving date",
+        "security": [{ "Bearer": [] }],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "orderId",
+            "description": "Id of OrderRequest entity",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "offerId",
+            "description": "Id of Order entity",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "requried": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "receivingDate": {
+                    "type": "Date"
+                  }
+                },
+                "example": {
+                  "receivingDate": "Mon Aug 21 2023 21:57:45 GMT-0300"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "order": {
+                      "type": "object",
+                      "description": "OrderRequest entity"
+                    },
+                    "offer": {
+                      "type": "object",
+                      "description": "Order entity"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "example": {
+                  "status": 400,
+                  "message": "Заказ не найден"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/cart/products-by-sellers": {
+      "post": {
+        "tags": ["Cart"],
+        "summary": "Get priced cart products",
+        "description": "POST (вместо GET) используется для передачи данных товаров корзины в cartProducts. Такая реализация необходима чтобы группировать товары по продавцам в том числе от неавторизованных пользователей",
+        "requestBody": {
+          "requried": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "cartProducts": {
+                    "type": "Array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "productId": {
+                          "type": "string",
+                          "required": true
+                        },
+                        "quantity": {
+                          "type": "number",
+                          "required": true
+                        },
+                        "createdAt": {
+                          "type": "string",
+                          "format": "date-time",
+                          "required": true
+                        },
+                        "priceOfferId": {
+                          "type": "number",
+                          "required": true
+                        },
+                        "isSelected": {
+                          "type": "boolean",
+                          "required": true
+                        },
+                        "deliveryMethod": {
+                          "type": "string",
+                          "required": false,
+                          "description": "Equals to 'pickup' or transport company's id"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "example": [
+                {
+                  "productId": "655c8062-3b75-46a3-81c8-1b49ca5a4dc9",
+                  "quantity": 3,
+                  "createdAt": "1695965197990",
+                  "priceOfferId": 21727,
+                  "isSelected": true,
+                  "deliveryMethod": "pickup"
+                },
+                {
+                  "productId": "655c8062-3b75-46a3-81c8-1b49ca5a4dc9",
+                  "quantity": 1,
+                  "createdAt": "1695965200894",
+                  "priceOfferId": 21728,
+                  "isSelected": false
+                }
+              ]
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "seller": {
+                      "type": "object"
+                    },
+                    "organization": {
+                      "type": "object"
+                    },
+                    "warehouse": {
+                      "type": "object"
+                    },
+                    "products": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "priceOfferId": {
+                            "type": "number"
+                          },
+                          "product": {
+                            "type": "object",
+                            "description": "Product entity"
+                          },
+                          "unitPrice": {
+                            "type": "number"
+                          },
+                          "availabledAmount": {
+                            "type": "number"
+                          },
+                          "quantity": {
+                            "type": "number"
+                          },
+                          "isSelected": {
+                            "type": "boolean"
+                          },
+                          "sale": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "deliveryMethod": {
+                      "type": "string",
+                      "description": "Equals to 'pickup' or transport company's id"
+                    },
+                    "totalPrice": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "example": {
+                  "status": 500,
+                  "message": "Не удалось загрузить товары от продавцов"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/catalog/sale-products": {
+      "get": {
+        "tags": ["Sale"],
+        "summary": "Получить список товаров из распродажи",
+        "description": "Данные о ценах, наличии и поставщике хранятся в объекте sale в каждом товаре. Все query параметры кроме описанных ниже передаются как при получении списка товаров из основного каталога",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "region",
+            "description": "Id региона поставщика",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "tags": ["Sale"],
+        "summary": "Добавить товар в распродажу",
+        "description": "Если передан sourceProductId (id родительского товара), новый товар не создается и не обновляется родительский товар, только добавляются данные о ценах, наличии и поставщике, передающиеся в объекте sale. Таким образом, родительский товар может иметь множество привязанных цен, благодаря которым формируется список товаров в неликвидах",
+        "requestBody": {
+          "description": "В product стандартные данные товара",
+          "requried": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "product": {
+                    "type": "object"
+                  },
+                  "sale": {
+                    "type": "object",
+                    "properties": {
+                      "organizationId": {
+                        "type": "string"
+                      },
+                      "price": {
+                        "type": "number"
+                      },
+                      "previousPrice": {
+                        "type": "number"
+                      },
+                      "amount": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v2/catalog/sale-products/:saleId": {
+      "get": {
+        "tags": ["Sale"],
+        "summary": "Получить товар из распродажи по sale.id из данных товара",
+        "description": "Причина использования sale.id вместо id товара описывается выше в добавлении товара в неликвиды. Данные о ценах, наличии и поставщике хранятся в объекте sale",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "saleId",
+            "description": "Id из sale объекта",
+            "schema": {
+              "type": "number"
+            }
+          },
+          {
+            "in": "query",
+            "name": "mode",
+            "description": "Чтобы получить данные либо для просмотра либо для редактирования",
+            "schema": {
+              "type": "string",
+              "enum": ["read", "edit"]
+            }
+          }
+        ]
+      },
+      "put": {
+        "tags": ["Sale"],
+        "summary": "Обновить товар в распродаже",
+        "description": "Причина использования sale.id вместо id товара описывается выше в добавлении товара в неликвиды. Если товар был добавлен с переданным sourceProductId (id родительского товара), обновляются только данные о ценах, наличии и поставщике, передающиеся в объекте sale, но не весь товар",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "saleId",
+            "description": "Id из sale объекта",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "В product стандартные данные товара",
+          "requried": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "properties": {
+                  "product": {
+                    "type": "object"
+                  },
+                  "sale": {
+                    "type": "object",
+                    "properties": {
+                      "organizationId": {
+                        "type": "string"
+                      },
+                      "price": {
+                        "type": "number"
+                      },
+                      "previousPrice": {
+                        "type": "number"
+                      },
+                      "amount": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": ["Sale"],
+        "summary": "Удалить товар из распродажи",
+        "description": "Причина использования sale.id вместо id товара описывается выше в добавлении товара в неликвиды. Если товар был добавлен с переданным sourceProductId (id родительского товара), удаются только данные о ценах, наличии и поставщике. Сам товар остается, но уже не выводится в неликвидах",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "saleId",
+            "description": "Id из sale объекта",
+            "schema": {
+              "type": "number"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AuthUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "idInt": {
+            "type": "number"
+          },
+          "phone": {
+            "type": "string",
+            "format": "phone"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "middlename": {
+            "type": "string"
+          },
+          "bannedUntil": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "avatar": {
+            "type": "string"
+          },
+          "phoneVerificationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "emailVerificationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ratingValue": {
+            "type": "number",
+            "format": "float"
+          },
+          "addressId": {
+            "type": "string"
+          },
+          "address": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "sellerConfirmationDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "type": "string"
+          },
+          "deletedAt": {
+            "type": "string"
+          },
+          "createdOrganizations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "rejections": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OrganizationRejection"
+                  }
+                }
+              }
+            }
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "bannedUntil": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "createdAt": {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              }
+            }
+          },
+          "sellerRegisterfiles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "idInt": {
+                  "type": "number"
+                },
+                "fileId": {
+                  "type": "string"
+                },
+                "userId": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "createdAt": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string"
+                },
+                "deletedAt": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "sellers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "idInt": {
+                  "type": "number"
+                },
+                "userId": {
+                  "type": "string"
+                },
+                "organizationId": {
+                  "type": "string"
+                },
+                "branchId": {
+                  "type": "string"
+                },
+                "confirmationDate": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "rejections": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "idInt": {
+                        "type": "number"
+                      },
+                      "organizationId": {
+                        "type": "string"
+                      },
+                      "organizationSellerId": {
+                        "type": "string"
+                      },
+                      "message": {
+                        "type": "string"
+                      },
+                      "isResponded": {
+                        "type": "boolean"
+                      },
+                      "createdAt": {
+                        "type": "string"
+                      },
+                      "updatedAt": {
+                        "type": "string"
+                      },
+                      "deletedAt": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "createdAt": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string"
+                },
+                "deletedAt": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "phone": {
+            "type": "string",
+            "format": "phone"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "middlename": {
+            "type": "string"
+          },
+          "address": {
+            "type": "object",
+            "properties": {
+              "required": ["country"],
+              "country": {
+                "type": "string"
+              },
+              "region": {
+                "type": "string"
+              },
+              "area": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "settlement": {
+                "type": "string"
+              },
+              "street": {
+                "type": "string"
+              },
+              "building": {
+                "type": "string"
+              },
+              "apartment": {
+                "type": "string"
+              },
+              "postcode": {
+                "type": "string"
+              }
+            }
+          },
+          "requisites": {
+            "$ref": "#/components/schemas/Requisites"
+          }
+        },
+        "required": ["phone"],
+        "example": {
+          "id": "02814b2b-e51a-4fbf-89de-a631727eea27",
+          "firstname": "Иван",
+          "lastname": "Иванов",
+          "middlename": "Иванович",
+          "address": {
+            "country": "Россия",
+            "region": "Москва",
+            "area": null,
+            "city": "Москва",
+            "settlement": null,
+            "street": "ул Карла-Маркса",
+            "building": "10",
+            "apartment": "10",
+            "postcode": "101010"
+          },
+          "requisites": {
+            "passportSeries": "1234",
+            "passportNumber": "123456",
+            "passportGiver": "Отделение УФМС г Москва",
+            "passportGettingDate": "Thu Jul 01 2021",
+            "passportLocationUnitCode": "123-456",
+            "passportRegistrationAddress": "г Москва, ул Карла-Маркса, 15",
+            "inn": "1234567890",
+            "bankName": "Тинькофф банк",
+            "bankInn": "1234567890",
+            "bankBik": "123456789012",
+            "bankKs": "1234567890123456",
+            "bankRs": "1234567890123456"
+          }
+        }
+      },
+      "Requisites": {
+        "type": "object",
+        "properties": {
+          "passportSeries": {
+            "type": "string"
+          },
+          "passportNumber": {
+            "type": "string"
+          },
+          "passportGiver": {
+            "type": "string"
+          },
+          "passportGettingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "passportLocationUnitCode": {
+            "type": "string"
+          },
+          "passportRegistrationAddress": {
+            "type": "string"
+          },
+          "inn": {
+            "type": "string"
+          },
+          "bankName": {
+            "type": "string"
+          },
+          "bankInn": {
+            "type": "string"
+          },
+          "bankBik": {
+            "type": "string"
+          },
+          "bankKs": {
+            "type": "string"
+          },
+          "bankRs": {
+            "type": "string"
+          }
+        }
+      },
+      "CreateProduct": {
+        "type": "object",
+        "required": ["product"],
+        "properties": {
+          "product": {
+            "type": "object",
+            "required": ["article"],
+            "properties": {
+              "status": {
+                "type": "number",
+                "enum": [100, 200, 300, 400, 500],
+                "description": "100 - DEFAULT, 200 - REVIEW, 300 - ACCEPTED, 400 - DECLINED, 500 - COPIED"
+              },
+              "article": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "number"
+              },
+              "length": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number"
+              },
+              "height": {
+                "type": "number"
+              },
+              "files": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "previewFileId": {
+                "type": "string",
+                "description": "Id of the main product's file - image of product"
+              },
+              "locales": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["language", "name"],
+                  "properties": {
+                    "language": {
+                      "type": "string",
+                      "description": "language's id"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "desc": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "categories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Array of ids of product categories"
+              }
+            }
+          },
+          "fileList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/File"
+            },
+            "required": false
+          },
+          "categoryIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "translates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "languageId": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "desc": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "UpdateProduct": {
+        "type": "object",
+        "required": ["product"],
+        "properties": {
+          "product": {
+            "type": "object",
+            "required": ["article"],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "number",
+                "enum": [100, 200, 300, 400, 500],
+                "description": "100 - DEFAULT, 200 - REVIEW, 300 - ACCEPTED, 400 - DECLINED, 500 - COPIED"
+              },
+              "article": {
+                "type": "string"
+              },
+              "weight": {
+                "type": "number"
+              },
+              "length": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number"
+              },
+              "height": {
+                "type": "number"
+              },
+              "files": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "previewFileId": {
+                "type": "string",
+                "description": "Id of the main product's file - image of product"
+              },
+              "locales": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["language", "name"],
+                  "properties": {
+                    "language": {
+                      "type": "string",
+                      "description": "language's id"
+                    },
+                    "name": {
+                      "type": "string"
+                    },
+                    "desc": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "categories": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Array of ids of product categories"
+              }
+            }
+          },
+          "fileList": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/File"
+            },
+            "required": false
+          },
+          "categoryIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "translates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "languageId": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "desc": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "Product": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "idInt": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "article": {
+            "type": "string"
+          },
+          "preview": {
+            "type": "string"
+          }
+        }
+      },
+      "GetProductWithFilesAndLocales": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "idInt": {
+            "type": "number"
+          },
+          "status": {
+            "type": "number"
+          },
+          "article": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "number",
+            "format": "double"
+          },
+          "length": {
+            "type": "number",
+            "format": "double"
+          },
+          "width": {
+            "type": "number",
+            "format": "double"
+          },
+          "height": {
+            "type": "number",
+            "format": "double"
+          },
+          "previewFileId": {
+            "type": "string"
+          },
+          "productFiles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "idInt": {
+                  "type": "number"
+                },
+                "productId": {
+                  "type": "string"
+                },
+                "fileId": {
+                  "type": "string"
+                },
+                "file": {
+                  "$ref": "#/components/schemas/File"
+                },
+                "isActive": {
+                  "type": "boolean"
+                },
+                "createdAt": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string"
+                },
+                "deletedAt": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "translates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "idInt": {
+                  "type": "number"
+                },
+                "productId": {
+                  "type": "string"
+                },
+                "languageId": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "desc": {
+                  "type": "string"
+                },
+                "createdAt": {
+                  "type": "string"
+                },
+                "updatedAt": {
+                  "type": "string"
+                },
+                "deletedAt": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "type": "string"
+          },
+          "deletedAt": {
+            "type": "string"
+          }
+        }
+      },
+      "ProductCategory": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "idInt": {
+            "type": "number"
+          },
+          "categoryTypeId": {
+            "type": "string"
+          },
+          "categorySectionId": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "imageFileId": {
+            "type": "string"
+          },
+          "favorite": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "type": "string"
+          },
+          "deletedAt": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "File": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "CreateAddress": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "area": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "settlement": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "building": {
+            "type": "string"
+          },
+          "apartment": {
+            "type": "string"
+          },
+          "postcode": {
+            "type": "string"
+          }
+        }
+      },
+      "Address": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          },
+          "area": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "settlement": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "building": {
+            "type": "string"
+          },
+          "apartment": {
+            "type": "string"
+          },
+          "postcode": {
+            "type": "string"
+          }
+        }
+      },
+      "Organization": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "confirmationDate": {
+            "type": "string",
+            "format": "date-time",
+            "description": "<b>null</b> if organization is not confirmed yet"
+          },
+          "bannedUntil": {
+            "type": "string",
+            "format": "date-time",
+            "description": "<b>null</b> if organization is not banned - active"
+          },
+          "priceBenefitPercent": {
+            "type": "number",
+            "description": "Percent of commission that organization gives to the project owner. Needed to calculate payments for sellers those work for an organization"
+          },
+          "hasNds": {
+            "type": "boolean"
+          },
+          "shopName": {
+            "type": "string"
+          },
+          "creatorUserId": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "phone": {
+            "type": "string",
+            "format": "phone"
+          },
+          "directorFirstname": {
+            "type": "string"
+          },
+          "directorLastname": {
+            "type": "string"
+          },
+          "directorMiddlename": {
+            "type": "string"
+          },
+          "juristicAddress": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "actualAddress": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "mailingAddress": {
+            "$ref": "#/components/schemas/Address"
+          },
+          "entityType": {
+            "type": "number",
+            "description": "1 - Individual entrepreneur, 2 - OOO, 3 - PAO"
+          },
+          "name": {
+            "type": "string"
+          },
+          "inn": {
+            "type": "string"
+          },
+          "ogrn": {
+            "type": "string"
+          },
+          "passportSeries": {
+            "type": "string"
+          },
+          "passportNumber": {
+            "type": "string"
+          },
+          "passportGiver": {
+            "type": "string"
+          },
+          "passportGettingDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "passportLocationUnitCode": {
+            "type": "string"
+          },
+          "passportRegistrationAddress": {
+            "type": "string"
+          },
+          "bankName": {
+            "type": "string"
+          },
+          "bankInn": {
+            "type": "string"
+          },
+          "bankBik": {
+            "type": "string"
+          },
+          "bankKs": {
+            "type": "string"
+          },
+          "bankRs": {
+            "type": "string"
+          }
+        }
+      },
+      "OrganizationRejection": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "idInt": {
+            "type": "number"
+          },
+          "organizationId": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "isResponded": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "updatedAt": {
+            "type": "string"
+          },
+          "deletedAt": {
+            "type": "string"
+          }
+        }
+      },
+      "LoginRequestCreateUser": {
+        "required": ["phone", "role"],
+        "type": "object",
+        "properties": {
+          "phone": {
+            "type": "string",
+            "description": "User's phone",
+            "format": "phone"
+          },
+          "role": {
+            "type": "string",
+            "oneOf": ["customer", "seller"],
+            "description": "Label of user's role"
+          }
+        },
+        "example": {
+          "phone": "+79141234567",
+          "role": "customer"
+        }
+      },
+      "LoginRequestLogin": {
+        "required": ["phone"],
+        "type": "object",
+        "properties": {
+          "phone": {
+            "type": "string",
+            "description": "User's phone",
+            "format": "phone"
+          }
+        },
+        "example": {
+          "phone": "+79141234567"
+        }
+      },
+      "LoginRequestConfirmLogin": {
+        "required": ["phone", "confirmCode"],
+        "type": "object",
+        "properties": {
+          "phone": {
+            "type": "string",
+            "description": "User's phone",
+            "format": "phone"
+          },
+          "confirmCode": {
+            "type": "string",
+            "description": "Confirmation code sent to the phone"
+          }
+        },
+        "example": {
+          "phone": "+79141234567",
+          "confirmCode": "111111"
+        }
+      },
+      "LoginResponseGetCodeSuccess": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          }
+        }
+      },
+      "LoginResponseAuthSuccess": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "type": "object",
+            "properties": {
+              "expires": {
+                "type": "number",
+                "example": "1503458437"
+              },
+              "token": {
+                "type": "string",
+                "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNmYyMjhiYzViNDhlMDFkY2RmNTdhYiIsInNpZCI6IjYwNmYyMjhiYzViNDhlMDFkY2RmNTdhYyIsImlhdCI6MTYxNzg5NjA3NSwiZXhwIjoxNjE3ODk5Njc1fQ.2ndGVtos-mrm5anb8IHS-gjl4cPGDPjj8GKVSuft_3g"
+              }
+            }
+          },
+          "user": {
+            "$ref": "#/components/schemas/User"
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "number",
+            "example": "404"
+          },
+          "message": {
+            "type": "string",
+            "example": "Пользователь не найден"
+          }
+        }
+      },
+      "UserUpdateRequest": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "object",
+            "schema": {
+              "$ref": "#/components/schemas/User"
+            }
+          }
+        },
+        "example": {
+          "user": {
+            "id": "02814b2b-e51a-4fbf-89de-a631727eea27",
+            "firstname": "Иван",
+            "lastname": "Иванов",
+            "middlename": "Иванович",
+            "address": {
+              "country": "Россия",
+              "region": "Москва",
+              "area": null,
+              "city": "Москва",
+              "settlement": null,
+              "street": "ул Карла-Маркса",
+              "building": "10",
+              "apartment": "10",
+              "postcode": "101010"
+            },
+            "requisites": {
+              "passportSeries": "1234",
+              "passportNumber": "123456",
+              "passportGiver": "Отделение УФМС г Москва",
+              "passportGettingDate": "Thu Jul 01 2021",
+              "passportLocationUnitCode": "123-456",
+              "passportRegistrationAddress": "г Москва, ул Карла-Маркса, 15",
+              "inn": "1234567890",
+              "bankName": "Тинькофф банк",
+              "bankInn": "1234567890",
+              "bankBik": "123456789012",
+              "bankKs": "1234567890123456",
+              "bankRs": "1234567890123456"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

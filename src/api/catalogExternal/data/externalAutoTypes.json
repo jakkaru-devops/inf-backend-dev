@@ -1,0 +1,5944 @@
+[
+  {
+    "index": 1,
+    "name": "Легковые (отечественные)",
+    "value": "CARS_NATIVE",
+    "image": "https://img.acat.online/acat/main/types/1.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=3DTGSa%2F7jJLnqajMHZZgxzKW4MY%3D",
+    "marks": [
+      {
+        "name": "АЗЛК",
+        "value": "AZLK",
+        "image": "https://img.acat.online/acat/main/marks/63.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=5CtwpcZhcMrNxLzYSSQihXruYSs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ВАЗ",
+        "value": "VAZ",
+        "image": "https://img.acat.online/acat/main/marks/40.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=bz%2Bk%2Fl%2Fably%2FBEvovXduQD4lbCM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ГАЗ",
+        "value": "GAZ",
+        "image": "https://img.acat.online/acat/main/marks/37.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=QawQqY6HLfFaGz%2BlZ%2B%2BN72Unazc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЗАЗ",
+        "value": "ZAZ",
+        "image": "https://img.acat.online/acat/main/marks/79.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=MltdUF0vfvt19byse8u42JLjp4o%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЗИЛ",
+        "value": "ZIL",
+        "image": "https://img.acat.online/acat/main/marks/39.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=bCM29e4%2FlyQvbkIIcawRJxHfN0E%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ИЖ",
+        "value": "IZH",
+        "image": "https://img.acat.online/acat/main/marks/38.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=yD059bFmHTXEbS7O8VbplzMBpDs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЛуАЗ",
+        "value": "LUAZ",
+        "image": "https://img.acat.online/acat/main/marks/111.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=QCpZqRsrAFXu0GsS8R4NTEMWJuA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "УАЗ",
+        "value": "UAZ",
+        "image": "https://img.acat.online/acat/main/marks/36.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=xQCGB%2BL5NI3kWgX97vW%2B98QDe2w%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Andoria",
+        "value": "ANDORIA_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/162.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=7HvyLgqZpj%2BLv3foDOmRWTCb8oY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Chrysler",
+        "value": "CHRYSLER_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/4.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=RYkA72Otg5DpRPEzG9aqLtSNmRE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Cummins",
+        "value": "CUMMINS_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/190.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=yb6aUUpU9lWOin%2BhwvwkTSV6OMw%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Iveco",
+        "value": "IVECO_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/13.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2BaZUPaR3ocwwUpQbUbWvqrLCGQA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "ГАЗ",
+        "value": "GAZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/37.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=QawQqY6HLfFaGz%2BlZ%2B%2BN72Unazc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "ЗМЗ",
+        "value": "ZMZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/51.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=veL3llH6WGsrYSbxZw4MT6g%2BI1M%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "УМЗ",
+        "value": "UMZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/178.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=rdAW%2FuzhCjjOjij%2FnY4wIkfKA3c%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "name": "Легковые (иномарки)",
+    "value": "CARS_FOREIGN",
+    "image": "https://img.acat.online/acat/main/types/9.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=qJ3bAzonX2bnxOtaMTfh5CmNb5Q%3D",
+    "marks": [
+      {
+        "name": "Abarth",
+        "code": "CFIAT84",
+        "vinexample": "ZFA31200000451262",
+        "frameexample": "",
+        "icon": "ABARTH.png",
+        "name2": "ABARTH",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "ZFA31200000451262"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Alfa Romeo",
+        "code": "RFIAT84",
+        "vinexample": "ZAR93700003090729",
+        "frameexample": "",
+        "icon": "Alfa Romeo.png",
+        "name2": "Alfa Romeo",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "ZAR93700003090729"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Audi",
+        "code": "AU1519",
+        "vinexample": "WAUZZZ4M0HD042149",
+        "frameexample": "",
+        "icon": "AUDI.png",
+        "name2": "Audi",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "WAUZZZ4M0HD042149"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Bmw",
+        "code": "BMW202301",
+        "vinexample": "X4XZW41140L831572",
+        "frameexample": "",
+        "icon": "BMW.png",
+        "name2": "BMW",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "X4XZW41140L831572"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Bmw Motorrad",
+        "code": "BMWMR202301",
+        "vinexample": "WB10A6100JZ656451",
+        "frameexample": "",
+        "icon": "BMW Motorrad.png",
+        "name2": "BMW Motorrad",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "WB10A6100JZ656451"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Buick",
+        "code": "GM_B201809",
+        "vinexample": "1G4ZP5SS1JU141468",
+        "frameexample": "",
+        "icon": "BUICK.png",
+        "name2": "Buick",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "1G4ZP5SS1JU141468"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Byd",
+        "value": "BYD",
+        "image": "https://img.acat.online/acat/main/marks/92.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=JrkxAj30%2F0mQj7ancBvRyEwCeO8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Cadillac",
+        "code": "GM_K201809",
+        "vinexample": "1GYS47KJ6GR466575",
+        "frameexample": "",
+        "icon": "CADILLAC.png",
+        "name2": "Cadillac",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "1GYS47KJ6GR466575"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Chery",
+        "value": "chery",
+        "image": "https://img.acat.online/acat/main/marks/331.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=2sIZfFuluRVo8M3Dx6IHOhB25f8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Chevrolet",
+        "code": "GM_C201809",
+        "vinexample": "XUFJF686JC3047030",
+        "frameexample": "",
+        "icon": "CHEVROLET.png",
+        "name2": "Chevrolet",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "XUFJF686JC3047030"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Chrysler",
+        "code": "CHRYSLER201802",
+        "vinexample": "2C3CCABG4JH227391",
+        "frameexample": "",
+        "icon": "chrysler.png",
+        "name2": "Chrysler",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "2C3CCABG4JH227391"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Citroen",
+        "code": "CITROEN00",
+        "vinexample": "VF77J5FS0DJ662587",
+        "frameexample": "",
+        "icon": "CITROEN.png",
+        "name2": "Citroen",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "VF77J5FS0DJ662587"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Dacia",
+        "code": "DACIA201910",
+        "vinexample": "UU1HSDACN44212595",
+        "frameexample": "",
+        "icon": "dacia.png",
+        "name2": "Dacia",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "UU1HSDACN44212595"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Daewoo",
+        "code": "GM_D201809",
+        "vinexample": "5GDMG35X88Y110588",
+        "frameexample": "",
+        "icon": "DAEWOO.png",
+        "name2": "Daewoo",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "5GDMG35X88Y110588"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Derways",
+        "value": "DERWAYS",
+        "image": "https://img.acat.online/acat/main/marks/93.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=EEDh5xOmVcKtgTNlE5TDWgNBZpg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Dodge",
+        "code": "DODGE201802",
+        "vinexample": "1C4RDJDG0JC255157",
+        "frameexample": "",
+        "icon": "dodge.png",
+        "name2": "Dodge",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "1C4RDJDG0JC255157"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Dong Feng",
+        "value": "DONGFENG",
+        "image": "https://img.acat.online/acat/main/marks/96.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=RNojLS9LNukCQyrm%2FheB1WXNe6s%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Faw",
+        "value": "FAW",
+        "image": "https://img.acat.online/acat/main/marks/61.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=fGUTrwvFa2e5HZLvuFtRkPL1SjU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Fiat",
+        "code": "FFIAT84",
+        "vinexample": "XU3178000BZ145059",
+        "frameexample": "",
+        "icon": "Fiat.png",
+        "name2": "Fiat",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "XU3178000BZ145059"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Fiat Professional",
+        "code": "TFIAT84",
+        "vinexample": "ZFA25000002298450",
+        "frameexample": "",
+        "icon": "Fiat Professional.png",
+        "name2": "Fiat Professional",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "ZFA25000002298450"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Ford",
+        "code": "FORD201911",
+        "vinexample": "6FPPXXMJ2PFM33679",
+        "frameexample": "",
+        "icon": "ford.png",
+        "name2": "Ford",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "6FPPXXMJ2PFM33679"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Foton",
+        "value": "FOTON",
+        "image": "https://img.acat.online/acat/main/marks/98.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=TkSuY2KkaAs82exVTGw9B6t6wts%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Geely",
+        "value": "GEELY",
+        "image": "https://img.acat.online/acat/main/marks/94.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=QdzUvY142pvkA4IDoah6uDtvVVg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Gmc",
+        "code": "GM_G201809",
+        "vinexample": "1GKS2CKJ4JR261725",
+        "frameexample": "",
+        "icon": "GMC.png",
+        "name2": "GMC",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "1GKS2CKJ4JR261725"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Great Wall",
+        "value": "GREAT_WALL",
+        "image": "https://img.acat.online/acat/main/marks/290.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Dp0YiRcfhMbm8LN3O59AbQ4a4nI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Hafei",
+        "value": "HAFEI",
+        "image": "https://img.acat.online/acat/main/marks/232.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=5QMHN9447bKUyqNXCENFf7BbTTY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Holden",
+        "code": "GM_HA201809",
+        "vinexample": "6G1EP4E20DL806794",
+        "frameexample": "",
+        "icon": "HOLDEN.png",
+        "name2": "Holden",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "6G1EP4E20DL806794"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Honda",
+        "code": "HONDA2017",
+        "vinexample": "JHMCL96806C216721",
+        "frameexample": "RN1-1000002",
+        "icon": "honda.png",
+        "name2": "Honda",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 1,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "framesearch",
+            "example": "RN1-1000002"
+          },
+          {
+            "name": "vinsearch",
+            "example": "JHMCL96806C216721"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Hummer",
+        "code": "GM_H201809",
+        "vinexample": "5GRGN23UX3H140510",
+        "frameexample": "",
+        "icon": "HUMMER.png",
+        "name2": "Hummer",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "5GRGN23UX3H140510"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Hyundai",
+        "code": "HYUNDAI",
+        "vinexample": "KMHL341J3NA043814",
+        "frameexample": "",
+        "icon": "HYUNDAI.png",
+        "name2": "Hyundai",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "KMHL341J3NA043814"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Infiniti",
+        "code": "INFINITI201809",
+        "vinexample": "JN1TDNS51U0590111",
+        "frameexample": "",
+        "icon": "INFINITI.png",
+        "name2": "Infiniti",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "JN1TDNS51U0590111"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": [
+          {
+            "description": "Search by model code",
+            "kind": "search_vehicle",
+            "name": "searchByModelCode",
+            "fields": [
+              {
+                "description": "Model code",
+                "name": "modelCode",
+                "pattern": "^[\\w\\d*%#+-]{4,18}$"
+              }
+            ]
+          }
+        ],
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Iran Khodro",
+        "value": "IRAN_KHODRO",
+        "image": "https://img.acat.online/acat/main/marks/233.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ygqFzRP7I6JAiM2o8jAJuwVHqnc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Isuzu",
+        "code": "ISUZU201702",
+        "vinexample": "JAATFS54H37100903",
+        "frameexample": "UES25EW-4111980",
+        "icon": "isuzu.png",
+        "name2": "Isuzu",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 1,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "framesearch",
+            "example": "UES25EW-4111980"
+          },
+          {
+            "name": "vinsearch",
+            "example": "JAATFS54H37100903"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": [
+          {
+            "description": "Search by chassis",
+            "kind": "search_vehicle",
+            "name": "findByChassisNumber",
+            "fields": [
+              {
+                "description": "Chassis number",
+                "name": "chassis",
+                "pattern": "[A-Z0-9]{8}"
+              }
+            ]
+          }
+        ],
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Jaguar",
+        "code": "JAGUAR201701",
+        "vinexample": "SAJWA07C491R36834",
+        "frameexample": "",
+        "icon": "jaguar.png",
+        "name2": "Jaguar",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "SAJWA07C491R36834"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 0,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Jeep",
+        "code": "JEEP201802",
+        "vinexample": "1C4RJFCT2JC219992",
+        "frameexample": "",
+        "icon": "jeep.png",
+        "name2": "Jeep",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "1C4RJFCT2JC219992"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Kia",
+        "code": "KIA",
+        "vinexample": "U5YH5F1AGNL023887",
+        "frameexample": "",
+        "icon": "KIA.png",
+        "name2": "Kia",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "U5YH5F1AGNL023887"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Lancia",
+        "code": "LFIAT84",
+        "vinexample": "ZLA83400000316586",
+        "frameexample": "",
+        "icon": "Lancia.png",
+        "name2": "Lancia",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "ZLA83400000316586"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Land Rover",
+        "code": "LRE201412",
+        "vinexample": "SALFA23A97H006598",
+        "frameexample": "",
+        "icon": "landrover.png",
+        "name2": "Land Rover",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "SALFA23A97H006598"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Lexus",
+        "code": "LEXUS00",
+        "vinexample": "JTJPBBCX304015692",
+        "frameexample": "URJ201-4188425",
+        "icon": "LEXUS.png",
+        "name2": "Lexus",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 1,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "framesearch",
+            "example": "URJ201-4188425"
+          },
+          {
+            "name": "vinsearch",
+            "example": "JTJPBBCX304015692"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Lifan",
+        "value": "LIFAN",
+        "image": "https://img.acat.online/acat/main/marks/85.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=c07%2BQfd5QWXxEiXdcLBb%2BASurOo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Mahindra",
+        "value": "MAHINDRA",
+        "image": "https://img.acat.online/acat/main/marks/48.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=9kvosRMGuorU8A49%2FQtqIUTCceY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Mazda",
+        "code": "MAZDA2020",
+        "vinexample": "RUMKEK97803002842",
+        "frameexample": "SGL5-400683",
+        "icon": "mazda.png",
+        "name2": "Mazda",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 1,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "framesearch",
+            "example": "SGL5-400683"
+          },
+          {
+            "name": "vinsearch",
+            "example": "RUMKEK97803002842"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Mercedes Benz",
+        "code": "MB201810",
+        "vinexample": "WDB4632721X279380",
+        "frameexample": "",
+        "icon": "MERCEDES-BENZ.png",
+        "name2": "Mercedes-Benz",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "WDB4632721X279380"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Mini",
+        "code": "MINI202301",
+        "vinexample": "WMWLN310102G31276",
+        "frameexample": "",
+        "icon": "Mini.png",
+        "name2": "Mini",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "WMWLN310102G31276"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Mitsubishi",
+        "code": "MMC202203",
+        "vinexample": "X2MGUKS10LM033520",
+        "frameexample": "CK2A-0403374",
+        "icon": "MITSUBISHI.png",
+        "name2": "Mitsubishi",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 1,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "framesearch",
+            "example": "CK2A-0403374"
+          },
+          {
+            "name": "vinsearch",
+            "example": "X2MGUKS10LM033520"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Nissan",
+        "code": "NISSAN201809",
+        "vinexample": "Z8NTAAT32ES016832",
+        "frameexample": "QG10-015252",
+        "icon": "NISSAN.png",
+        "name2": "Nissan",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 1,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "framesearch",
+            "example": "QG10-015252"
+          },
+          {
+            "name": "vinsearch",
+            "example": "Z8NTAAT32ES016832"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": [
+          {
+            "description": "Search by model code",
+            "kind": "search_vehicle",
+            "name": "searchByModelCode",
+            "fields": [
+              {
+                "description": "Model code",
+                "name": "modelCode",
+                "pattern": "^[\\w\\d*%#+-]{4,18}$"
+              }
+            ]
+          }
+        ],
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Oldsmobile",
+        "code": "GM_O201809",
+        "vinexample": "1G3GR64H714120508",
+        "frameexample": "",
+        "icon": "OLDSMOBILE.png",
+        "name2": "Oldsmobile",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "1G3GR64H714120508"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Opel",
+        "code": "GM_OP201809",
+        "vinexample": "W0L0SDL08D6093185",
+        "frameexample": "",
+        "icon": "OPEL.png",
+        "name2": "Opel",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "W0L0SDL08D6093185"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Peugeot",
+        "code": "PEUGEOT00",
+        "vinexample": "VF3YCBMAC12063585",
+        "frameexample": "",
+        "icon": "PEUGEOT.png",
+        "name2": "Peugeot",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "VF3YCBMAC12063585"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Plymouth",
+        "value": "plymouth",
+        "image": "https://img.acat.online/acat/main/marks/Plymouth.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2BTRxQiGyoci6ruWcxiwtCWBPXS0%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": true
+      },
+      {
+        "name": "Pontiac",
+        "code": "GM_P201809",
+        "vinexample": "5Y2SL62833Z431955",
+        "frameexample": "",
+        "icon": "PONTIAC.png",
+        "name2": "Pontiac",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "5Y2SL62833Z431955"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Porsche",
+        "code": "PO729",
+        "vinexample": "WP0ZZZ97ZJL141659",
+        "frameexample": "",
+        "icon": "PORSCHE.png",
+        "name2": "Porsche",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "WP0ZZZ97ZJL141659"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Ram",
+        "code": "RAM201802",
+        "vinexample": "1C6RR6FT3JS211319",
+        "frameexample": "",
+        "icon": "ram.png",
+        "name2": "Ram",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "1C6RR6FT3JS211319"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Ravon",
+        "code": "GM_R201809",
+        "vinexample": "XWBMA48N9HA526208",
+        "frameexample": "",
+        "icon": "RAVON.png",
+        "name2": "Ravon",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "XWBMA48N9HA526208"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Renault",
+        "code": "RENAULT201910",
+        "vinexample": "VF1KC0MCF27827649",
+        "frameexample": "",
+        "icon": "renault.png",
+        "name2": "Renault",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "VF1KC0MCF27827649"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Rolls Royce",
+        "code": "RR202301",
+        "vinexample": "SCA665C52JUX86902",
+        "frameexample": "",
+        "icon": "Rolls-Royce.png",
+        "name2": "Rolls-Royce",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "SCA665C52JUX86902"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Saab",
+        "code": "GM_SB201809",
+        "vinexample": "YS3FF71W296001643",
+        "frameexample": "",
+        "icon": "SAAB.png",
+        "name2": "Saab",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "YS3FF71W296001643"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Saturn",
+        "code": "GM_S201809",
+        "vinexample": "1G8MB35B88Y126394",
+        "frameexample": "",
+        "icon": "SATURN.png",
+        "name2": "Saturn",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "1G8MB35B88Y126394"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Seat",
+        "code": "SE1045",
+        "vinexample": "VSSZZZ5FZHR051646",
+        "frameexample": "",
+        "icon": "SEAT.png",
+        "name2": "Seat",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "VSSZZZ5FZHR051646"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Skoda",
+        "code": "SK1051",
+        "vinexample": "TMBLD6NS8J8008154",
+        "frameexample": "",
+        "icon": "SKODA.png",
+        "name2": "Skoda",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "TMBLD6NS8J8008154"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Smart",
+        "code": "MBS201810",
+        "vinexample": "WME4533441K220674",
+        "frameexample": "",
+        "icon": "SMART.png",
+        "name2": "Smart",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "WME4533441K220674"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Ssangyong",
+        "code": "SY201502",
+        "vinexample": "KPBFA2AF15P145312",
+        "frameexample": "",
+        "icon": "SsangYong.png",
+        "name2": "SsangYong",
+        "supportquickgroups": 0,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "KPBFA2AF15P145312"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 0,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Subaru",
+        "code": "SUBARU201802",
+        "vinexample": "JF1SJ5LC5HG335227",
+        "frameexample": "VMG-021566",
+        "icon": "SUBARU.png",
+        "name2": "Subaru",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 1,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 0,
+        "features": [
+          {
+            "name": "framesearch",
+            "example": "VMG-021566"
+          },
+          {
+            "name": "vinsearch",
+            "example": "JF1SJ5LC5HG335227"
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Suzuki",
+        "code": "SUZUKI201402L",
+        "vinexample": "JS2RC62H265353572",
+        "frameexample": "MA15S-200246",
+        "icon": "suzuki.png",
+        "name2": "Suzuki",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 1,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "framesearch",
+            "example": "MA15S-200246"
+          },
+          {
+            "name": "vinsearch",
+            "example": "JS2RC62H265353572"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": [
+          {
+            "description": "Search by chassis",
+            "kind": "search_vehicle",
+            "name": "findByChassisNumber",
+            "fields": [
+              {
+                "description": "Chassis number",
+                "name": "chassis",
+                "pattern": "[A-Z0-9]{8}"
+              }
+            ]
+          }
+        ],
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Tata",
+        "value": "TATA",
+        "image": "https://img.acat.online/acat/main/marks/58.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=FdNGaxvR6hIWFQiHMvmYTA1u4pI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Toyota",
+        "code": "TOYOTA00",
+        "vinexample": "JTMAA7BJ1P4045449",
+        "frameexample": "AGH30-0115914",
+        "icon": "TOYOTA.png",
+        "name2": "Toyota",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 1,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "framesearch",
+            "example": "AGH30-0115914"
+          },
+          {
+            "name": "vinsearch",
+            "example": "JTMAA7BJ1P4045449"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Vauxhall",
+        "code": "GM_VX201809",
+        "vinexample": "W0L0AHM75E2047456",
+        "frameexample": "",
+        "icon": "VAUXHALL.png",
+        "name2": "Vauxhall",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "W0L0AHM75E2047456"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Volkswagen",
+        "code": "VW1519",
+        "vinexample": "XW8ZZZ7PZHG003807",
+        "frameexample": "",
+        "icon": "VOLKSWAGEN.png",
+        "name2": "Volkswagen",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "XW8ZZZ7PZHG003807"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Volvo",
+        "code": "VOLVO201410",
+        "vinexample": "YV4952CT3B1597665",
+        "frameexample": "",
+        "icon": "volvo.png",
+        "name2": "Volvo",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "YV4952CT3B1597665"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      },
+      {
+        "name": "Zaz",
+        "code": "ZAZ",
+        "vinexample": "Y6DAF4854C0011443",
+        "frameexample": "",
+        "icon": "ZAZ.png",
+        "name2": "ZAZ",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "Y6DAF4854C0011443"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "cars"
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "name": "Грузовые (отечественные)",
+    "value": "TRUCKS_NATIVE",
+    "image": "https://img.acat.online/acat/main/types/2.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ROCEHkh8PSMa5RFxgZmIjXbida8%3D",
+    "marks": [
+      {
+        "name": "Алтай",
+        "value": "ALTAJ",
+        "image": "https://img.acat.online/acat/main/marks/203.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=CZvbZAa1QO55d6uVpVD2PNeZ2ks%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "БелАЗ",
+        "value": "BELAZ",
+        "image": "https://img.acat.online/acat/main/marks/125.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=P2mnxDvNl8qN0grpDk3AZbKR8bU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Брянский арсенал",
+        "value": "BRYANSKIJ_ARSENAL",
+        "image": "https://img.acat.online/acat/main/marks/144.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=3cTKY1avUbiZAGH5H7l%2F63yvxew%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ГАЗ",
+        "value": "GAZ",
+        "image": "https://img.acat.online/acat/main/marks/37.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=QawQqY6HLfFaGz%2BlZ%2B%2BN72Unazc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Дормашэкспо",
+        "value": "DORMASHEXPO",
+        "image": "https://img.acat.online/acat/main/marks/352.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=4fVVj03nAcaffLgVqouemYXAPCg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЗИЛ",
+        "value": "ZIL",
+        "image": "https://img.acat.online/acat/main/marks/39.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=bCM29e4%2FlyQvbkIIcawRJxHfN0E%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "КАЗ",
+        "value": "KAZ",
+        "image": "https://img.acat.online/acat/main/marks/143.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=sPZVLvF7zLf0Bx879iv%2FxSJAUZI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "КамАЗ",
+        "value": "KAMAZ",
+        "image": "https://img.acat.online/acat/main/marks/45.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Ik90Y6a7TEeSfmydriV5lr0ff8Q%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "КрАЗ",
+        "value": "KRAZ",
+        "image": "https://img.acat.online/acat/main/marks/81.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=8HfrxWOSak0tq%2B8wWZC6bMeq5GA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МАЗ",
+        "value": "MAZ",
+        "image": "https://img.acat.online/acat/main/marks/46.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2BEdCyKHIZBGJC9RtVznbM%2FKDRyU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МЗКТ",
+        "value": "MZKT",
+        "image": "https://img.acat.online/acat/main/marks/128.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=CKLy4EoXDDnS5MwY5iYp8sdMAkk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МоАЗ",
+        "value": "MOAZ",
+        "image": "https://img.acat.online/acat/main/marks/132.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=oSswuhfJrOGQRqTFwSBTR%2BTCLaI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МТМ",
+        "value": "MTM",
+        "image": "https://img.acat.online/acat/main/marks/165.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=vV4%2BDGvppq%2BOGk90yqPs9IHdQHs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "НефАЗ",
+        "value": "NEFAZ",
+        "image": "https://img.acat.online/acat/main/marks/110.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=PxPjQX%2Fgyo7YFoxH5TyDIbLwpco%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "СЗАП",
+        "value": "SZAP",
+        "image": "https://img.acat.online/acat/main/marks/163.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=v9T9TShEMBF8Nt%2BBxJlKHK0a2Bg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ТМЗ",
+        "value": "TMZ",
+        "image": "https://img.acat.online/acat/main/marks/216.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2BVJnugR6GJkECNRu4i%2FQvwNL4Ow%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Тонар",
+        "value": "TONAR",
+        "image": "https://img.acat.online/acat/main/marks/211.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=kuk6nwtzVUUrWke5Kt0769LL708%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Урал",
+        "value": "URAL",
+        "image": "https://img.acat.online/acat/main/marks/49.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=L90rWqMNyfJcvsgNJ4nDHUm6Zmc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЧМЗАП",
+        "value": "CHZAP",
+        "image": "https://img.acat.online/acat/main/marks/289.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=yykrf36cmhGG4FVg2MV1V7HzTFs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "name": "Грузовые (иномарки)",
+    "value": "TRUCKS_FOREIGN",
+    "image": "https://img.acat.online/acat/main/types/10.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2BeQ%2FdgBVJ0oQUR6oFdpXUOpGsRM%3D",
+    "marks": [
+      {
+        "name": "Ashok Leyland",
+        "value": "ASHOK_LEYLAND",
+        "image": "https://img.acat.online/acat/main/marks/351.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=MMjjWL1rGD5qvNLRwmTdzysKbms%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Avia",
+        "value": "AVIA",
+        "image": "https://img.acat.online/acat/main/marks/102.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=fOR1SWJyEObzdSWNuBL3YfI%2FDuE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Baw",
+        "value": "BAW",
+        "image": "https://img.acat.online/acat/main/marks/62.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=CIA6z1kJKEZNIXpWObVpTRSvEZg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Beifang Benchi",
+        "value": "BEIFANG_BENCHI",
+        "image": "https://img.acat.online/acat/main/marks/106.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=LPomKsnXeSPh3AEdGRTt8NmM6ig%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Camc",
+        "value": "CAMC",
+        "image": "https://img.acat.online/acat/main/marks/101.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=bDKCOLa41hsTMuZCBgTsMWh%2BYOI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Caterpillar",
+        "value": "CATERPILLAR",
+        "image": "https://img.acat.online/acat/main/marks/99.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=5ODkU133dzrrDzk8mI10lKYg4nc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Cnhtc Sinotruk",
+        "value": "CNHTC_SINOTRUK",
+        "image": "https://img.acat.online/acat/main/marks/103.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ZqXlVujQ2qTFXLcvgdbK%2FKUQQgs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Daf",
+        "code": "DAF",
+        "vinexample": "98PTT47MSEB100567",
+        "frameexample": "",
+        "icon": "daf.png",
+        "name2": "Daf",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 0,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "98PTT47MSEB100567"
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": [
+          {
+            "description": "Search by chassis",
+            "kind": "search_vehicle",
+            "name": "findByChassisNumber",
+            "fields": [
+              {
+                "description": "Chassis number",
+                "name": "chassis",
+                "pattern": "[A-Z0-9]{7,8}"
+              }
+            ]
+          }
+        ],
+        "supportdetailapplicability": 0,
+        "laximo": true,
+        "urlType": "trucks"
+      },
+      {
+        "name": "Dong Feng",
+        "value": "DONGFENG",
+        "image": "https://img.acat.online/acat/main/marks/96.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=RNojLS9LNukCQyrm%2FheB1WXNe6s%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Faw",
+        "value": "FAW",
+        "image": "https://img.acat.online/acat/main/marks/61.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=fGUTrwvFa2e5HZLvuFtRkPL1SjU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Foton",
+        "value": "FOTON",
+        "image": "https://img.acat.online/acat/main/marks/98.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=TkSuY2KkaAs82exVTGw9B6t6wts%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Hino Heavy",
+        "value": "hino-heavy",
+        "image": "https://img.acat.online/acat/main/marks/hino.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=JticDpAMyDb8yEJ1NLIxbrS2yRY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Hino Light",
+        "value": "hino-light",
+        "image": "https://img.acat.online/acat/main/marks/hino.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=JticDpAMyDb8yEJ1NLIxbrS2yRY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Hyundai",
+        "code": "HYUNDAI_CV",
+        "vinexample": "KMEFC18NPNC110282",
+        "frameexample": "",
+        "icon": "HYUNDAI.png",
+        "name2": "Hyundai Commercial",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "KMEFC18NPNC110282"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "trucks"
+      },
+      {
+        "name": "Isuzu",
+        "code": "ISUZUCV201702",
+        "vinexample": "JAAN1R71P77101821",
+        "frameexample": "NPR66L-7408282",
+        "icon": "isuzu.png",
+        "name2": "Isuzu Commercial",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 1,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "framesearch",
+            "example": "NPR66L-7408282"
+          },
+          {
+            "name": "vinsearch",
+            "example": "JAAN1R71P77101821"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": [
+          {
+            "description": "Search by chassis",
+            "kind": "search_vehicle",
+            "name": "findByChassisNumber",
+            "fields": [
+              {
+                "description": "Chassis number",
+                "name": "chassis",
+                "pattern": "[A-Z0-9]{8}"
+              }
+            ]
+          }
+        ],
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "trucks"
+      },
+      {
+        "name": "Iveco",
+        "code": "IVECO202001",
+        "vinexample": "ZCFC3572005297765",
+        "frameexample": "",
+        "icon": "iveco.png",
+        "name2": "Iveco",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "ZCFC3572005297765"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": [
+          {
+            "description": "Search by chassis",
+            "kind": "search_vehicle",
+            "name": "findByChassis",
+            "fields": [
+              {
+                "description": "Chassis number",
+                "name": "chassis",
+                "pattern": "[A-Z0-9]{7}"
+              }
+            ]
+          }
+        ],
+        "supportdetailapplicability": 0,
+        "laximo": true,
+        "urlType": "trucks"
+      },
+      {
+        "name": "Jac",
+        "value": "JAC",
+        "image": "https://img.acat.online/acat/main/marks/248.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=VpsVLxZGUz5yYL%2FbagGulAIWHOE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Jmc",
+        "value": "JMC",
+        "image": "https://img.acat.online/acat/main/marks/228.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=3Yi1Csj%2BMDnaSHfinY1OAfm%2BBdI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Kia",
+        "code": "KIA_CV",
+        "vinexample": "KNGGBJ7R17K110577",
+        "frameexample": "",
+        "icon": "KIA.png",
+        "name2": "Kia Commercial",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "KNGGBJ7R17K110577"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "trucks"
+      },
+      {
+        "name": "Madara",
+        "value": "MADARA",
+        "image": "https://img.acat.online/acat/main/marks/108.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ZiSFQKVr4N6hyNQ%2FzlTndl4I%2F50%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Man",
+        "code": "MAN201908",
+        "vinexample": "WMA03SZZ49P017718",
+        "frameexample": "",
+        "icon": "MAN.png",
+        "name2": "Man",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 1,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "framesearch",
+            "example": null
+          },
+          {
+            "name": "vinsearch",
+            "example": "WMA03SZZ49P017718"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": [
+          {
+            "description": "Search by vehicle number",
+            "kind": "search_vehicle",
+            "name": "searchByVehicleNumber",
+            "fields": [
+              {
+                "description": "Vehicle number",
+                "name": "vehicleNumber",
+                "pattern": "^[\\w\\d*%#+-]{7,10}$"
+              }
+            ]
+          }
+        ],
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "trucks"
+      },
+      {
+        "name": "Mercedes Benz",
+        "code": "MBC201810",
+        "vinexample": "WDB932314H0172044",
+        "frameexample": "",
+        "icon": "MERCEDES-BENZ.png",
+        "name2": "Mercedes-Benz Commercial",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "WDB932314H0172044"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": null,
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "trucks"
+      },
+      {
+        "name": "Nissan",
+        "value": "nissan",
+        "image": "https://img.acat.online/acat/main/marks/21.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=1INWKbAkt1Q9ocWvhv%2BEW2FJhzA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": true
+      },
+      {
+        "name": "Renault",
+        "code": "RCV201910",
+        "vinexample": "VF622GVA000144434",
+        "frameexample": "",
+        "icon": "rcv.png",
+        "name2": "Renault Trucks",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "VF622GVA000144434"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": [
+          {
+            "description": "Search by chassis",
+            "kind": "search_vehicle",
+            "name": "searchByChassis",
+            "fields": [
+              {
+                "description": "Chassis series",
+                "name": "chassisSeries",
+                "pattern": "[\\w\\d]{1,10}"
+              },
+              {
+                "description": "Chassis",
+                "name": "chassis",
+                "pattern": "[\\d]{1,6}"
+              }
+            ]
+          }
+        ],
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "trucks"
+      },
+      {
+        "name": "Scania",
+        "code": "SCANIA202010",
+        "vinexample": "XLER4X20004490991",
+        "frameexample": "",
+        "icon": "scania.png",
+        "name2": "Scania",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 1,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "XLER4X20004490991"
+          },
+          {
+            "name": "wizardsearch2",
+            "example": null
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "detailapplicability",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": [
+          {
+            "description": "Search by engine number",
+            "kind": "search_vehicle",
+            "name": "findByEngineNumber",
+            "fields": [
+              {
+                "description": "Engine number",
+                "name": "engineNo",
+                "pattern": "[A-Z0-9]{7}"
+              }
+            ]
+          },
+          {
+            "description": "Search by chassis",
+            "kind": "search_vehicle",
+            "name": "findByChassisNumber",
+            "fields": [
+              {
+                "description": "Chassis number",
+                "name": "chassis",
+                "pattern": "[0-9]{7}"
+              }
+            ]
+          }
+        ],
+        "supportdetailapplicability": 1,
+        "laximo": true,
+        "urlType": "trucks"
+      },
+      {
+        "name": "Shaanxi",
+        "value": "SHAANXI",
+        "image": "https://img.acat.online/acat/main/marks/104.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=BVtEWGetmueFsgA1HLaHX7DHLtM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Shaanxi Fast Gear",
+        "value": "SHAANXI_FAST_GEAR",
+        "image": "https://img.acat.online/acat/main/marks/105.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=giRk2WaY5l4T7RO6xACQiHE56pI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Tata",
+        "value": "TATA",
+        "image": "https://img.acat.online/acat/main/marks/58.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=FdNGaxvR6hIWFQiHMvmYTA1u4pI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Tatra",
+        "value": "TATRA",
+        "image": "https://img.acat.online/acat/main/marks/97.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=f5FJUsmcbOMJ5Zh3n6clCVV788Q%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Terex",
+        "value": "TEREX",
+        "image": "https://img.acat.online/acat/main/marks/235.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=08aopQZxot6fSHUZdyexN68h4ZE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Volvo",
+        "code": "VCV201606",
+        "vinexample": "YV2A4B3A2TA246478",
+        "frameexample": "",
+        "icon": "volvo.png",
+        "name2": "Volvo Trucks",
+        "supportquickgroups": 1,
+        "supportvinsearch": 1,
+        "supportframesearch": 0,
+        "supportparameteridentification": 0,
+        "supportparameteridentification2": 0,
+        "features": [
+          {
+            "name": "vinsearch",
+            "example": "YV2A4B3A2TA246478"
+          },
+          {
+            "name": "quickgroups",
+            "example": null
+          },
+          {
+            "name": "fulltextsearch",
+            "example": null
+          }
+        ],
+        "operations": [
+          {
+            "description": "Search by chassis",
+            "kind": "search_vehicle",
+            "name": "searchByChassis",
+            "fields": [
+              {
+                "description": "Chassis series",
+                "name": "chassisSeries",
+                "pattern": "[\\w\\d]{1,10}"
+              },
+              {
+                "description": "Chassis",
+                "name": "chassis",
+                "pattern": "[\\d]{1,6}"
+              }
+            ]
+          }
+        ],
+        "supportdetailapplicability": 0,
+        "laximo": true,
+        "urlType": "trucks"
+      },
+      {
+        "name": "Zf",
+        "value": "ZF",
+        "image": "https://img.acat.online/acat/main/marks/205.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=m1v8DljDKk4o9Rx%2By%2F3rKAKzYd8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "name": "Автобусы",
+    "value": "BUS",
+    "image": "https://img.acat.online/acat/main/types/3.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=bLSAWJBl8cicyn7xyc6av0dYtG4%3D",
+    "marks": [
+      {
+        "name": "Golden Dragon",
+        "value": "GOLDEN_DRAGON",
+        "image": "https://img.acat.online/acat/main/marks/227.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Be5PGVLwbQspmxKoaDDRw8rltek%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Higer",
+        "value": "HIGER",
+        "image": "https://img.acat.online/acat/main/marks/226.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=qIYtlcP%2Fg6UhknEALjP7bA%2FIgVc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Hino",
+        "value": "hino-heavy",
+        "image": "https://img.acat.online/acat/main/marks/hino.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=JticDpAMyDb8yEJ1NLIxbrS2yRY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Hyundai",
+        "value": "hyundai",
+        "image": "https://img.acat.online/acat/main/marks/11.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=j2va4jUKrJwNd%2BOoYyYRcO4tZcY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": true
+      },
+      {
+        "name": "Ikarus",
+        "value": "IKARUS",
+        "image": "https://img.acat.online/acat/main/marks/44.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Zd7lvx9iNBG6xF1fkckq%2BHufqJo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Isuzu",
+        "value": "isuzu",
+        "image": "https://img.acat.online/acat/main/marks/12.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=zgwQkcDdG8zDMLUyXdHelXGwmFk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": true
+      },
+      {
+        "name": "IVECO",
+        "value": "iveco",
+        "image": "https://img.acat.online/acat/main/marks/13.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2BaZUPaR3ocwwUpQbUbWvqrLCGQA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": true
+      },
+      {
+        "name": "JAC",
+        "value": "JAC",
+        "image": "https://img.acat.online/acat/main/marks/248.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=VpsVLxZGUz5yYL%2FbagGulAIWHOE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Karosa",
+        "value": "KAROSA",
+        "image": "https://img.acat.online/acat/main/marks/309.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=gi%2BHrylmdFXV9mjZURCGZ7rvdnk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Kia",
+        "value": "kia",
+        "image": "https://img.acat.online/acat/main/marks/15.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=afY19jvRKnk4hYGhbDQp1o%2BUEFg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": true
+      },
+      {
+        "name": "King Long",
+        "value": "KING_LONG",
+        "image": "https://img.acat.online/acat/main/marks/229.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=gHhuz4rjEU%2FA3NNvcMKXAQX2Agc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Madara",
+        "value": "MADARA",
+        "image": "https://img.acat.online/acat/main/marks/108.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ZiSFQKVr4N6hyNQ%2FzlTndl4I%2F50%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Man",
+        "value": "man",
+        "image": "https://img.acat.online/acat/main/marks/90.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Isu2O3ZojCAiqVWh96GLx9jROzo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Mercedes Benz",
+        "value": "mercedes",
+        "image": "https://img.acat.online/acat/main/marks/19.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=w6OLctbj%2Fsn8D%2BHtZ77P6%2FeaoHU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": true
+      },
+      {
+        "name": "Nissan",
+        "value": "nissan",
+        "image": "https://img.acat.online/acat/main/marks/21.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=1INWKbAkt1Q9ocWvhv%2BEW2FJhzA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": true
+      },
+      {
+        "name": "Scania",
+        "value": "scania",
+        "image": "https://img.acat.online/acat/main/marks/89.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=lnKg0hLcHmSmMdrQtq5IQm5H6mE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": true
+      },
+      {
+        "name": "Volgabus",
+        "value": "VOLGABUS",
+        "image": "https://img.acat.online/acat/main/marks/265.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=i9mbivW%2FOYA5UggHA8LihYmpU%2B4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Yutong",
+        "value": "YUTONG",
+        "image": "https://img.acat.online/acat/main/marks/230.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=u6ndihXeem2bpACt8LQi4pSQ8Hg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Богдан",
+        "value": "BOGDAN",
+        "image": "https://img.acat.online/acat/main/marks/109.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=QAWTm9id19hFElys2FsP16RgSlM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЗИЛ",
+        "value": "ZIL",
+        "image": "https://img.acat.online/acat/main/marks/39.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=bCM29e4%2FlyQvbkIIcawRJxHfN0E%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "КАвЗ",
+        "value": "KAVZ",
+        "image": "https://img.acat.online/acat/main/marks/84.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=u0ktzgbTtZULikZ%2FAritgM2q3XI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "КамАЗ",
+        "value": "KAMAZ",
+        "image": "https://img.acat.online/acat/main/marks/45.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Ik90Y6a7TEeSfmydriV5lr0ff8Q%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЛАЗ",
+        "value": "LAZ",
+        "image": "https://img.acat.online/acat/main/marks/82.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=5RssWLsXkNvA6nGo59fPAv3y0F8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЛЗГМП",
+        "value": "LZGMP",
+        "image": "https://img.acat.online/acat/main/marks/310.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=YvqJMA1IuUHXSGJIxcYpdOy%2BQTQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЛиАЗ",
+        "value": "LIAZ",
+        "image": "https://img.acat.online/acat/main/marks/42.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=7ynHreENQJ6uwZgM%2FIs9%2BlEnIz4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МАЗ",
+        "value": "MAZ",
+        "image": "https://img.acat.online/acat/main/marks/46.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2BEdCyKHIZBGJC9RtVznbM%2FKDRyU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "НефАЗ",
+        "value": "NEFAZ",
+        "image": "https://img.acat.online/acat/main/marks/110.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=PxPjQX%2Fgyo7YFoxH5TyDIbLwpco%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ПАЗ",
+        "value": "PAZ",
+        "image": "https://img.acat.online/acat/main/marks/41.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=YmO922dd1q3NIIQMrL9sKJWF5bE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Урал",
+        "value": "URAL",
+        "image": "https://img.acat.online/acat/main/marks/49.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=L90rWqMNyfJcvsgNJ4nDHUm6Zmc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "РАФ",
+        "value": "RAF",
+        "image": "https://img.acat.online/acat/main/marks/83.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=VBJncOF7AcXpynerHoQpqyx9MMk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      }
+    ]
+  },
+  {
+    "index": 6,
+    "name": "Спецтехника (отечественные)",
+    "value": "SPECIAL_TECH_NATIVE",
+    "image": "https://img.acat.online/acat/main/types/7.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=QycDMXOyFMBrFywgKlzZD0ki%2BzE%3D",
+    "marks": [
+      {
+        "name": "Автокран",
+        "value": "AVTOKRAN",
+        "image": "https://img.acat.online/acat/main/marks/50.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=bQibno8OL%2FDignZJLF1q0fDQtYM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Агро",
+        "value": "AGRO",
+        "image": "https://img.acat.online/acat/main/marks/252.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=EY5F1Qg7tJun2lAk0r9mV7pJvcA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Агроцентр",
+        "value": "AGROCENTER",
+        "image": "https://img.acat.online/acat/main/marks/313.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=5skepLhNcbjb5HHnWjC%2Fm59bLaQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "АЗСМ",
+        "value": "AZCM",
+        "image": "https://img.acat.online/acat/main/marks/323.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=2M2rNuoddTXdadi%2B73FNXkktTY4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "АЗСМ",
+        "value": "AZSM",
+        "image": "https://img.acat.online/acat/main/marks/349.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=tv%2FaIOkIVj238sQItUA%2BaKHLIzE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Амкодор",
+        "value": "AMKODOR",
+        "image": "https://img.acat.online/acat/main/marks/112.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ZIuM0MrE9MV42%2BwVr0z9GB1W1Uw%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "АНИТИМ",
+        "value": "ANITIM",
+        "image": "https://img.acat.online/acat/main/marks/328.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=q9h4nPJTE8%2B0D%2FIqhk4TaIfX7kU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "АОМЗ",
+        "value": "AOMZ",
+        "image": "https://img.acat.online/acat/main/marks/299.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=9dviU23x%2FK4UKpr1EkXreK3ewt0%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "АТЕК",
+        "value": "ATEK",
+        "image": "https://img.acat.online/acat/main/marks/300.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=jAyLcwBxJw5xw2nZY1Taif1HwL8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "АТЗ",
+        "value": "ATZ",
+        "image": "https://img.acat.online/acat/main/marks/67.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=C8BlNQ75Jz4HZoACcuABgjc4Ets%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "БелАЗ",
+        "value": "BELAZ",
+        "image": "https://img.acat.online/acat/main/marks/125.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=P2mnxDvNl8qN0grpDk3AZbKR8bU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Беловеж",
+        "value": "BELOVEZH",
+        "image": "https://img.acat.online/acat/main/marks/242.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ZKJsIGBX0v7OQKXWQSb5sx6oI%2BE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "БелоцерковМАЗ",
+        "value": "BELOCERKOVMAZ",
+        "image": "https://img.acat.online/acat/main/marks/215.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=EwkZXzi4u6TyB8lzySXq3p2WY0Y%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "БЗСТ",
+        "value": "BZST",
+        "image": "https://img.acat.online/acat/main/marks/271.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=aCDi2JJPTinMIV%2FsFgqQmqVicGE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "БЗТДиА",
+        "value": "BZTDIA",
+        "image": "https://img.acat.online/acat/main/marks/346.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=I1PQrOZarp1z6mtH8dtZSJQN6xQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "БЗТМ",
+        "value": "BZTM",
+        "image": "https://img.acat.online/acat/main/marks/272.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=6MWc4r10ot%2B74rQ2HrU%2BUHVdTw4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "БобруйскАгроМаш",
+        "value": "BOBRUJSKAGROMASH",
+        "image": "https://img.acat.online/acat/main/marks/130.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=TSCx5wdjgURCDmaxxfP8fbS5SpE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "БобруйскСельМаш",
+        "value": "BOBRUJSKSELMASH",
+        "image": "https://img.acat.online/acat/main/marks/152.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=10yhV2gjbYdDkLO4o8F5f5t%2BBv0%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Большая Земля",
+        "value": "BOLSHAYA_ZEMLYA",
+        "image": "https://img.acat.online/acat/main/marks/281.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ypeWOLIGvzAvZxc2AGE%2Fc%2F64l%2F4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Борекс",
+        "value": "BOREX",
+        "image": "https://img.acat.online/acat/main/marks/301.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2FmBEeLfysqikTA8JkyeA5%2BYEF88%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Брянский арсенал",
+        "value": "BRYANSKIJ_ARSENAL",
+        "image": "https://img.acat.online/acat/main/marks/144.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=3cTKY1avUbiZAGH5H7l%2F63yvxew%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "БЭМЗ",
+        "value": "BEHMZ",
+        "image": "https://img.acat.online/acat/main/marks/255.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=DSd2Uc9bl3lBfLUNIUDLtEMiSlA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ВгТЗ",
+        "value": "VGTZ",
+        "image": "https://img.acat.online/acat/main/marks/64.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=evp8vBWO1dftFmf9Z7cNI%2BE7%2BwM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Велес Агро",
+        "value": "VELES_AGRO",
+        "image": "https://img.acat.online/acat/main/marks/329.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=b5dEeZ2ZX56pdi%2Bvzk26n9RCyus%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ВЗС",
+        "value": "VZS",
+        "image": "https://img.acat.online/acat/main/marks/266.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=M4OFkXnLPf%2ByYlRuxKXImMm%2FVVY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ВСМ",
+        "value": "VSM",
+        "image": "https://img.acat.online/acat/main/marks/151.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=jUHEC7GURLYIFWBDQLObPGk4ECc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ВТЗ",
+        "value": "VTZ",
+        "image": "https://img.acat.online/acat/main/marks/69.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=lUueP3nrlHlSUZdM9JjRpyUQ2kk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ВЭКС",
+        "value": "VEHKS",
+        "image": "https://img.acat.online/acat/main/marks/146.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=f5H52J4rii6Z7wFC4wTO5My9vwg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ГАЗ",
+        "value": "GAZ",
+        "image": "https://img.acat.online/acat/main/marks/37.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=QawQqY6HLfFaGz%2BlZ%2B%2BN72Unazc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Газпром-кран",
+        "value": "GAZPROM-KRAN",
+        "image": "https://img.acat.online/acat/main/marks/185.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2BxCWdi1IEYA05GfLnDwlKnp97xE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ГАКЗ",
+        "value": "GAKZ",
+        "image": "https://img.acat.online/acat/main/marks/237.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=G7wLK0hr%2Bm%2FF6uOUUpBAwwSG2I4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Гатчинсельмаш",
+        "value": "GATCHINSELMASH",
+        "image": "https://img.acat.online/acat/main/marks/267.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=waKTckku6ZMlXYl7DCLfWS26Nhk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Геомаш",
+        "value": "GEOMASH",
+        "image": "https://img.acat.online/acat/main/marks/167.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ZFT1nZ6AaiutU6C845NVukmum9g%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Гидромаш",
+        "value": "GIDROMASH",
+        "image": "https://img.acat.online/acat/main/marks/183.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=1xoRpfhriBPi8Cq%2BrI4%2BTCs3P90%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Гомсельмаш",
+        "value": "GOMSELMASH",
+        "image": "https://img.acat.online/acat/main/marks/131.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Lj8xNXukUZuU6Bs%2FvyPdZUQadgE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ДЗАК",
+        "value": "DZAK",
+        "image": "https://img.acat.online/acat/main/marks/274.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=LaX%2BpWzHpqQVY7p18vg8SG708a8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ДКЗ",
+        "value": "DKZ",
+        "image": "https://img.acat.online/acat/main/marks/156.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=dobyS4KIaLA25Iph5GrR7F%2FrK68%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Донэкс",
+        "value": "DONEHKS",
+        "image": "https://img.acat.online/acat/main/marks/220.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=hgWU1bNhaJAejqr%2FkUni%2BLjyw0c%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Дормаш",
+        "value": "DORMASH",
+        "image": "https://img.acat.online/acat/main/marks/136.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=8eBc4xbtaani8v%2BV2XHLj%2F%2F5qLE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Дорэлектромаш",
+        "value": "DORELECTROMASH",
+        "image": "https://img.acat.online/acat/main/marks/268.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=GSHVXjyEPrI1g%2FFoCtP%2Fw6bsTMA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ДСТ-УРАЛ",
+        "value": "DST-URAL",
+        "image": "https://img.acat.online/acat/main/marks/324.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=kTZMgjqPeK2N%2F9kjHByRLR2awcA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ДЭЗ",
+        "value": "DEZ",
+        "image": "https://img.acat.online/acat/main/marks/304.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=rjS2qaYW%2FOzUyD9k0%2Be5J7DBp4E%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЕлАЗ",
+        "value": "ELAZ",
+        "image": "https://img.acat.online/acat/main/marks/184.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=pdDf8SmXSvPWuL6PZS2PNjfJPqU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Завод Автотехнологий",
+        "value": "ZADOV_AUTOTECHNOLOGIY",
+        "image": "https://img.acat.online/acat/main/marks/342.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=xvbnQ9dKBvIZEJQ66ztGEF6OkZ4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЗЗГТ",
+        "value": "ZZGT",
+        "image": "https://img.acat.online/acat/main/marks/120.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=44uZ7xs2Nt92euUPLtOMSdNGWSQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЗиД",
+        "value": "ZID",
+        "image": "https://img.acat.online/acat/main/marks/119.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=STO9yKWj53C1fMXwGQ55ofGmJEo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЗиК",
+        "value": "ZIK",
+        "image": "https://img.acat.online/acat/main/marks/121.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=npcSkYfPtOovoRjWhNgBzLHg594%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Златмаш",
+        "value": "ZLATMASH",
+        "image": "https://img.acat.online/acat/main/marks/275.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Jlk8TC47Wis%2FCl2d59O%2F6Ov%2BIiE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Златэкс",
+        "value": "ZLATEHKS",
+        "image": "https://img.acat.online/acat/main/marks/113.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2FZJNbFYNnKQdkr1Us9hgQPm%2BDJA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Ижнефтемаш",
+        "value": "IZHNEFTEMASH",
+        "image": "https://img.acat.online/acat/main/marks/154.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=KjFB10D6gQKkMeXzyLexBCScRDo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Ижорские заводы",
+        "value": "IZHORSKIE_ZAVODY",
+        "image": "https://img.acat.online/acat/main/marks/222.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=pB%2FlKEb7W8%2BGEogglBUt2gwXmUk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ИнТех",
+        "value": "INTEH",
+        "image": "https://img.acat.online/acat/main/marks/353.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=fdQ9rXSE59iFmzhoNgJKhUI3AOk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "КАЗ",
+        "value": "KAZ",
+        "image": "https://img.acat.online/acat/main/marks/320.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=bfv45CZoirRzJJM1jLyaNjY2EOM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Канаш",
+        "value": "KANASH",
+        "image": "https://img.acat.online/acat/main/marks/157.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=C8%2F%2BPYhPEd7bUJdcNvho8w1wKlg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "КЗК",
+        "value": "KZK",
+        "image": "https://img.acat.online/acat/main/marks/129.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=y36BvLBIQr9zghfSBObJur70tZc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "КЗКТ",
+        "value": "KZKT",
+        "image": "https://img.acat.online/acat/main/marks/148.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=kFBBmTZEY9tlSBDd5Pks2G%2Bkd3M%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Кировец-Ландтехник",
+        "value": "KIROVEC_LANDTECHNICK",
+        "image": "https://img.acat.online/acat/main/marks/308.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=cDjH%2Fbn088HaIHk3CLYlQrMTU40%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Клевер",
+        "value": "KLEVER",
+        "image": "https://img.acat.online/acat/main/marks/134.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=if%2FAnWR4myGPMPDMxLlfGg9AyLo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "КМЗ",
+        "value": "KMZ",
+        "image": "https://img.acat.online/acat/main/marks/141.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=mXruFHpCM7gpR0dZuKlrIO4Iv7w%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "КМЗ 1 Мая",
+        "value": "KMZ_1_MAYA",
+        "image": "https://img.acat.online/acat/main/marks/124.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=kM0nSTZGlw7INksQ5Lc5VRuGL9Y%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Ковровец",
+        "value": "KOVROVEC",
+        "image": "https://img.acat.online/acat/main/marks/127.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=MDnQvKONeg8s7SfMzwh522fNteE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Кранэкс",
+        "value": "KRANEKS",
+        "image": "https://img.acat.online/acat/main/marks/306.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Rpd8GGl%2B8OHT%2BTT%2F2uQxg4OSzCw%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Кредмаш",
+        "value": "KREDMASH",
+        "image": "https://img.acat.online/acat/main/marks/126.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=qdg8X7rHBac0I71KDquF6x%2BhVvM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "КЭЗ",
+        "value": "KEHZ",
+        "image": "https://img.acat.online/acat/main/marks/149.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ml64oXkHdehGa6CN08WWAymjl4k%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "КЭМЗ",
+        "value": "KEMZ",
+        "image": "https://img.acat.online/acat/main/marks/325.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=TYvPWK7yjmpSCNZUAnCs%2F45TdPI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЛЗА",
+        "value": "LZA",
+        "image": "https://img.acat.online/acat/main/marks/158.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=VujC5vgjr6UHL%2BLXGBjtzKrtIgs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЛидАгроПромМаш",
+        "value": "LIDAGROPROMMASH",
+        "image": "https://img.acat.online/acat/main/marks/238.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=7WVFAhTdbmA%2F29rGKzKGnzHZyDE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЛидСельМаш",
+        "value": "LIDSELMASH",
+        "image": "https://img.acat.online/acat/main/marks/164.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=jO85dN9BqGJIRrrH3uuPFbjZ6qU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЛТЗ",
+        "value": "LTZ",
+        "image": "https://img.acat.online/acat/main/marks/70.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=33nTg6oFmfLZsW4btpKP1Iq6Y1M%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МАЗ",
+        "value": "MAZ",
+        "image": "https://img.acat.online/acat/main/marks/46.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2BEdCyKHIZBGJC9RtVznbM%2FKDRyU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Маштехремонт",
+        "value": "MASHTEKHREMONT",
+        "image": "https://img.acat.online/acat/main/marks/191.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=CWQTBrUkK4esEicpBRt8cpLqv3E%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МЗКМ",
+        "value": "MZKM",
+        "image": "https://img.acat.online/acat/main/marks/122.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=FXrELCkFwAOx9oRcB3f%2FEXbF7%2BE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ММЗ",
+        "value": "MMZ",
+        "image": "https://img.acat.online/acat/main/marks/107.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=zmMumgr5TRCbByOj8AKcywkgd4Y%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МоАЗ",
+        "value": "MOAZ",
+        "image": "https://img.acat.online/acat/main/marks/132.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=oSswuhfJrOGQRqTFwSBTR%2BTCLaI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МозМЗ",
+        "value": "MOZMZ",
+        "image": "https://img.acat.online/acat/main/marks/311.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=iDBs72VkY532p4sQvS70YCxZbFY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МолдАгроТехника",
+        "value": "MOLDAGROTEKHNIKA",
+        "image": "https://img.acat.online/acat/main/marks/250.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=BVZo55XtudY8MGVZim1hrmx%2F71g%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МордовАгроМаш",
+        "value": "MORDOVAGROMASH",
+        "image": "https://img.acat.online/acat/main/marks/354.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=2Q41Pq%2FReOW5un%2BxqHSbtYzTJ4Y%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МРМЗ",
+        "value": "MRMZ",
+        "image": "https://img.acat.online/acat/main/marks/246.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=0VDw%2FLJcTuRARYJyia9XgVtIGEg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МТЗ",
+        "value": "MTZ",
+        "image": "https://img.acat.online/acat/main/marks/66.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=qeItfK%2BsqxC%2FDHmFjkxI4MfUya8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "МТМ",
+        "value": "MTM",
+        "image": "https://img.acat.online/acat/main/marks/165.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=vV4%2BDGvppq%2BOGk90yqPs9IHdQHs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Навигатор",
+        "value": "NAVIGATOR",
+        "image": "https://img.acat.online/acat/main/marks/312.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=F5d9%2B3SYwv1DOoWv2rEc%2B5%2F79KE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "НефАЗ",
+        "value": "NEFAZ",
+        "image": "https://img.acat.online/acat/main/marks/110.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=PxPjQX%2Fgyo7YFoxH5TyDIbLwpco%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "НЗТТМ",
+        "value": "NZTTM",
+        "image": "https://img.acat.online/acat/main/marks/350.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=M7lhft5v211maFBzDvlODaKKoPs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "НКМЗ",
+        "value": "NKMZ",
+        "image": "https://img.acat.online/acat/main/marks/194.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=PNupPSDVlMDbpw15Bo527FDZpiY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "НМЗ",
+        "value": "NMZ",
+        "image": "https://img.acat.online/acat/main/marks/335.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=fRkC%2BOK8wKrRmWfHF4TU75KkU1U%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Новатор-Плюс",
+        "value": "NOVATOR_PLUS",
+        "image": "https://img.acat.online/acat/main/marks/355.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ObD%2FHN3UwfU32DQg5zLAnOZ5CIc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Омсктрансмаш",
+        "value": "OMSKTRANSMASH",
+        "image": "https://img.acat.online/acat/main/marks/276.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=tIUOvUQih5FATH3tS7kVSU6l8to%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Орел-Погрузчик",
+        "value": "OREL-POGRUZCHIK",
+        "image": "https://img.acat.online/acat/main/marks/137.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=3rBAeXkMwxkknqKJIAEeBBCp2JQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Оста",
+        "value": "OSTA",
+        "image": "https://img.acat.online/acat/main/marks/161.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=WS90K31EpuAE9KINlxuuNdzvRDQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ОТЗ",
+        "value": "OTZ",
+        "image": "https://img.acat.online/acat/main/marks/138.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=BMouO8DWPl9diScrFXUzaNAb%2Bc0%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Первомайск химмаш",
+        "value": "PERVOMAJSKHIMMASH",
+        "image": "https://img.acat.online/acat/main/marks/277.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=KsfNb6razQQGQv%2BcUS%2Bo4lkGBlI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Посевная компания",
+        "value": "POSEVNAYA_COMPANIYA",
+        "image": "https://img.acat.online/acat/main/marks/330.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=19NcAQiw59bbtHBPMIYGtTe3wCE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ПромАгро Технологии",
+        "value": "PROMAGROTECHNOLOGII",
+        "image": "https://img.acat.online/acat/main/marks/343.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=hWF%2FsdUajTkbz73zlctLEzjvPSw%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Промтрактор",
+        "value": "PROMTRAKTOR",
+        "image": "https://img.acat.online/acat/main/marks/207.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=mwxxSJYoYfaXA3bLQxP1UU%2B1sxs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ПТЗ",
+        "value": "PTZ",
+        "image": "https://img.acat.online/acat/main/marks/65.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=qRGvk6aX5heEHvuixOQIvsJOl%2Fw%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Радиозавод",
+        "value": "RADIOZAVOD",
+        "image": "https://img.acat.online/acat/main/marks/344.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=xNzdV6dNQbXotlZ0PxOiUiNtYa4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Раскат",
+        "value": "RASKAT",
+        "image": "https://img.acat.online/acat/main/marks/118.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=iajrK64J2SUcjvGe3ucLMTOhZTE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "РМЗ",
+        "value": "RMZ",
+        "image": "https://img.acat.online/acat/main/marks/223.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Y6NLq%2BE7HbI5r4u%2BlnGzq0x2fRY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Ростсельмаш",
+        "value": "ROSTSELMASH",
+        "image": "https://img.acat.online/acat/main/marks/117.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=cf4TrTyAMpAO30rKeG%2BlYRrfVzE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "САЗ",
+        "value": "SAZ",
+        "image": "https://img.acat.online/acat/main/marks/210.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=H4qj7kqPEK1W7NXNzHDkLnyes%2FM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Сальсксельмаш",
+        "value": "SALSKSELMASH",
+        "image": "https://img.acat.online/acat/main/marks/243.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=zN%2FkEbFnfExvqntAReHgCtcDOG0%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Сарэкс",
+        "value": "SAREHKS",
+        "image": "https://img.acat.online/acat/main/marks/135.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=TAbpn5DELPDP9APDi7eYiMcEkmo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Сибсельмаш",
+        "value": "SIBSELMASH",
+        "image": "https://img.acat.online/acat/main/marks/171.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=anmU0XC%2FMGGCi%2FjMPy80aPG2I8k%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Синергия",
+        "value": "SINERGIYA",
+        "image": "https://img.acat.online/acat/main/marks/170.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=J8%2F0ipIeu%2FFOjVlTCQPxLB1%2FciI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "СмолТра",
+        "value": "SMOLTRA",
+        "image": "https://img.acat.online/acat/main/marks/279.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=vpzzfEt%2Bxz4GHftlydffTSSy%2BBM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "СпецБурМаш",
+        "value": "SPECBURMASH",
+        "image": "https://img.acat.online/acat/main/marks/282.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2FUOxrhfCNgZ0TeHpp8uPSrDCh9k%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Стройдормаш",
+        "value": "STROJDORMASH",
+        "image": "https://img.acat.online/acat/main/marks/145.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=g5pD8CMSOjptJSRfdLtAQ5xjX6s%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Стромнефтемаш",
+        "value": "STROMNEFTEMASH",
+        "image": "https://img.acat.online/acat/main/marks/176.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=PeCoxr5W%2FYC4MzY%2F8cVAL0RPm1Y%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ТВЭКС",
+        "value": "TVEHKS",
+        "image": "https://img.acat.online/acat/main/marks/114.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=GxDIzF43kez5RynHgp5fDzyzDCM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ТеКЗ",
+        "value": "TEKZ",
+        "image": "https://img.acat.online/acat/main/marks/307.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=fFlCN00I3EbAmyLe%2F2W0C7%2FLAw4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Техника-сервис",
+        "value": "TECHNIKA_SERVICE",
+        "image": "https://img.acat.online/acat/main/marks/305.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=M%2FUo6HBs%2FZJt%2BFxBXSTx%2B2PveDU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ТЗА",
+        "value": "TZA",
+        "image": "https://img.acat.online/acat/main/marks/218.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=AHSKUjsWaUaQj8sJ8mPRY3wX9QI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ТКЗ",
+        "value": "TKZ",
+        "image": "https://img.acat.online/acat/main/marks/160.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=o18EYqepHHTPz52jox%2FKIznYNKg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ТМЗВ",
+        "value": "TMZV",
+        "image": "https://img.acat.online/acat/main/marks/270.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=1PtNZZzLBSNAx6IfdvX3XvAXduQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Торфмаш",
+        "value": "TORFMASH",
+        "image": "https://img.acat.online/acat/main/marks/179.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=0Idgz3oF2f5MFGtkTPay1NqKBpA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ТТМ",
+        "value": "TTM",
+        "image": "https://img.acat.online/acat/main/marks/319.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=b%2FAefyzipmZlJJBBvAKsWQOYeKI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "УВЗ",
+        "value": "UVZ",
+        "image": "https://img.acat.online/acat/main/marks/140.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=8Gze%2BD7XaBRSo1qRoJBh8uSPtXs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "УЗСТ",
+        "value": "UZST",
+        "image": "https://img.acat.online/acat/main/marks/348.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=wAQZOguesDqiStCIPXOPfRJgNzk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "УМЗ №2",
+        "value": "UMZ_-2",
+        "image": "https://img.acat.online/acat/main/marks/166.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=vVtkkVGUFOfoBc3pLqTVEOHJun4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "УМПО",
+        "value": "UMPO",
+        "image": "https://img.acat.online/acat/main/marks/172.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=oYF7RYvibvK5UfIUgJahWH7Cfys%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Унисибмаш",
+        "value": "UNISIBMASH",
+        "image": "https://img.acat.online/acat/main/marks/253.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2FnaBsferWzNla%2B7c2%2FuO9uqbnp4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Урал",
+        "value": "URAL",
+        "image": "https://img.acat.online/acat/main/marks/49.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=L90rWqMNyfJcvsgNJ4nDHUm6Zmc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Уралмаш",
+        "value": "URALMASH",
+        "image": "https://img.acat.online/acat/main/marks/197.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=sOagxX%2B0K7ed%2FLoYNp1%2BB6lgDkM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ХЗТСШ",
+        "value": "HZTSSH",
+        "image": "https://img.acat.online/acat/main/marks/68.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=nOcvcSHaLuLtzFrWByIyiK9IPcQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ХТЗ",
+        "value": "HTZ",
+        "image": "https://img.acat.online/acat/main/marks/73.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ZESQwUy%2B48Dr5VR8dV8nwjhQ8f8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЧелЭкс",
+        "value": "CHELEKS",
+        "image": "https://img.acat.online/acat/main/marks/283.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=fu3GwNYOzjgThEG2qNJrgX1Ukmg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Червона зирка",
+        "value": "CHERVONA_ZIRKA",
+        "image": "https://img.acat.online/acat/main/marks/155.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=3NrV0uK9ofi6DeJ4kaWK0R4Tp2U%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЧЗТС",
+        "value": "CHZTS",
+        "image": "https://img.acat.online/acat/main/marks/224.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=pSqcHvKS7FJLXvlkQdcf24L6k%2F0%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЧМЗ",
+        "value": "CHMZ",
+        "image": "https://img.acat.online/acat/main/marks/231.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=SHRHavyC%2BvsU8KFlwhzjk62CT%2F0%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЧСДМ",
+        "value": "CHSDM",
+        "image": "https://img.acat.online/acat/main/marks/123.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=JvTtwVlbcRcvuGUeUZWZTpVUL0A%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЧТЗ",
+        "value": "CHTZ",
+        "image": "https://img.acat.online/acat/main/marks/72.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=PQSAKDogqzRjD%2BbTmn9ktnXIGxw%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ШААЗ",
+        "value": "SHAAZ",
+        "image": "https://img.acat.online/acat/main/marks/251.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=LLvwyywVtsVqI2mVQa79zOsMSJs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Экско",
+        "value": "EHKSKO",
+        "image": "https://img.acat.online/acat/main/marks/219.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=av7JtJdkkXhYG%2FgmEXCeJNpLIZ0%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Эксмаш",
+        "value": "EHKSMASH",
+        "image": "https://img.acat.online/acat/main/marks/221.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=oCMTY%2B%2FKV6Om%2BcOvOPt900EeGGA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЮМЗ",
+        "value": "YUMZ",
+        "image": "https://img.acat.online/acat/main/marks/74.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=al%2BoHPQ6YIQkjCnuQltCJp%2F516E%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЮрМаш",
+        "value": "YURMASH",
+        "image": "https://img.acat.online/acat/main/marks/150.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=fSmAyjD0aFs70aWuzzFdTYz9%2F%2Fc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Tinger",
+        "value": "TINGER",
+        "image": "https://img.acat.online/acat/main/marks/341.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=eDelgdNDq6cHAXYsucdKFkLmSpM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ZF",
+        "value": "ZF",
+        "image": "https://img.acat.online/acat/main/marks/205.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=m1v8DljDKk4o9Rx%2By%2F3rKAKzYd8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      }
+    ]
+  },
+  {
+    "index": 7,
+    "name": "Спецтехника (иномарки)",
+    "value": "SPECIAL_TECH_FOREIGN",
+    "image": "https://img.acat.online/acat/main/types/11.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ji9l78sHjDPp6UGO9jZcQI1Qtl4%3D",
+    "marks": [
+      {
+        "name": "Amity",
+        "value": "AMITY",
+        "image": "https://img.acat.online/acat/main/marks/293.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=4S4iHFWo7fr21a%2FLJSdF3m5209o%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Balkancar",
+        "value": "BALKANCAR",
+        "image": "https://img.acat.online/acat/main/marks/133.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=5XIl79HLxmSXqB9%2B%2F5MRyu88GOs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Carmix",
+        "value": "CARMIX",
+        "image": "https://img.acat.online/acat/main/marks/315.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=CYLolm7cKqbCynH6Ah6EpYkSg2M%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Case",
+        "value": "CASE",
+        "image": "https://img.acat.online/acat/main/marks/195.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=vFprYh2fObVP6vUTtd6nSdKak64%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Changlin",
+        "value": "CHANGLIN",
+        "image": "https://img.acat.online/acat/main/marks/336.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ejo7hPcoaKMNbYXbAE5%2FnG0tH%2Fo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "CHTC JOVE",
+        "value": "CHTC_JOVE",
+        "image": "https://img.acat.online/acat/main/marks/326.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ymgExOFTM3wgITxyjoNcncXtTQk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "CSM",
+        "value": "CSM",
+        "image": "https://img.acat.online/acat/main/marks/264.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=onCdecsJ16VT77gqFWl0FJH%2Bjps%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "CVS FERRARI",
+        "value": "CVS_FERRARI",
+        "image": "https://img.acat.online/acat/main/marks/285.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=EewxONlLokB%2FRfwDGx2YD3Oc77c%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ChengGong",
+        "value": "CHENGGONG",
+        "image": "https://img.acat.online/acat/main/marks/200.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=tnfChIgDsfBIjFcyGssGsGDRrBo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Daifeng",
+        "value": "DAIFENG",
+        "image": "https://img.acat.online/acat/main/marks/337.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=CWCejOvTTTfWTjVobOW5i5c0gqk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Delta",
+        "value": "DELTA",
+        "image": "https://img.acat.online/acat/main/marks/273.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=aZNIUMxXjdpWZE2a8zJuNafhniA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Detva",
+        "value": "DETVA",
+        "image": "https://img.acat.online/acat/main/marks/142.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=SXksj0OvIBVAyP7Dawokyb%2FcE7A%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Dimex",
+        "value": "DIMEX",
+        "image": "https://img.acat.online/acat/main/marks/294.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=arPYOFGbkxgg2L8Yq6%2B6JuRHs4o%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Doosan",
+        "value": "DOOSAN",
+        "image": "https://img.acat.online/acat/main/marks/192.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=wGE2zMrFNTktfbPwodoh9h14ung%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Dynapac",
+        "value": "DYNAPAC",
+        "image": "https://img.acat.online/acat/main/marks/316.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=FnG67reWrcyPQqY0iO8wEkRf35Y%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Fendt",
+        "value": "FENDT",
+        "image": "https://img.acat.online/acat/main/marks/317.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=mDDUN8leHAIOIUNOctMYD1zf3Rg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Fortschritt",
+        "value": "FORTSCHRITT",
+        "image": "https://img.acat.online/acat/main/marks/139.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=jlFCyeE839mf3o77IcLph0bZ%2BNA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Foton",
+        "value": "FOTON",
+        "image": "https://img.acat.online/acat/main/marks/98.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=TkSuY2KkaAs82exVTGw9B6t6wts%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "FRESIA",
+        "value": "FRESIA",
+        "image": "https://img.acat.online/acat/main/marks/286.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=RD22R9cbg94%2FVusWqA0xmz46jjQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Hanwoo",
+        "value": "HANWOO",
+        "image": "https://img.acat.online/acat/main/marks/196.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=JjE4ewW0wwybaHO4oWa05qCifdQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "HBXG",
+        "value": "HBXG",
+        "image": "https://img.acat.online/acat/main/marks/202.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=GAcKdlLTXA%2Ftm6Sm2gmPAf8ySa0%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Hidromek",
+        "value": "HIDROMEK",
+        "image": "https://img.acat.online/acat/main/marks/236.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=HwzUkqbmFBSV0tGhS%2F6SC5MwGIo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Hitachi",
+        "value": "HITACHI",
+        "image": "https://img.acat.online/acat/main/marks/296.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=oIrCoyVfafYq7gUPE83ROdnp610%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Honey Bee",
+        "value": "HONEY_BEE",
+        "image": "https://img.acat.online/acat/main/marks/239.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=q8PNFpxIn8MQ0oX42w3PUZdD6EM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "JCB",
+        "value": "JCB",
+        "image": "https://img.acat.online/acat/main/marks/209.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=AQbMq8bARS82U%2FCbaGRXNV3AYeM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Kalmar",
+        "value": "KALMAR",
+        "image": "https://img.acat.online/acat/main/marks/314.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=8TQO0C81NPo%2B4%2B8%2BrJGQxBLO4x0%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Komat'su",
+        "value": "KOMAT'SU",
+        "image": "https://img.acat.online/acat/main/marks/189.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=31%2FCTjc5%2Byseove8jNizF9d39Uo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Krone",
+        "value": "KRONE",
+        "image": "https://img.acat.online/acat/main/marks/321.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=sQYb9XMEjT7ym6dX3qRGzZPITaI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Lemken",
+        "value": "LEMKEN",
+        "image": "https://img.acat.online/acat/main/marks/295.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=5UotCWJP%2F%2B7Q8Fwe2psTv9tksgk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "LiuGong",
+        "value": "LIUGONG",
+        "image": "https://img.acat.online/acat/main/marks/244.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=FOC9fyHlgKfex38wcUlUhO31Pdk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Locust",
+        "value": "LOCUST",
+        "image": "https://img.acat.online/acat/main/marks/199.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=NY6K1nARkt6GxSWKkoXAtUj%2FXrA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Lonking",
+        "value": "LONKING",
+        "image": "https://img.acat.online/acat/main/marks/297.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=AmHtUisK0onQGWYBFwukurcJr4c%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "MacDon",
+        "value": "MACDON",
+        "image": "https://img.acat.online/acat/main/marks/254.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=c9LaMa7fOhol2J6Wsw5lhlsNrxc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Massey Ferguson",
+        "value": "MASSEY_FERGUSON",
+        "image": "https://img.acat.online/acat/main/marks/318.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=4qs47sYG0Yv54lfFwR9rc8Y%2FKIM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Mecanica Ceahlau",
+        "value": "MECANICA_CEAHLAU",
+        "image": "https://img.acat.online/acat/main/marks/173.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=61n4Th5i%2B9Lq3Fz8GG66DZ36cxI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Mercedes Benz",
+        "value": "mercedes",
+        "image": "https://img.acat.online/acat/main/marks/19.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=w6OLctbj%2Fsn8D%2BHtZ77P6%2FeaoHU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": true
+      },
+      {
+        "name": "Metal-Fach",
+        "value": "METAL-FACH",
+        "image": "https://img.acat.online/acat/main/marks/249.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=b%2Ft6oKYVkKUA4uidwX71Ynq2L%2Fs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Mitsuber",
+        "value": "MITSUBER",
+        "image": "https://img.acat.online/acat/main/marks/234.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=TA0x7Vq%2Bpydu1MFd59aWRe4eZOk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "New Holland",
+        "value": "NEW_HOLLAND",
+        "image": "https://img.acat.online/acat/main/marks/187.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=yoidd7JY9at%2FHtUyONrjXT3dXbA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Pengpu",
+        "value": "PENGPU",
+        "image": "https://img.acat.online/acat/main/marks/298.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=ZX%2Bk4YCVAnjVoQ%2F4fC0JeOVxnNA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "SCHOPF",
+        "value": "SCHOPF",
+        "image": "https://img.acat.online/acat/main/marks/287.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=A5aTnAnSnvYlR7W4fKvJjKAmODQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "SDLG",
+        "value": "SDLG",
+        "image": "https://img.acat.online/acat/main/marks/247.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=WYuFnlr5GyfTZbZ6JnBXJzxTZMs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "SEM",
+        "value": "SEM",
+        "image": "https://img.acat.online/acat/main/marks/333.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=CV%2FcJtkZwKU88ev9b%2BFAdGKyRXQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Shantui",
+        "value": "SHANTUI",
+        "image": "https://img.acat.online/acat/main/marks/204.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=FtDODMFdJFOsE9ruIhDeKOO%2BiuY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Terex",
+        "value": "TEREX",
+        "image": "https://img.acat.online/acat/main/marks/235.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=08aopQZxot6fSHUZdyexN68h4ZE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Thermo King",
+        "value": "THERMO_KING",
+        "image": "https://img.acat.online/acat/main/marks/225.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=xY2x%2FeMoM%2Bg54OdrXcflkGyaGo4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Tiangong",
+        "value": "TIANGONG",
+        "image": "https://img.acat.online/acat/main/marks/338.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=lSPWgnXG3alNh0cYKx5xBFa8J80%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Tigarbo",
+        "value": "TIGARBO",
+        "image": "https://img.acat.online/acat/main/marks/186.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=9EGqweNGy%2B5pQOs12iuLTPH0Kds%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Tracom",
+        "value": "TRACOM",
+        "image": "https://img.acat.online/acat/main/marks/213.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=37iadn8%2BX3GlBOu3UiZ%2Blr0SNw4%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Versatile",
+        "value": "VERSATILE",
+        "image": "https://img.acat.online/acat/main/marks/240.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=1sVjTCVokGTbwmt6Qb6u8WH5uVg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Volvo",
+        "value": "VOLVO",
+        "image": "https://img.acat.online/acat/main/marks/34.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Hpbcwou9hKX4ZeeQRY6cVucuOlA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "XCMG",
+        "value": "XCMG",
+        "image": "https://img.acat.online/acat/main/marks/188.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=j5mYDgx1AswJBBe7LCAn1DdOWoE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "XGMA",
+        "value": "XGMA",
+        "image": "https://img.acat.online/acat/main/marks/327.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=gWyF%2FVTjIQt5YrKjz%2FHapxtuR2o%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Xiamen",
+        "value": "XIAMEN",
+        "image": "https://img.acat.online/acat/main/marks/182.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=zVBJAj%2BW4fkO7ex9cgrWl5QuiQQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "YTO",
+        "value": "YTO",
+        "image": "https://img.acat.online/acat/main/marks/339.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=S%2F1ghdi6Kp75MyGwNrVKfrI3UTI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Zhenyu",
+        "value": "ZHENYU",
+        "image": "https://img.acat.online/acat/main/marks/334.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=jqDGOwyaLPekZcn1m9NW7jV1Ngg%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Zoomlion",
+        "value": "ZOOMLION",
+        "image": "https://img.acat.online/acat/main/marks/322.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=PvIFpbhGX4OgWNOECJZlfclDXxI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      }
+    ]
+  },
+  {
+    "index": 8,
+    "name": "Двигатели",
+    "value": "ENGINE",
+    "image": "https://img.acat.online/acat/main/types/8.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=USJ4xEiUrjKOL05NABY%2Bq3q%2FFFo%3D",
+    "marks": [
+      {
+        "name": "Balkancar",
+        "value": "BALKANCAR_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/133.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=5XIl79HLxmSXqB9%2B%2F5MRyu88GOs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Bearford",
+        "value": "BEARFORD_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/180.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=bVn0Py7cui3bKiXTwzLxN%2FgzWAk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Caterpillar",
+        "value": "CATERPILLAR_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/99.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=5ODkU133dzrrDzk8mI10lKYg4nc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Cummins",
+        "value": "CUMMINS_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/190.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=yb6aUUpU9lWOin%2BhwvwkTSV6OMw%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Deutz",
+        "value": "DEUTZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/181.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=PXlTeB8ZA%2B9GmpyxTNBfeZG4sjM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "DongFeng",
+        "value": "DONGFENG_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/96.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=RNojLS9LNukCQyrm%2FheB1WXNe6s%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Great Wall",
+        "value": "GREAT_WALL_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/290.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Dp0YiRcfhMbm8LN3O59AbQ4a4nI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "HSW",
+        "value": "HSW_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/291.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=DYfzikI5Mi%2BnwqhO1jBl%2FIYvao8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "IVECO",
+        "value": "iveco",
+        "image": "https://img.acat.online/acat/main/marks/13.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2BaZUPaR3ocwwUpQbUbWvqrLCGQA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": true
+      },
+      {
+        "name": "Komat'su",
+        "value": "KOMAT'SU_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/189.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=31%2FCTjc5%2Byseove8jNizF9d39Uo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Nissan",
+        "value": "NISSAN_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/21.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=1INWKbAkt1Q9ocWvhv%2BEW2FJhzA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "SDEC",
+        "value": "SDEC_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/269.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=9dYrt2mgIBO9S6upc4ivHkz1eQU%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Scania",
+        "value": "SCANIA_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/89.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=lnKg0hLcHmSmMdrQtq5IQm5H6mE%3D",
+        "SKD": false,
+        "archival": true,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Valmet",
+        "value": "VALMET_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/292.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=AjSLaf2crP%2B7FzuJHXwtE3jvsrA%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Yanmar",
+        "value": "YANMAR_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/212.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Zk7bRrEgr9hirVl9WM9AWORAeGw%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Yuchai",
+        "value": "YUCHAI_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/206.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=X%2FeZHXjqRq%2BkZlqV82kY0K%2BGEd8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Weichai",
+        "value": "WEICHAI_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/288.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=SJTp%2BbQYJKZQE4JljtoWbv5VZVE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Zetor",
+        "value": "ZETOR_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/193.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=H72gRogKM1VcAwJdaK4WxJlua5s%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "АМЗ",
+        "value": "AMZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/116.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=1CMJXe%2FWtsdwsklAOOUkRDHmyZI%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Барнаултрансмаш",
+        "value": "BARNAULTRANSMASH_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/177.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=p5zWARBqInb6E8pw21Ac9Z%2FFCIs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "ВТЗ",
+        "value": "VTZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/69.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=lUueP3nrlHlSUZdM9JjRpyUQ2kk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "ЗиД",
+        "value": "ZID_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/119.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=STO9yKWj53C1fMXwGQ55ofGmJEo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "ЗМЗ",
+        "value": "ZMZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/51.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=veL3llH6WGsrYSbxZw4MT6g%2BI1M%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "КамАЗ",
+        "value": "KAMAZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/45.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Ik90Y6a7TEeSfmydriV5lr0ff8Q%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "ММЗ",
+        "value": "MMZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/107.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=zmMumgr5TRCbByOj8AKcywkgd4Y%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Пензадизельмаш",
+        "value": "PENZADIZELMASH_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/208.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=hAtQOAG%2FSy11kr24KXrJM89pt7I%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "СМД",
+        "value": "SMD_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/115.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=e9S%2F3fTrPJrqk0k5vHzyoZ5Kz9Q%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "ТДА",
+        "value": "TDA_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/278.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Pa19RdxWWHQVJ9QSOQBPWAvEPPs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Теплостар",
+        "value": "TEPLOSTAR_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/198.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=RaMyxi3zTVM6Pvay%2Bu0TUdHm1zk%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "ТМЗ",
+        "value": "TMZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/216.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2BVJnugR6GJkECNRu4i%2FQvwNL4Ow%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "УДМЗ",
+        "value": "UDMZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/347.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=NgVlVlDMY%2ByPndE%2BE2dgEoG1ddM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "ЧТЗ",
+        "value": "CHTZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/72.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=PQSAKDogqzRjD%2BbTmn9ktnXIGxw%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "Элтра",
+        "value": "EHLTRA_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/214.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=KKOjn6CgrJSZmlAkpVwh%2Fy5ZQ20%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "ЮМЗ",
+        "value": "YUMZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/74.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=al%2BoHPQ6YIQkjCnuQltCJp%2F516E%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      },
+      {
+        "name": "ЯМЗ",
+        "value": "YAMZ_ENGINE",
+        "image": "https://img.acat.online/acat/main/marks/52.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=2aHeNXDdCg2cfwsHJZExexGCZvM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": true,
+        "vin": false
+      }
+    ]
+  },
+  {
+    "index": 9,
+    "name": "Мототехника",
+    "value": "MOTORCYCLE",
+    "image": "https://img.acat.online/acat/main/types/4.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Z%2F1sl0z7gp1ed1F1laAbxIYbkew%3D",
+    "marks": [
+      {
+        "name": "BMW",
+        "value": "bmw-moto",
+        "image": "https://img.acat.online/acat/main/marks/3.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=uYS04Pxt3cr2U6sH156sZ3DgBqM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": true
+      },
+      {
+        "name": "CF Moto",
+        "value": "CF_MOTO",
+        "image": "https://img.acat.online/acat/main/marks/168.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=eAxT%2FqNivc21qnD18UUsGxPSg%2Fc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Eagle-Wing",
+        "value": "EAGLE-WING",
+        "image": "https://img.acat.online/acat/main/marks/201.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=yUiEEo4Vk4g41WwogVeI13IVDQY%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Jawa",
+        "value": "JAWA",
+        "image": "https://img.acat.online/acat/main/marks/147.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=aR7%2F%2BXuD16sqcTYnHVaYUWvIHxc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Jianshe",
+        "value": "JIANSHE",
+        "image": "https://img.acat.online/acat/main/marks/169.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=xlo8j%2FXsrcxpL9v4VyfLzCQkVrE%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Sarkana zvaigzne",
+        "value": "SARKANA_ZVAIGZNE",
+        "image": "https://img.acat.online/acat/main/marks/159.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=xthG47JmJbw9r6MP18WSFrzmwS8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Suzuki",
+        "value": "SUZUKI",
+        "image": "https://img.acat.online/acat/main/marks/31.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=axuwXjGB8VetlAT479Rim6vMZ0Q%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Zongshen",
+        "value": "ZONGSHEN",
+        "image": "https://img.acat.online/acat/main/marks/175.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=j%2B%2FVvAq%2BX9QZ%2FoMaglOB6I%2B4wT8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ВПМЗ",
+        "value": "VPMZ",
+        "image": "https://img.acat.online/acat/main/marks/303.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=%2B2j6cEtKxrO3rOoUYYwO90r91Z8%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЗиД",
+        "value": "ZID",
+        "image": "https://img.acat.online/acat/main/marks/119.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=STO9yKWj53C1fMXwGQ55ofGmJEo%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ИЖ",
+        "value": "IZH",
+        "image": "https://img.acat.online/acat/main/marks/38.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=yD059bFmHTXEbS7O8VbplzMBpDs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ИМЗ",
+        "value": "IMZ",
+        "image": "https://img.acat.online/acat/main/marks/153.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=Eom8ZMGPbi5tsSvWTNvzK21UhQM%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ММВЗ",
+        "value": "MMVZ",
+        "image": "https://img.acat.online/acat/main/marks/302.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=X4vdbBskaOqlNQDuh49WPgj86Vs%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "Русская механика",
+        "value": "RUSSKAYA_MEKHANIKA",
+        "image": "https://img.acat.online/acat/main/marks/174.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=zuCMscB%2FDX0gBhCy7Cljqh0xjrc%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "СЭК",
+        "value": "SEK",
+        "image": "https://img.acat.online/acat/main/marks/280.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=l6l3ysQhVCqDm%2FozH7PG46eOsvQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "УМПО",
+        "value": "UMPO",
+        "image": "https://img.acat.online/acat/main/marks/172.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=oYF7RYvibvK5UfIUgJahWH7Cfys%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      },
+      {
+        "name": "ЯВТ",
+        "value": "YAVT",
+        "image": "https://img.acat.online/acat/main/marks/284.png?AWSAccessKeyId=9sY8a5xfU3eNf8SPbg69&Expires=1697580702&Signature=DyGO5%2BhVbJ2ZW5mCDSjKzvX%2BXBQ%3D",
+        "SKD": false,
+        "archival": false,
+        "engine": false,
+        "vin": false
+      }
+    ]
+  }
+]

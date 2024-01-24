@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        position: relative;
+        font-size: 16.8px;
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 1.25;
+        color: #000;
+        width: 100%;
+        height: 960px;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 16.8px;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      p {
+        text-indent: 29px;
+      }
+      table {
+        width: 100%;
+        line-height: 1.2;
+      }
+      table, tr, th, td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 10px;
+        text-align: left;
+        overflow-wrap: break-word;
+      }
+      table.products-table {
+        margin-top: 20px;
+      }
+      table.products-table th, table.products-table td {
+        text-align: center;
+        padding: 10px 5px;
+      }
+      table.products-table td.text-left {
+        text-align: left;
+      }
+
+      .totals {
+        display: flex;
+        justify-content: flex-end;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 20px;
+      }
+      .totals .param-names {
+        margin-right: 20px;
+      }
+      .sum-text {
+        margin-top: 15px;
+      }
+
+      hr {
+        margin-top: 15px;
+        margin-bottom: 3px;
+      }
+
+      li {
+        list-style-type: none;
+        padding-left: 20px;
+      } /* Убираем исходную нумерацию у списка */
+      ol {
+        counter-reset: list1;
+        padding-left: 9px;
+      } /* Инициируем счетчик */
+      ol li:before {
+        counter-increment: list1; /* Увеличиваем значение счетчика */
+        content: counter(list1) '. '; /* Выводим число */
+      }
+      ol ol {
+        counter-reset: list2;
+      } /* Инициируем счетчик вложенного списка */
+      ol ol li:before {
+        counter-increment: list2; /* Увеличиваем значение счетчика вложенного списка */
+        content: counter(list1) '.' counter(list2) '. '; /* Выводим число */
+      }
+      ol ol ol {
+        counter-reset: list3;
+      } /* Инициируем счетчик вложенного списка */
+      ol ol ol li:before {
+        counter-increment: list3; /* Увеличиваем значение счетчика вложенного списка */
+        content: counter(list1) '.' counter(list2) '. ' counter(list3) '. '; /* Выводим число */
+      }
+
+      .text-left {
+        text-align: left;
+      }
+      .one-line {
+        clear: both;
+        white-space: nowrap;
+      }
+      .signature-block {
+        position: relative;
+      }
+      .signature {
+        position: absolute;
+        height: 70px;
+        left: 70px;
+        top: 38px;
+        z-index: 1;
+      }
+      .stamp {
+        position: absolute;
+        height: 150px;
+        left: 0px;
+        top: 30px;
+        z-index: 2;
+      }
+      .payment-postponed {
+        color: #e6332a;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    {{#if paymentPostponedAt}}
+    <div class="payment-postponed">ОТСРОЧКА ПЛАТЕЖА ДО: {{paymentPostponedAt}}</div>
+    {{/if}}
+    <span>ПРОВЕРЬТЕ ПРАВИЛЬНОСТЬ РЕКВИЗИТОВ ВАШЕЙ ОРГАНИЗАЦИИ И УКАЖИТЕ НОМЕР ЭТОГО СЧЕТА В ПЛАТЕЖНОМ ПОРУЧЕНИИ</span
+    >
+    <table>
+      <tr>
+        <td>
+          Банк получателя:<br>
+          БАЙКАЛЬСКИЙ БАНК ПАО СБЕРБАНК
+        </td>
+        <td class="one-line">
+          <span class="one-line">БИК 042520607</span><br>
+          <span class="one-line">Кор. Сч. № 30101810900000000607</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="one-line">Получатель: ООО «ИНФИНИТУМ» ИНН/КПП 3801147025/380101001</td>
+        <td class="one-line">Сч. № 40702810018350014018</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          Назначение платежа: Оплата счет-договора № {{invoiceNumber}} от {{date}} г. {{#if totals.nds}}НДС 20%{{else}}без НДС{{/if}}. по заказу № {{idOrder}}
+        </td>
+      </tr>
+    </table>
+
+    <h1>СЧЕТ-ДОГОВОР № {{invoiceNumber}} от {{date}} г.</h1>
+
+    <table>
+      {{#if displayAgent}}
+      <tr>
+        <td>Агент</td>
+        <td>
+          ООО «ИНФИНИТУМ», ИНН/КПП: 3801147025/380101001<br />
+          адрес: 665800, Иркутская область, г. Ангарск, нп. Второй промышленный массив, квл. 41, стр. 15, оф. 57, E-mail: info@inf.market.
+        </td>
+      </tr>
+      {{/if}}
+      <tr>
+        <td>Поставщик</td>
+        <td>
+          {{sellerOrg.name}}, ИНН/КПП {{sellerOrg.inn}}/{{sellerOrg.kpp}}, {{sellerOrg.ogrnForm}} {{sellerOrg.ogrn}}<br />
+          адрес: {{sellerOrg.address}}. E-mail: {{sellerOrg.email}}.
+        </td>
+      </tr>
+      <tr>
+        <td>Покупатель</td>
+        <td>
+          {{customerOrg.name}}, ИНН/КПП {{customerOrg.inn}}/{{customerOrg.kpp}}, {{customerOrg.ogrnForm}} {{customerOrg.ogrn}}<br />
+          Адрес: {{customerOrg.address}}. E-mail: {{customerOrg.email}}.
+        </td>
+      </tr>
+    </table>
+
+    <table class="products-table">
+      <tr>
+        <th>№</th>
+        <th>Артикул</th>
+        <th>Бренд</th>
+        <th>Товары (работы, услуги)</th>
+        <th>Количест<br>во, шт</th>
+        <th>Цена, руб</th>
+        <th>Сумма, руб</th>
+      </tr>
+      {{#each productsData}}
+        <tr>
+          <td>{{this.index}}</td>
+          <td>{{this.article}}</td>
+          <td>{{this.manufacturer}}</td>
+          <td class="text-left">{{this.name}}</td>
+          <td>{{this.count}}</td>
+          <td class="one-line">{{this.unitPrice}}</td>
+          <td class="one-line">{{this.totalPrice}}</td>
+        </tr>
+      {{/each}}
+    </table>
+
+    <div class="totals">
+      <div class="param-names">
+        Сумма:<br>
+        {{#if totals.nds}}НДС 20%:<br>{{/if}}
+        Итого к оплате:
+      </div>
+      <div class="param-values">
+        {{totals.sum}}<br>
+        {{#if totals.nds}}{{totals.nds}}<br>{{/if}}
+        {{totals.sum}}
+      </div>
+    </div>
+
+    <div class="sum-text">
+      Всего наименований {{totals.productNamesCount}} в количестве {{totals.productsCount}}шт., на сумму {{totals.sum}} рублей<br>
+      <strong>{{totalsInWords.sum}}.{{#if totals.nds}} В том числе НДС 20%: {{totalsInWords.nds}}.{{/if}}</strong>
+    </div>
+
+    <hr>
+
+    <div>
+      <p>
+        Настоящий Счет-договор является письменным предложением Поставщика Покупателю заключить договор поставки
+        товара (далее –– Договор) на изложенных ниже условиях:
+      </p>
+      <ol>
+        <li>Предмет, количество и стоимость товара и условия доставки указаны в Счет-договоре.</li>
+        <li>
+          Договор считается заключенным (акцепт оферты) с момента оплаты Счет-договора Покупателем, а именно с даты
+          зачисления денежных средств на расчетный счет {{#if displayAgent}}Агента{{else}}Поставщика{{/if}}. Неполная оплата Счет-договора не является
+          акцептом, если иное не указано в Счет-договоре.
+        </li>
+        <li>
+          Способ доставки товара:
+          <ol>
+            <li>
+              Покупатель должен осуществить выборку товара со склада/магазина Поставщика в течение 3 (трех) дней с
+              момента получения уведомления о готовности товара.
+            </li>
+            <li>Отгрузка транспортной компанией - силами поставщика или покупателя.</li>
+          </ol>
+          Способ доставки указывается покупателем при оформлении заказа на Сервисе.
+        </li>
+        <li>
+          Приемка товара
+          <ol>
+            <li>
+              При приемке товара Покупатель обязан проверить:
+              <ol>
+                <li>количество и ассортимент товара на соответствие Счет-договору;</li>
+                <li>комплектность и качество товара;</li>
+                <li>отсутствие внешних повреждений упаковки и товара;</li>
+                <li>наличие необходимой документации.</li>
+              </ol>
+            </li>
+            <li>
+              Покупатель, принимая товар и расписываясь в накладной, подтверждает, что:
+              <ol>
+                <li>
+                  характеристики полученного товара соответствуют Счет-договору, принято товара по количеству мест,
+                  указанных в накладной;
+                </li>
+                <li>
+                  Поставщик полностью выполнил обязательства по отгрузке товара надлежащего качества, ассортимента,
+                  комплектности и передачи документации к товару.
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        {{#if displayAgent}}
+        <li>
+          Агент не несет ответственность за качество товара, действия Поставщика при доставке товара. Все
+          претензии Покупатель направляет напрямую Поставщику.
+        </li>
+        {{/if}}
+        <li>
+          Счет-договор действителен в течение 3 (трех) календарных дней. В случае просрочки оплаты Счета Покупателем
+          Поставщик вправе вернуть денежные средства и отказаться от исполнения обязательств, указанных в Счете.
+        </li>
+        <li>
+          Все, что не урегулировано Счет-договором, подлежит разрешению в соответствии с Правилами заключения договора
+          поставки и законодательством РФ.
+        </li>
+      </ol>
+    </div>
+
+    <br><br>
+    {{#if signatureIndent}}<div style="height:{{signatureIndent}}px"></div>{{/if}}
+    <div>
+      <div class="signature-block">
+        Генеральный директор ООО “ИНФИНИТУМ”<br><br><br>
+        М.П. _________________/Таскаев А.Н./
+        <img src="{{url}}/images/inf-signature.png" alt="" class="signature">
+        <img src="{{url}}/images/inf-stamp.png" alt="" class="stamp">
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,97 @@
+<html lang='ru'>
+  <head>
+    <style>
+      {{defaultCssStyle}}
+    </style>
+  </head>
+  <body>
+    <h1>Запрос {{idOrder}}</h1>
+    <p>Дата заказа: {{date}}</p>
+    {{#if customerName}}<p>Покупатель: {{customerName}}</p>{{/if}}
+    <p>Адрес доставки: {{deliveryAddress}}</p>
+    {{#if comment}}<p>Комментарий: {{comment}}</p>{{/if}}
+
+    {{#each offers}}
+      <div class="offer">
+        <br><br>
+        <h2>Продавец {{this.index}}</h2>
+        <div class="sellerInfo">
+          <span>Продавец: {{this.seller.name}}</span>
+          <span class='rating' style='color:{{#if this.seller.reviewsNumber}}#ffb800{{else}}rgba(0, 0, 0, 0.85){{/if}};'>
+            {{this.seller.rating}}
+            {{#each this.seller.stars}}
+              {{#if this}}
+                <svg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                  <path
+                    d='M6 0L7.34708 4.1459H11.7063L8.17963 6.7082L9.52671 10.8541L6 8.2918L2.47329 10.8541L3.82037 6.7082L0.293661 4.1459H4.65292L6 0Z'
+                    fill='#FFB800'
+                  ></path>
+                </svg>
+              {{else}}
+                <svg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                  <path
+                    d='M6 0L7.34708 4.1459H11.7063L8.17963 6.7082L9.52671 10.8541L6 8.2918L2.47329 10.8541L3.82037 6.7082L0.293661 4.1459H4.65292L6 0Z'
+                    fill='#C4C4C4'
+                  ></path>
+                </svg>
+              {{/if}}
+            {{/each}}
+          </span>
+          <span>Отзывы: {{this.seller.reviewsNumber}}</span>
+          <span>Продаж: {{this.seller.salesNumber}}</span>
+        </div>
+        <p>Условие доставки: {{this.deliveryOption}}</p>
+        <p>Трек номер: {{this.trackNumber}}</p>
+        <p>Заказ отгружен: {{this.departureDate}}</p>
+        <p>Заказ получен: {{this.receivingDate}}</p>
+        <div>Цены указаны: {{#if this.hasNds}}c НДС{{else}}без НДС{{/if}}</div>
+        <div>{{this.organizationName}}</div>
+
+        <br>
+        <table class="size-small">
+          <tr>
+            <th width="4%" rowspan="2">№</th>
+            <th width="22%" rowspan="2">Наименование</th>
+            <th width="11%" rowspan="2">Бренд</th>
+            <th width="11%" rowspan="2">Артикул</th>
+            <th width="5%" rowspan="2">Кол-во</th>
+            <th width="10%" rowspan="2">Цена за ед, ₽</th>
+            <th width="7%" rowspan="2">Кол-во в наличии</th>
+            <th width="14%" colspan="2">Под заказ</th>
+            <th width="9%" rowspan="2">Сумма, ₽</th>
+            <th width="7%" rowspan="2">Возврат/<br>обмен</th>
+          </tr>
+          <tr>
+            <td width='7%'>кол-во</td>
+            <td width='7%'>срок</td>
+          </tr>
+          {{#each this.products}}
+            <tr>
+              <td>{{this.index}}</td>
+              <td>{{this.name}}</td>
+              <td>{{this.manufacturer}}</td>
+              <td>{{this.article}}</td>
+              <td>{{this.requestedQuantity}}</td>
+              <td>{{this.unitPrice}}</td>
+              <td>{{this.offeredQuantity}}</td>
+              <td>{{this.deliveryQuantity}}</td>
+              <td>{{this.deliveryTerm}}</td>
+              <td>{{this.totalPrice}}</td>
+              <td>{{this.refundStatus}}</td>
+            </tr>
+          {{/each}}
+          <tr class="text-bold">
+            <td colspan="4" class="text-right">Итого:</td>
+            <td>{{this.total.requestedQuantity}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{this.total.price}}</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    {{/each}}
+  </body>
+</html>

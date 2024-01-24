@@ -1,0 +1,43 @@
+<html lang='ru'>
+  <head>
+    <style>
+      {{defaultCssStyle}}
+    </style>
+  </head>
+  <body>
+    <h1>Запрос {{idOrder}}</h1>
+    <p>Дата заказа: {{date}}</p>
+    {{#if customerName}}<p>Покупатель: {{customerName}}</p>{{/if}}
+    <p>Адрес доставки: {{deliveryAddress}}</p>
+    {{#if comment}}<p>Комментарий: {{comment}}</p>{{/if}}
+
+    <br><br>
+
+    <h2>Весь заказ</h2>
+    <table>
+      <tr>
+        <th width="5%">№</th>
+        <th width="45%">Наименование</th>
+        <th width="10%">Бренд</th>
+        <th width="10%">Артикул</th>
+        <th width="15%">Кол-во</th>
+        <th width="15%">Сумма, ₽</th>
+      </tr>
+      {{#each order.products}}
+        <tr>
+          <td>{{this.index}}</td>
+          <td>{{this.name}}</td>
+          <td>{{this.manufacturer}}</td>
+          <td>{{this.article}}</td>
+          <td>{{this.quantity}}</td>
+          <td>{{this.totalPrice}}</td>
+        </tr>
+      {{/each}}
+      <tr>
+        <td colspan="4" class="text-right text-bold">Итого:</td>
+        <td>{{order.productsQuantity}}</td>
+        <td>{{order.totalPrice}}</td>
+      </tr>
+    </table>
+  </body>
+</html>

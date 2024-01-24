@@ -1,0 +1,88 @@
+<html lang='ru'>
+  <head>
+    <style>
+      {{defaultCssStyle}}
+    </style>
+  </head>
+  <body>
+    <h1>Заказ {{idOrder}}</h1>
+    <p>Дата заказа: {{date}}</p>
+    <p>Покупатель: {{customerName}}</p>
+    <p>Плательщик: {{payerName}}</p>
+    <p>Адрес доставки: {{deliveryAddress}}</p>
+    <p>Условие доставки: {{deliveryOption}}</p>
+    <p>Трек номер: {{trackNumber}}</p>
+    <p>Заказ отгружен: {{departureDate}}</p>
+    <p>Заказ получен: {{receivingDate}}</p>
+    {{#if comment}}<p>Комментарий: {{comment}}</p>{{/if}}
+    <p>Цены указаны: {{#if hasNds}}c НДС{{else}}без НДС{{/if}}</p>
+    <p>{{organizationName}}</p>
+    <p>Комиссия: {{organizationComission}}%</p>
+    <p>CASH: {{total.cash}}</p>
+
+    <br><br>
+    <table class="size-small">
+      <tr>
+        <th width="4%" rowspan="2">№</th>
+        <th width="22%" rowspan="2">Наименование</th>
+        <th width="11%" rowspan="2">Бренд</th>
+        <th width="11%" rowspan="2">Артикул</th>
+        <th width="5%" rowspan="2">Кол-во</th>
+        <th width="10%" rowspan="2">Цена за ед, ₽</th>
+        <th width="7%" rowspan="2">Кол-во в наличии</th>
+        <th width="14%" colspan="2">Под заказ</th>
+        <th width="9%" rowspan="2">Сумма, ₽</th>
+        <th width="7%" rowspan="2">Возврат/<br>обмен</th>
+      </tr>
+      <tr>
+        <td width='7%'>кол-во</td>
+        <td width='7%'>срок</td>
+      </tr>
+      {{#each products}}
+        <tr>
+          <td>{{this.index}}</td>
+          <td>{{this.name}}</td>
+          <td>{{this.manufacturer}}</td>
+          <td>{{this.article}}</td>
+          <td>{{this.requestedQuantity}}</td>
+          <td>{{this.unitPrice}}</td>
+          <td>{{this.offeredQuantity}}</td>
+          <td>{{this.deliveryQuantity}}</td>
+          <td>{{this.deliveryTerm}}</td>
+          <td>{{this.totalPrice}}</td>
+          <td>{{this.refundStatus}}</td>
+        </tr>
+      {{/each}}
+      <tr class="text-bold">
+        <td colspan="4" class="text-right">Итого:</td>
+        <td>{{total.requestedQuantity}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>{{total.price}}</td>
+        <td></td>
+      </tr>
+      <tr class="text-bold">
+        <td colspan="4" class="text-right">Комиссия:</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>{{total.comission}}</td>
+        <td></td>
+      </tr>
+      <tr class="text-bold">
+        <td colspan="4" class="text-right">За вычетом комиссии:</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>{{total.earn}}</td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>

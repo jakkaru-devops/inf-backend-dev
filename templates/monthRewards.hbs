@@ -1,0 +1,206 @@
+<html lang='ru'>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        position: relative;
+        font-size: 14px;
+        font-family: "Roboto", sans-serif;
+        line-height: 1.3;
+        color: rgba(0, 0, 0, 0.85);
+        width: 810px;
+        height: 960px;
+      }
+      .text-left {
+        text-align: left;
+      }
+      .text-right {
+        text-align: right;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 23px;
+        color: #2e2e2e;
+        text-align: left;
+      }
+      p {
+        text-indent: 32px;
+      }
+      table {
+        width: 100%;
+        font-size: 15px;
+        line-height: 1.2;
+      }
+      table.top-table td {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      table.main-table {
+        margin-top: 10px;
+        min-height: 50px;
+        font-size: 14px;
+      }
+      th, td {
+        text-align: center;
+        padding: 2px 5px;
+      }
+      td.text-left {
+        padding-left: 10px;
+      }
+      td.pl-0 {
+        padding-left: 0;
+      }
+      td.pr-0 {
+        padding-right: 0;
+      }
+      td.text-bold {
+        font-weight: 600;
+      }
+      table.main-table, table.main-table tr, table.main-table th, table.main-table td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+      .sum-text {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+      .no-claims {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      table.table-sides {
+        font-size: 13px;
+        margin-top: 20px;
+        border: none;
+      }
+      table.table-sides td {
+        padding: 0;
+        border: none;
+        text-align: left;
+      }
+      table.table-sides hr {
+        margin-top: 30px;
+      }
+      .side-name {
+        font-size: 16px;
+      }
+      .hr {
+        width: 100%;
+        border-bottom: 2px solid #000;
+      }
+      .text-uppercase {
+        text-transform: uppercase;
+      }
+      .director-name {
+        text-align: center;
+        margin-top: 2px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+      .sides-content {
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        justify-content: space-between;
+        padding-bottom: 15px;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{title}}</h1>
+    <br>
+
+    <table class="top-table">
+      <tr>
+        <td class="text-left pl-0">Исполнитель:</td>
+        <td class="text-left text-bold pr-0">{{seller.full}}</td>
+      </tr>
+      <tr>
+        <td class="text-left pl-0">Заказчик:</td>
+        <td class="text-left text-bold pr-0">ООО "ИНФИНИТУМ", ИНН 3801147025, КПП 380101001, 665800, Иркутская область, г. Ангарск, кв-л 41 (второй Промышленный Массив Тер.), строение 15, офис 57</td>
+      </tr>
+      <tr>
+        <td class="text-left pl-0">Основание:</td>
+        <td class="text-left text-bold pr-0">{{confirmingDocName}}</td>
+      </tr>
+    </table>
+
+    <table class="main-table">
+      <tr>
+        <th width='6%'>№</th>
+        <th width='49%'>Наименование работ, услуг</th>
+        <th width="8%">Кол-во</th>
+        <th width="6%">Ед.</th>
+        <th width='13%'>Цена</th>
+        <th width='13%'>Сумма</th>
+      </tr>
+      {{#each orders}}
+        <tr>
+          <td>{{this.number}}</td>
+          <td class="text-left">Заключение договора поставки на Сервисе, заказ {{this.idOrder}} от {{this.date}}</td>
+          <td>{{this.count}}</td>
+          <td>шт</td>
+          <td>{{this.reward}}</td>
+          <td>{{this.reward}}</td>
+        </tr>
+      {{/each}}
+    </table>
+    <br><br>
+    <table class="sub-table">
+      <tr>
+        <td width="10%"></td>
+        <td width="77%" class="text-bold text-right">Итого:</td>
+        <td width="13%" class="text-bold">{{totalAmount.total}}</td>
+      </tr>
+      <tr>
+        <td width="10%"></td>
+        <td width="77%" class="text-bold text-right">Итого с НДФЛ:</td>
+        <td width="13%" class="text-bold">{{totalAmount.totalWithNdfl}}</td>
+      </tr>
+    </table>
+
+    <div class="sum-text">Всего оказано услуг {{ordersLength}}, на сумму {{totalAmount.totalWithNdfl}} руб.<br>
+    <strong>{{totalAmountInWords}}</strong></div>
+
+    <div class="no-claims">Вышеперечисленные услуги выполнены полностью и в срок. Заказчик претензий по объему, качеству и срокам оказания услуг не имеет.</div>
+
+    <table class="table-sides">
+      <tr>
+        <td width="47%">
+          <div class="sides-content">
+            <div>
+              <strong class="side-name text-uppercase">Исполнитель</strong><br>
+              {{!-- {{seller.name}} --}}
+            </div>
+            <div>
+              <hr>
+              {{!-- <div class="director-name">{{seller.name}}</div> --}}
+            </div>
+          </div>
+        </td>
+        <td width="6%"></td>
+        <td width="47%">
+          <div class="sides-content">
+            <div>
+              <strong class="side-name text-uppercase">Заказчик</strong>
+              {{!-- <br>Общество с ограниченной ответственностью "Инфинитум" --}}
+            </div>
+            <div>
+              <hr>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

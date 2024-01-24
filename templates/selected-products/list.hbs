@@ -1,0 +1,130 @@
+<html lang='ru'>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        position: relative;
+        font-size: 13px;
+        font-family: Roboto, sans-serif;
+        line-height: 1.35rem;
+        color: rgba(0, 0, 0, 0.85);
+        width: 672px;
+        padding-top: 15px;
+      }
+
+      h2 {
+        font-weight: bolder;
+        font-size: 38px;
+        color: #2e2e2e;
+        margin-bottom: 8px;
+      }
+
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+
+      p {
+        color: #525252;
+        margin-bottom: 27px;
+      }
+
+      table {
+        width: 672px;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-style: hidden;
+        font-size: 8px;
+        line-height: 0.7rem;
+        margin-bottom: 14px;
+      }
+
+      td {
+        text-align: center;
+        padding: 10px 5px;
+        min-height: 50px;
+        border: 1px solid #e5e5e5;
+      }
+
+      tr:nth-of-type(2n+1) {
+        background: #c9c9c9;
+      }
+
+      tr.total {
+        border-top: 1.9px solid #2e2e2e !important;
+        background: #fff !important;
+        font-weight: bold;
+      }
+
+      td.bold {
+        font-weight: bold;
+      }
+
+      .offerInfo {
+        margin-bottom: 14px;
+      }
+
+      .offerInfo>span {
+        display: block;
+        color: #525252;
+        margin-right: 8px;
+      }
+
+      .offerInfo .seller {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .rating {
+        color: #ffb800 !important;
+      }
+
+      svg {
+        margin: 0 1px;
+      }
+
+      footer {
+        text-align: right;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Запрос {{idOrder}}</h2>
+    <span>Дата запроса: {{date}}</span>
+
+    <br />
+    <br />
+
+    <table>
+      <tr>
+        <td width="40%">Наименование</td>
+        <td width="15%">Бренд</td>
+        <td width="15%">Артикул</td>
+        <td width="15%">Кол-во</td>
+        <td width="15%">Сумма, ₽</td>
+      </tr>
+      {{#each products}}
+        <tr>
+          <td class='bold'>{{this.name}}</td>
+          <td>{{this.manufacturer}}</td>
+          <td>{{this.article}}</td>
+          <td>{{this.count}}</td>
+          <td>{{this.totalPrice}}</td>
+        </tr>
+      {{/each}}
+    </table>
+
+    <footer>Итого: {{totalPrice}} ₽</footer>
+  </body>
+</html>

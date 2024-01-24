@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="http://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
+  <style>
+    body {
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: 'Roboto', Roboto, sans-serif;
+      width: 672px;
+      align-content: center;
+    }
+    h1 {
+      line-height: 1.3;
+      font-size: 21px;
+    }
+    .container {
+      padding: 10px;
+      margin: 0 auto;
+    }
+    .line {
+      margin-top: 7px;
+      margin-bottom: 7px;
+      border-top: 1px dashed #000;
+    }
+    .item__name {
+      font-weight: bold;
+    }
+    .item__prepayment, .item__nds, .itog__item {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class='container'>
+    <h1> Кассовый чек  /  Приход  / {{receiptDate}}<br>
+      Заказ № {{orderNumber}}</h1>
+    <div>
+      <div>
+        Общество с ограниченной ответственностью «ИНФИНИТУМ»
+        Россия, Иркутская область, г. Ангарск,
+        нп. Второй промышленный массив,
+        квл. 41, стр. 15, оф. 57, 665800<br>
+        Место расчетов: {{calculationService}}<br>
+        Автомат: {{avtomat}}
+        <div class="line"></div>
+      </div>
+      {{#each orders}}
+      <div class="position">
+        <div class="supplier">
+          Поставщик: {{this.supplier}} ИНН {{this.supplierInn}}
+        </div>
+        <div class="line"></div>
+        {{#each this.products}}
+        <div class="item">
+          <div class="item__name"> {{this.name}} </div>
+          <div class="item__article">Артикул: {{this.article}}</div>
+          <div class="item__brand-name">Бренд: {{this.brand}}</div>
+          <div class="item__prepayment"><div>Предоплата, руб.:</div> <div> 100% {{this.count}} x {{this.price}} = {{this.prepayment}}</div> </div>
+          <div class="item__nds"><div>{{this.ndsFormat}}</div> {{#if this.nds}}<div>{{this.nds}}</div>{{/if}}</div>
+          <div class="line"></div>
+        </div>
+        {{/each}}
+      </div>
+      {{/each}}
+      <div class="itog">
+        <div class='itog__item'>
+          <div>##BIG##ИТОГ, руб.:</div>
+          <div>{{total}}</div>
+        </div>
+        <div class='itog__item'>
+          <div>ВСЕГО ПОЛУЧЕНО, руб.:</div>
+          <div>{{totalReceived}}</div>
+        </div>
+        <div class='itog__item'>
+          <div>ЭЛЕКТРОННЫМИ, руб.:</div>
+          <div>{{totalReceived}}</div>
+        </div>
+        <div class='itog__item'>
+          <div>СУММА НДС 20%, руб.:</div>
+          <div>{{totalNds}}</div>
+        </div>
+        <div class="line"></div>
+      </div>
+      <div class="last__info">
+        <div>* Составлен комиссионером (агентом): ООО "Инфинитум", 665800, Иркутская область, г. Ангарск, нп. Второй промышленный массив, квл. 41, стр. 15, оф. 57, ИНН/КПП: 3801147025/380101001</div>
+        <div>ККТ ДЛЯ ИНТЕРНЕТ</div>
+        <div>ЭЛ.АДР.ПОКУПАТЕЛЯ {{customerEmail}}</div>
+        <div>ИНН {{inn}}</div>
+        <div>СНО ОСНО</div>
+        <div>ЧЕК: {{receiptNumber}} СМЕНА: {{turnNumber}}</div>
+        <div>САЙТ ФНС {{fnsSite}}</div>
+        <div>РН ККТ: {{RnKkt}} ФН: {{fn}}</div>
+        <div>ФД: {{fd}} ФП: {{fp}}</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

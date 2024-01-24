@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      font-family: sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      height: 297mm;
+      width: 210mm;
+      margin: auto;
+      padding: 1.5cm 3cm 2cm 1.5cm;
+    }
+    h1 {
+      display: inline;
+      font-size: 60px;
+      size: auto;
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    .main {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left {
+      box-sizing: border-box;
+      width: 45%;
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+    }
+    .right {
+      box-sizing: border-box;
+      width: 45%;
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+    }
+    ul {
+      color: rgba(0, 0, 0, 0.7);
+      padding: 20px 0px;
+    }
+    li {
+      font-size: larger;
+      list-style-type: none;
+    }
+    h2 {
+      font-size: 25px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Карточка предприятия покупателя</h1><br>
+  <div class="main">
+    <div class="left">
+      <ul>
+        <li>
+          <h2>ИНН</h2>
+        </li>
+        <li>{{inn}}</li>
+      </ul>
+
+      <ul>
+        <li>
+          <h2>Наименование организации</h2>
+        </li>
+        <li>{{orgName}}</li>
+      </ul>
+
+      <ul>
+        <li>
+          <h2>Юридический адрес</h2>
+        </li>
+        <li>{{juristicAddressCountry}}</li>
+        <li>{{juristicAddressSettlement}}</li>
+        <li>{{juristicAddressStreet}}</li>
+        <li>{{juristicAddressBuilding}}</li>
+        <li>{{juristicAddressApartment}}</li>
+      </ul>
+
+      <ul>
+        <li>
+          <h2>Почтовый адрес</h2>
+        </li>
+        <li>{{mailingAddressCountry}}</li>
+        <li>{{mailingAddressSettlement}}</li>
+        <li>{{mailingAddressStreet}}</li>
+        <li>{{mailingAddressBuilding}}</li>
+        <li>{{mailingAddressApartment}}</li>
+      </ul>
+
+      {{#if kpp}}
+        <ul>
+          <li>
+            <h2>КПП</h2>
+          </li>
+          <li>{{kpp}}</li>
+        </ul>
+      {{/if}}
+
+      <ul>
+        <li>
+          <h2>{{orgnLabel}}</h2>
+        </li>
+        <li>{{ogrn}}</li>
+      </ul>
+    </div>
+
+    <div class="right">
+      <ul>
+        <li>
+          <h2>Банковские реквизиты</h2>
+        </li>
+        <li>{{bankName}} </li>
+        <li>{{bankInn}}</li>
+        <li>{{bankBik}}</li>
+        <li>{{bankKs}}</li>
+        <li>{{bankRs}}</li>
+      </ul>
+      <ul>
+        <li>
+          <h2>E-mail организации</h2>
+        </li>
+        <li>{{email}}</li>
+      </ul>
+
+      <ul>
+        <li>
+          <h2>Компания работает</h2>
+        </li>
+        <li>{{organizationNds}}</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        position: relative;
+        font-size: 16.8px;
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 1.25;
+        color: #000;
+        width: 810px;
+        height: 960px;
+      }
+      h1 {
+        font-weight: bold;
+        font-size: 16.8px;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+      p {
+        text-indent: 29px;
+      }
+      table {
+        width: 100%;
+        line-height: 1.2;
+      }
+      table, tr, th, td {
+        border: 1px solid #000;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 10px;
+        text-align: left;
+        overflow-wrap: break-word;
+      }
+      table.products-table {
+        margin-top: 20px;
+      }
+      table.products-table th, table.products-table td {
+        text-align: center;
+        padding: 10px 5px;
+      }
+      table.products-table td.text-left {
+        text-align: left;
+      }
+
+      .totals {
+        display: flex;
+        justify-content: flex-end;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 20px;
+      }
+      .totals .param-names {
+        margin-right: 20px;
+      }
+      .sum-text {
+        margin-top: 15px;
+      }
+
+      hr {
+        margin-top: 15px;
+        margin-bottom: 3px;
+      }
+
+      li {
+        list-style-type: none;
+        padding-left: 20px;
+      } /* Убираем исходную нумерацию у списка */
+      ol {
+        counter-reset: list1;
+        padding-left: 9px;
+      } /* Инициируем счетчик */
+      ol li:before {
+        counter-increment: list1; /* Увеличиваем значение счетчика */
+        content: counter(list1) '. '; /* Выводим число */
+      }
+      ol ol {
+        counter-reset: list2;
+      } /* Инициируем счетчик вложенного списка */
+      ol ol li:before {
+        counter-increment: list2; /* Увеличиваем значение счетчика вложенного списка */
+        content: counter(list1) '.' counter(list2) '. '; /* Выводим число */
+      }
+      ol ol ol {
+        counter-reset: list3;
+      } /* Инициируем счетчик вложенного списка */
+      ol ol ol li:before {
+        counter-increment: list3; /* Увеличиваем значение счетчика вложенного списка */
+        content: counter(list1) '.' counter(list2) '. ' counter(list3) '. '; /* Выводим число */
+      }
+
+      .text-left {
+        text-align: left;
+      }
+      .one-line {
+        clear: both;
+        white-space: nowrap;
+      }
+      .signatureBlock {
+        position: relative;
+        margin-left: 100px;
+      }
+      .signatureBlock span {
+        position: relative;
+        z-index: 5;
+      }
+      .signature {
+        position: absolute;
+        height: 70px;
+        left: 60px;
+        bottom: -26px;
+        z-index: 1;
+      }
+      .stamp {
+        position: relative;
+        height: 150px;
+        left: -130px;
+        top: 85px;
+        z-index: 2;
+      }
+      .paymentPostponed {
+        color: #e6332a;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Акт приема передачи товара № {{orderNumber}} от {{date}} г.</h1>
+
+      <table class="members-table">
+        <tr>
+          <td>Агент</td>
+          <td>
+            ООО «ИНФИНИТУМ», ИНН/КПП: 3801147025/380101001<br />
+            адрес: 665800, Иркутская область, г. Ангарск, нп. Второй промышленный массив, квл. 41, стр. 15, оф. 57, E-mail: info@inf.market.
+          </td>
+        </tr>
+        <tr>
+          <td>Поставщик</td>
+          <td>
+            {{supplier.name}}, ИНН/КПП {{supplier.inn}}/{{supplier.kpp}}, {{supplier.ogrnForm}} {{supplier.ogrn}}<br />
+            адрес: {{supplier.address}}. E-mail: {{supplier.email}}.
+          </td>
+        </tr>
+        <tr>
+          <td>Покупатель</td>
+          <td>
+            {{customerOrg.name}}, ИНН/КПП {{customerOrg.inn}}/{{customerOrg.kpp}}, {{customerOrg.ogrnForm}} {{customerOrg.ogrn}}<br />
+            адрес: {{customerOrg.address}}.{{#if customerOrg.email}} E-mail: {{customerOrg.email}}.{{/if}}
+          </td>
+        </tr>
+      </table>
+      <br>
+
+      <ol>
+        <li>В соответствии с Счет-договором {{invoiceNumber}} от {{invoiceDate}} г., Поставщик передает, а Покупатель принимает Товар следующего ассортимента и количества:</li>
+      </ol>
+
+      <table class="products-table">
+        <tr>
+          <th>№</th>
+          <th>Артикул</th>
+          <th>Бренд</th>
+          <th>Товары (работы, услуги)</th>
+          <th>Количест<br>во, шт</th>
+          <th>Цена, руб</th>
+          <th>Сумма, руб</th>
+        </tr>
+        {{#each products}}
+          <tr>
+            <td>{{this.number}}</td>
+            <td>{{this.article}}</td>
+            <td>{{this.manufacturer}}</td>
+            <td class="text-left">{{this.name}}</td>
+            <td>{{this.quantity}}</td>
+            <td class="one-line">{{this.unitPrice}}</td>
+            <td class="one-line">{{this.totalPrice}}</td>
+          </tr>
+        {{/each}}
+      </table>
+
+      <div class="totals">
+        <div class="param-names">
+          Сумма:<br>
+          {{#if totals.nds}}НДС 20%:<br>{{/if}}
+          Итого к оплате:
+        </div>
+        <div class="param-values">
+          {{totals.totalPrice}}<br>
+          {{#if totals.nds}}{{totals.nds}}<br>{{/if}}
+          {{totals.totalPrice}}
+        </div>
+      </div>
+
+      <div class="sum-text">
+        Всего наименований {{totals.productNamesCount}} в количестве {{totals.productsCount}}шт., на сумму {{totals.totalPrice}} рублей<br>
+        <strong>{{totalsInWords.totalPrice}}.{{#if totals.nds}} В том числе НДС 20%: {{totalsInWords.nds}}.{{/if}}</strong>
+      </div>
+
+      <hr>
+      <br>
+
+      <ol start="2">
+        <li>Принятый покупателем товар обладает качеством и ассортиментом, соответствующим требованиям Счет-договором {{invoiceNumber}} от {{invoiceDate}} г.. Товар поставлен в установленные в Счет-договором {{invoiceNumber}} от {{invoiceDate}} г. сроки. Покупатель не имеет никаких претензий к принятому товару.</li>
+        <li>Настоящий Акт составлен в двух экземплярах, имеющих равную юридическую силу, по одному экземпляру для каждой из Сторон и является неотъемлемой частью Счет-договором {{invoiceNumber}} от {{invoiceDate}} г. между Сторонами.</li>
+        <li>Поставщик передает Товар принимая доверенность от Покупателя.</li>
+      </div>
+
+      <br><br>
+      <div>
+        <div>ПОСТАВЩИК {{supplier.name}}, _________________/ М.П.</div>
+        <br><br><br>
+        <div>ПОКУПАТЕЛЬ {{customerOrg.name}}, _________________/ М.П.</div>
+        <br><br><br>
+        <div>
+          <span>АГЕНТ ООО «ИНФИНИТУМ»</span>
+          <span class="signatureBlock">
+            <span>Таскаев А.Н./</span>
+            <img src="{{url}}/images/inf-signature.png" alt="" class="signature">
+            <img src="{{url}}/images/inf-stamp.png" alt="" class="stamp">
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      font-size: 13px;
+      font-family: 'Times New Roman', Times, serif;
+      width: 672px;
+      height: 979px;
+      align-content: center;
+    }
+    .text {
+        width: 300px;
+    }
+    .text-row {
+        margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class='text'>
+    {{#each rows}}
+      <div class='text-row'>{{this}}</div>
+    {{/each}}
+  </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html lang='ru'>
+  <head>
+    <style>
+      {{defaultCssStyle}}
+    </style>
+  </head>
+  <body>
+    <h1>Запрос {{idOrder}}</h1>
+    <p>Дата запроса: {{date}}</p>
+    {{#if customerName}}<p>Покупатель: {{customerName}}</p>{{/if}}
+    <p>Адрес доставки: {{deliveryAddress}}</p>
+    {{#if comment}}<p>Комментарий: {{comment}}</p>{{/if}}
+    {{#if describedProduct}}
+      <p>Категория товара: {{describedProduct.categories}}</p>
+      <p>Количество: {{describedProduct.quantity}}</p>
+      {{#if describedProduct.description}}<p>Описание товара: {{describedProduct.description}}</p>{{/if}}
+      {{#if sellerRegion}}<p>Регион поставщика: {{sellerRegion}}</p>{{/if}}
+      {{#if selectedSellers}}<p>Выбранные продавцы: {{selectedSellers}}</p>{{/if}}
+    {{/if}}
+
+    {{#if displayProducts}}
+      <br><br>
+      <table class="size-small">
+        <tr>
+          <th width="4%" rowspan="2">№</th>
+          <th width="22%" rowspan="2">Наименование</th>
+          <th width="11%" rowspan="2">Бренд</th>
+          <th width="11%" rowspan="2">Артикул</th>
+          <th width="5%" rowspan="2">Кол-во</th>
+          <th width="10%" rowspan="2">Цена за ед, ₽</th>
+          <th width="7%" rowspan="2">Кол-во в наличии</th>
+          <th width="14%" colspan="2">Под заказ</th>
+          <th width="9%" rowspan="2">Сумма, ₽</th>
+          <th width="7%" rowspan="2">CASH, ₽</th>
+        </tr>
+        <tr>
+          <td width='7%'>кол-во</td>
+          <td width='7%'>срок</td>
+        </tr>
+        {{#each products}}
+          <tr>
+            <td>{{this.index}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.manufacturer}}</td>
+            <td>{{this.article}}</td>
+            <td>{{this.requestedQuantity}}</td>
+            <td>{{this.unitPrice}}</td>
+            <td>{{this.offeredQuantity}}</td>
+            <td>{{this.deliveryQuantity}}</td>
+            <td>{{this.deliveryTerm}}</td>
+            <td>{{this.totalPrice}}</td>
+            <td>{{this.cash}}</td>
+          </tr>
+        {{/each}}
+        <tr class="text-bold">
+          <td colspan="4" class="text-right">Итого:</td>
+          <td>{{total.requestedQuantity}}</td>
+          <td></td>
+          <td>{{total.offeredQuantity}}</td>
+          <td></td>
+          <td></td>
+          <td>{{total.price}}</td>
+          <td>{{total.cash}}</td>
+        </tr>
+        <tr class="text-bold">
+          <td colspan="4" class="text-right">Комиссия:</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>{{total.comission}}</td>
+          <td></td>
+        </tr>
+        <tr class="text-bold">
+          <td colspan="4" class="text-right">За вычетом комиссии:</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>{{total.earn}}</td>
+          <td></td>
+        </tr>
+      </table>
+    {{/if}}
+  </body>
+</html>

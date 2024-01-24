@@ -1,0 +1,1 @@
+export const ServiceErrorName = 'ServiceError';

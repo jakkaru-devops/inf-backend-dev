@@ -1,0 +1,191 @@
+<html lang='ru'>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+      *, *::before, *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        position: relative;
+        font-size: 13px;
+        font-family: Roboto, sans-serif;
+        line-height: 1.35rem;
+        color: rgba(0, 0, 0, 0.85);
+        width: 672px;
+        padding-top: 15px;
+      }
+
+      h2 {
+        font-weight: bolder;
+        font-size: 38px;
+        color: #2e2e2e;
+        margin-bottom: 8px;
+      }
+
+      h3 {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+
+      p {
+        color: #525252;
+        margin-bottom: 27px;
+      }
+
+      table {
+        width: 672px;
+      }
+
+      table {
+        border-collapse: collapse;
+        border-style: hidden;
+        font-size: 8px;
+        line-height: 0.7rem;
+        margin-bottom: 20px;
+      }
+
+      td {
+        text-align: center;
+        padding: 6px 3px;
+        min-height: 30px;
+        border: 1px solid #e5e5e5;
+      }
+
+      td.total {
+        text-align: right;
+        padding-right: 10px;
+      }
+
+      tr:nth-of-type(2n+1) {
+        background: #c9c9c9;
+      }
+
+      tr.total {
+        border-top: 1.9px solid #2e2e2e !important;
+        background: #fff !important;
+        font-weight: bold;
+      }
+
+      td.bold {
+        font-weight: bold;
+      }
+
+      .offerInfo {
+        margin-bottom: 14px;
+      }
+
+      .offerInfo .seller {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .offerInfo .seller>span {
+        display: block;
+        color: #525252;
+        margin-right: 8px;
+      }
+
+      svg {
+        margin: 0 1px;
+      }
+
+      footer {
+        text-align: right;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Запрос {{idOrder}}</h2>
+    <p>Дата запроса: {{date}}</p>
+
+    {{#each offers}}
+      <section>
+        <div class='offerInfo'>
+          <h3>Предложение {{this.index}}</h3>
+          {{#if this.requestChanged}}<div><strong>Продавец внес изменения в запрос!</strong></div>{{/if}}
+          <div>Действует еще: {{this.offerTerm}}</div>
+          <div class='seller'>
+            <span>Продавец: {{this.seller.name}}</span>
+            <span class='rating' style='color:{{#if this.seller.reviewsNumber}}#ffb800{{else}}rgba(0, 0, 0, 0.85){{/if}};'>
+              {{this.seller.rating}}
+              {{#each this.seller.stars}}
+                {{#if this}}
+                  <svg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                      d='M6 0L7.34708 4.1459H11.7063L8.17963 6.7082L9.52671 10.8541L6 8.2918L2.47329 10.8541L3.82037 6.7082L0.293661 4.1459H4.65292L6 0Z'
+                      fill='#FFB800'
+                    ></path>
+                  </svg>
+                {{else}}
+                  <svg width='12' height='11' viewBox='0 0 12 11' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                      d='M6 0L7.34708 4.1459H11.7063L8.17963 6.7082L9.52671 10.8541L6 8.2918L2.47329 10.8541L3.82037 6.7082L0.293661 4.1459H4.65292L6 0Z'
+                      fill='#C4C4C4'
+                    ></path>
+                  </svg>
+                {{/if}}
+              {{/each}}
+            </span>
+            <span>Отзывы: {{this.seller.reviewsNumber}}</span>
+            <span>Продаж: {{this.seller.salesNumber}}</span>
+          </div>
+          <div>
+            Адрес поставщика:
+            {{this.address}}
+          </div>
+          <div>Цены указаны: {{#if this.hasNds}}c НДС{{else}}без НДС{{/if}}</div>
+          <div>{{this.organizationName}}</div>
+        </div>
+
+        <table>
+          <tr>
+            <td width='5%' rowspan='2'>№</td>
+            <td width='25%' rowspan='2'>Наименование</td>
+            <td width='10%' rowspan='2'>Бренд</td>
+            <td width='9%' rowspan='2'>Артикул</td>
+            <td width='8%' rowspan='2'>Кол-во</td>
+            <td width='9%' rowspan='2'>Цена за ед.</td>
+            <td width='9%' rowspan='2'>Кол-во в наличии</td>
+            <td width='18%' colspan="2">Под заказ</td>
+            <td width='9%' rowspan='2'>Сумма</td>
+          </tr>
+          <tr>
+            <td width='9%'>кол-во</td>
+            <td width='9%'>срок</td>
+          </tr>
+          {{#each this.products}}
+            <tr>
+              <td>{{this.index}}</td>
+              <td class='bold'>{{this.name}}</td>
+              <td>{{this.manufacturer}}</td>
+              <td>{{this.article}}</td>
+              <td>{{this.count}}</td>
+              <td>{{this.unitPrice}} ₽</td>
+              <td>{{this.quantity}}</td>
+              <td>{{this.deliveryQuantity}}</td>
+              <td>{{this.deliveryTerm}}</td>
+              <td>{{this.totalPrice}} ₽</td>
+            </tr>
+          {{/each}}
+          <tr class='total'>
+            <td colspan='4' class="total">Итого:</td>
+            <td>{{this.total.count}}</td>
+            <td></td>
+            <td>{{this.total.quantity}}</td>
+            <td></td>
+            <td></td>
+            <td>{{this.total.price}} ₽</td>
+          </tr>
+        </table>
+      </section>
+    {{/each}}
+
+    <footer>Итого: {{totalPrice}} ₽</footer>
+  </body>
+</html>
