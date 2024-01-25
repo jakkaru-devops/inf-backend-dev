@@ -1,4 +1,8 @@
 name: Push to Yandex Cloud Container Registry
+env:
+  SOURCE_REPO_ARGOCD: https://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@github.com/jakkaru-devops/inf-argocd
+  IMAGE_TAG: ${{ github.sha }}
+  CI_PROJECT_NAME: inf-argocd/HelmCharts/Development
 on:
   push:
     branches: [ main ] # измените ветку по вашему выбору
@@ -26,7 +30,44 @@ jobs:
         env:
           CR_REGISTRY: crpn9ikb6hp5v19o9957
           CR_REPOSITORY: inf-backend-dev
-          IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -t cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG .
           docker push cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG
+
+
+      
+      - name: Checkout source code
+        uses: actions/checkout@v2
+        
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.1
+        with:
+            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        
+      - name: Install Helm
+        uses: azure/setup-helm@v1
+
+      
+      - name: Configure Git
+        run: |
+          git config --global user.email "savamedvedevvv@gmail.com"
+          git config --global user.name "jakkaru-devops"
+
+      - name: Clone Helm repository
+        run: git clone $SOURCE_REPO_ARGOCD
+          
+
+      - name: Set foobar to cool
+        uses: mikefarah/yq@master
+        with:
+          cmd: |
+            cd $CI_PROJECT_NAME
+            yq -i '.api.version =$IMAGE_TAG' values.yaml       
+            
+
+      - name: Update version and repository in Helm charts
+        run: |
+              cd $CI_PROJECT_NAME
+              git add values.yaml
+              git diff-index --quiet HEAD || git commit -m " CI: Update app version to $(echo $IMAGE_TAG) "
+              git push
