@@ -1,7 +1,7 @@
 name: Push to Yandex Cloud Container Registry
 env:
   SOURCE_REPO_ARGOCD: https://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@github.com/jakkaru-devops/inf-argocd
-  IMAGE_TAG: ${{ github.sha }}
+  IMAGE_TAG: 777
   CI_PROJECT_NAME: inf-argocd/HelmCharts/Development
 on:
   push:
@@ -34,10 +34,6 @@ jobs:
           docker build -t cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG .
           docker push cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG
 
-
-      
-      - name: Checkout source code
-        uses: actions/checkout@v2
         
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.1
@@ -57,12 +53,12 @@ jobs:
         run: git clone $SOURCE_REPO_ARGOCD
           
 
-      - name: Set foobar to cool
+      - name: Update tag version for api in Helm charts values
         uses: mikefarah/yq@master
         with:
           cmd: |
             cd $CI_PROJECT_NAME
-            yq -i '.api.version =$IMAGE_TAG' values.yaml       
+            yq -i ".api.version =$IMAGE_TAG" values.yaml       
             
 
       - name: Update version and repository in Helm charts
