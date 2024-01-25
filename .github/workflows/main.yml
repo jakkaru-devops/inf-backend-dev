@@ -1,7 +1,7 @@
 name: Push to Yandex Cloud Container Registry
 env:
   SOURCE_REPO_ARGOCD: https://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@github.com/jakkaru-devops/inf-argocd
-  IMAGE_TAG: 777
+  IMAGE_TAG: "2.0"
   CI_PROJECT_NAME: inf-argocd/HelmCharts/Development
 on:
   push:
