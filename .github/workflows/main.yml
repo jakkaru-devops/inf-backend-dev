@@ -1,7 +1,6 @@
-name: Push to Yandex Cloud Container Registry
+name: Push to Yandex Cloud Container Registry Backend
 env:
   SOURCE_REPO_ARGOCD: https://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@github.com/jakkaru-devops/inf-argocd
-  IMAGE_TAG: 3
   CI_PROJECT_NAME: inf-argocd/HelmCharts/Development
 on:
   push:
@@ -9,6 +8,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
@@ -18,6 +18,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+
+      - name: Set env
+        run: echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-6)" >> $GITHUB_ENV
+
+      - name: Test
+        run: echo ${{ env.GITHUB_SHA_SHORT }}
 
       # Runs a single command using the runners shell
       - name: Yandex Cloud CR "Login" Action for GitHub Actions
@@ -29,10 +35,10 @@ jobs:
       - name: Build, tag, and push image to Yandex Cloud Container Registry
         env:
           CR_REGISTRY: crpn9ikb6hp5v19o9957
-          CR_REPOSITORY: inf-backend-dev
+          CR_REPOSITORY: inf-frontend-dev
         run: |
-          docker build -t cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG .
-          docker push cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:$IMAGE_TAG
+          docker build -t cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:${{ env.GITHUB_SHA_SHORT }} .
+          docker push cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:${{ env.GITHUB_SHA_SHORT }}
 
         
       - name: Set up SSH
@@ -51,15 +57,13 @@ jobs:
 
       - name: Clone Helm repository
         run: git clone $SOURCE_REPO_ARGOCD
-          
 
       - name: Update tag version for api in Helm charts values
-        uses: mikefarah/yq@master
+        uses: mikefarah/yq@v4.40.5
         with:
           cmd: |
             cd $CI_PROJECT_NAME
-            yq -i ".api.version =$IMAGE_TAG" values.yaml       
-            
+            yq -i '.api.version ="${{ env.GITHUB_SHA_SHORT }}"' values.yaml                 
 
       - name: Update version and repository in Helm charts
         run: |
