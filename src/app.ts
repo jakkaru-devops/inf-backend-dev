@@ -105,8 +105,8 @@ if (cluster.isMaster) {
   const io = createSocket(httpServer);
 
   if (cluster.worker.id === 1) {
-    // Run cron only once
-    cron.schedule('*/5 * * * *', async () => {
+    // Run cron only once sadads
+    cron.schedule('*/15 * * * *', async () => {
       await getAndUpdateExpiredOffersService(io);
       await getAndUpdateRewardsGivenAtService();
       await getUnreadEmails(io);
@@ -115,6 +115,7 @@ if (cluster.isMaster) {
   }
 
   // Routes
+  // asdcrp86m314psunr7fn694
   app.use('/api', createMainRouter(io));
   app.use('/api/v2', createV2Router(io));
 
