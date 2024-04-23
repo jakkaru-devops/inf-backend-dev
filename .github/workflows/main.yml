@@ -1,7 +1,7 @@
 name: Push to Yandex Cloud Container Registry Backend
 env:
-  SOURCE_REPO_ARGOCD: https://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@github.com/infmarket/argo-cd
-  CI_PROJECT_NAME: argo-cd/HelmCharts/Development
+  SOURCE_REPO_ARGOCD: https://${{ secrets.ACCESS_TOKEN }}@github.com/jakkaru-devops/inf-argocd
+  CI_PROJECT_NAME: inf-argocd/HelmCharts/Production
 on:
   push:
     branches: [ main ] # измените ветку по вашему выбору
@@ -34,7 +34,7 @@ jobs:
 
       - name: Build, tag, and push image to Yandex Cloud Container Registry
         env:
-          CR_REGISTRY: crp86m314psunr7fn694
+          CR_REGISTRY: crpn9ikb6hp5v19o9957
           CR_REPOSITORY: inf-backend-dev
         run: |
           docker build -t cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:${{ env.GITHUB_SHA_SHORT }} .
