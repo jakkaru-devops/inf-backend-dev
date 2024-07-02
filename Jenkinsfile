@@ -89,8 +89,12 @@ pipeline {
 
         stage('Update helm chart values version backend ') {
             steps {
+                echo 'cd to productions'
                 sh "cd $CI_PROJECT_NAME"
+                echo 'list derectory'
                 sh "ls -la"
+                echo 'used yq'
+                sh "yq -i '.api.version ="${{ IMAGE_TAG }}"' values.yaml"
             }
         }            
     }
