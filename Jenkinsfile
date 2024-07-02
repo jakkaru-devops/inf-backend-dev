@@ -29,7 +29,7 @@ pipeline {
         }
 
 
-        stage('List derictory ') {
+        stage('List derictory backend') {
             steps {
                 sh "ls -la"
             }
@@ -50,27 +50,40 @@ pipeline {
              }
          }
 
-        stage('Build Docker Image') {
-            steps {
-                echo 'Building image..'
-                sh "docker build -t $IMAGE_NAME:$IMAGE_TAG ."
-            }
-        }
+        // stage('Build Docker Image') {
+        //     steps {
+        //         echo 'Building image..'
+        //         sh "docker build -t $IMAGE_NAME:$IMAGE_TAG ."
+        //     }
+        // }
 
 
-        stage('Publish Docker Image to Yandex Cloud') {
-            steps {
-                echo 'Publishing image to YandexCloud..'
-                sh "docker push $IMAGE_NAME:$IMAGE_TAG"
-            }
-        }
+        // stage('Publish Docker Image to Yandex Cloud') {
+        //     steps {
+        //         echo 'Publishing image to YandexCloud..'
+        //         sh "docker push $IMAGE_NAME:$IMAGE_TAG"
+        //     }
+        // }
 
 
         
-        stage('Cleanup Docker Image') {
+        // stage('Cleanup Docker Image') {
+        //     steps {
+        //         sh "sudo docker rmi $IMAGE_NAME:$IMAGE_TAG "    
+        //     }
+        // }   
+
+        stage("Checkout from SCM Helm Chart"){
             steps {
-                sh "sudo docker rmi $IMAGE_NAME:$IMAGE_TAG "    
+                git branch: 'main', credentialsId: 'jenkins-github', url: 'git@github.com:jakkaru-devops/inf-argocd.git'
             }
-        }   
+        }
+
+        stage('List derictory backend') {
+            steps {
+                sh "ls -la"
+            }
+        }
+
     }
 }
