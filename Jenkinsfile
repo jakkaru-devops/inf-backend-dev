@@ -80,7 +80,7 @@ pipeline {
             }
         }
 
-        stage('List derictory backend') {
+        stage('List derictory fronted') {
             steps {
                 sh "ls -la"
             }
