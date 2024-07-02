@@ -15,7 +15,7 @@ pipeline {
 
     stages {
 
-         stage("Cleanup Workspace"){
+        stage("Cleanup Workspace"){
             steps {
                 cleanWs()
             }
@@ -36,7 +36,7 @@ pipeline {
         }
 
 
-         stage('Docker login') {
+        stage('Docker login') {
              steps {
                  echo 'Initializing..'
                  echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
@@ -79,11 +79,6 @@ pipeline {
             }
         }
 
-        stage('List derictory backend') {
-            steps {
-                sh "ls -la"
-            }
-        }
-
+        
     }
 }
