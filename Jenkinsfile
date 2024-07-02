@@ -9,6 +9,7 @@ pipeline {
         CR_REGISTRY = "cr.yandex/crpn9ikb6hp5v19o9957"
         CR_REPOSITORY = "inf-backend-dev"
         IMAGE_NAME = "${CR_REGISTRY}" + "/" + "${CR_REPOSITORY}"
+        CI_PROJECT_NAME =  "inf-argocd/HelmCharts/Production"
     }
 
 
@@ -84,6 +85,13 @@ pipeline {
             steps {
                 sh "ls -la"
             }
-        }        
+        }
+
+        stage('List derictory fronted') {
+            steps {
+                sh "cd $CI_PROJECT_NAME"
+                sh "ls -la"
+            }
+        }            
     }
 }
