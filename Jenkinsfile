@@ -90,7 +90,7 @@ pipeline {
         stage('Update helm chart values version backend ') {
             steps {
                 echo 'cd to productions'
-                sh "cd $CI_PROJECT_NAME"
+                sh "cd HelmCharts"
                 echo 'list derectory'
                 sh "ls -la"
                 echo 'used yq'
