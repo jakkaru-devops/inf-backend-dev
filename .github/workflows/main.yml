@@ -1,73 +1,73 @@
-name: Push to Yandex Cloud Container Registry Backend
-env:
-  SOURCE_REPO_ARGOCD: https://${{ secrets.ACCESS_TOKEN }}@github.com/jakkaru-devops/inf-argocd
-  CI_PROJECT_NAME: inf-argocd/HelmCharts/Production
-on:
-  push:
-    branches: [ main ] # измените ветку по вашему выбору
+# name: Push to Yandex Cloud Container Registry Backend
+# env:
+#   SOURCE_REPO_ARGOCD: https://${{ secrets.ACCESS_TOKEN }}@github.com/jakkaru-devops/inf-argocd
+#   CI_PROJECT_NAME: inf-argocd/HelmCharts/Production
+# on:
+#   push:
+#     branches: [ main ] # измените ветку по вашему выбору
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
+# # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# jobs:
 
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+#   # This workflow contains a single job called "build"
+#   build:
+#     # The type of runner that the job will run on
+#     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+#     # Steps represent a sequence of tasks that will be executed as part of the job
+#     steps:
+#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+#       - uses: actions/checkout@v2
 
-      - name: Set env
-        run: echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-6)" >> $GITHUB_ENV
+#       - name: Set env
+#         run: echo "GITHUB_SHA_SHORT=$(echo $GITHUB_SHA | cut -c 1-6)" >> $GITHUB_ENV
 
-      - name: Test
-        run: echo ${{ env.GITHUB_SHA_SHORT }}
+#       - name: Test
+#         run: echo ${{ env.GITHUB_SHA_SHORT }}
 
-      # Runs a single command using the runners shell
-      - name: Yandex Cloud CR "Login" Action for GitHub Actions
-        uses: yc-actions/yc-cr-login@v0.1-alpha
-        with:
-          yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_CREDENTIALS }}
+#       # Runs a single command using the runners shell
+#       - name: Yandex Cloud CR "Login" Action for GitHub Actions
+#         uses: yc-actions/yc-cr-login@v0.1-alpha
+#         with:
+#           yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_CREDENTIALS }}
 
 
-      - name: Build, tag, and push image to Yandex Cloud Container Registry
-        env:
-          CR_REGISTRY: crpn9ikb6hp5v19o9957
-          CR_REPOSITORY: inf-backend-dev
-        run: |
-          docker build -t cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:${{ env.GITHUB_SHA_SHORT }} .
-          docker push cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:${{ env.GITHUB_SHA_SHORT }}
+#       - name: Build, tag, and push image to Yandex Cloud Container Registry
+#         env:
+#           CR_REGISTRY: crpn9ikb6hp5v19o9957
+#           CR_REPOSITORY: inf-backend-dev
+#         run: |
+#           docker build -t cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:${{ env.GITHUB_SHA_SHORT }} .
+#           docker push cr.yandex/$CR_REGISTRY/$CR_REPOSITORY:${{ env.GITHUB_SHA_SHORT }}
 
         
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.1
-        with:
-            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+#       - name: Set up SSH
+#         uses: webfactory/ssh-agent@v0.5.1
+#         with:
+#             ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         
-      - name: Install Helm
-        uses: azure/setup-helm@v1
+#       - name: Install Helm
+#         uses: azure/setup-helm@v1
 
       
-      - name: Configure Git
-        run: |
-          git config --global user.email "savamedvedevvv@gmail.com"
-          git config --global user.name "jakkaru-devops"
+#       - name: Configure Git
+#         run: |
+#           git config --global user.email "savamedvedevvv@gmail.com"
+#           git config --global user.name "jakkaru-devops"
 
-      - name: Clone Helm repository
-        run: git clone $SOURCE_REPO_ARGOCD
+#       - name: Clone Helm repository
+#         run: git clone $SOURCE_REPO_ARGOCD
 
-      - name: Update tag version for api in Helm charts values
-        uses: mikefarah/yq@v4.40.5
-        with:
-          cmd: |
-            cd $CI_PROJECT_NAME
-            yq -i '.api.version ="${{ env.GITHUB_SHA_SHORT }}"' values.yaml                 
+#       - name: Update tag version for api in Helm charts values
+#         uses: mikefarah/yq@v4.40.5
+#         with:
+#           cmd: |
+#             cd $CI_PROJECT_NAME
+#             yq -i '.api.version ="${{ env.GITHUB_SHA_SHORT }}"' values.yaml                 
 
-      - name: Update version and repository in Helm charts
-        run: |
-              cd $CI_PROJECT_NAME
-              git add values.yaml
-              git diff-index --quiet HEAD || git commit -m " CI: Update app version to $(echo $IMAGE_TAG) "
-              git push
+#       - name: Update version and repository in Helm charts
+#         run: |
+#               cd $CI_PROJECT_NAME
+#               git add values.yaml
+#               git diff-index --quiet HEAD || git commit -m " CI: Update app version to $(echo $IMAGE_TAG) "
+#               git push
