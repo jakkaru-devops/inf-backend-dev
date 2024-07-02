@@ -89,7 +89,7 @@ pipeline {
 
        stage('Update helm chart values version backend ') {
             steps {
-                dir('HelmCharts') {
+                dir('HelmCharts/Production') {
                     sh 'echo "Current directory: $(pwd)"'
                     sh 'ls -la'
                     sh "yq -i '.api.version =\"${IMAGE_TAG}\"' values.yaml"
