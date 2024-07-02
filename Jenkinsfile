@@ -78,7 +78,6 @@ pipeline {
             steps {
                 echo 'Checkout from SCM Helm Chart..'
                 git branch: 'main', credentialsId: 'jenkins-github', url: 'git@github.com:jakkaru-devops/inf-argocd.git'
-                sh 'cd HelmCharts'
             }
         }
 
@@ -88,15 +87,14 @@ pipeline {
             }
         }
 
-        stage('Update helm chart values version backend ') {
+       stage('Update helm chart values version backend ') {
             steps {
-                echo 'cd to productions'
-                sh "cd HelmCharts"
-                echo 'list derectory'
-                sh "ls -la"
-                echo 'used yq'
-                // sh "yq -i '.api.version ="${{ IMAGE_TAG }}"' values.yaml"
+                dir('HelmCharts') {
+                    sh 'echo "Current directory: $(pwd)"'
+                    sh 'ls -la'
+                    sh "yq -i '.api.version =\"${IMAGE_TAG}\"' values.yaml"
+                }
             }
-        }            
+       }          
     }
 }
