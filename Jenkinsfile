@@ -7,7 +7,7 @@ pipeline {
         RELEASE = "1.0.0"
         IMAGE_TAG = "${BUILD_NUMBER}"
         CR_REGISTRY = "cr.yandex/crpn9ikb6hp5v19o9957"
-        CR_REPOSITORY = "inf-frontend-dev"
+        CR_REPOSITORY = "inf-backend-dev"
         IMAGE_NAME = "${CR_REGISTRY}" + "/" + "${CR_REPOSITORY}"
     }
 
@@ -50,19 +50,26 @@ pipeline {
              }
          }
 
-
-      
-        stage('Docker Build') {
+        stage('Build Docker Image') {
             steps {
-                sh "docker build $IMAGE_NAME ."
+                echo 'Building image..'
+                sh "docker build -t $IMAGE_NAME:$IMAGE_TAG ."
+            }
+        }
+
+
+        stage('Publish Docker Image to Yandex Cloud') {
+            steps {
+                echo 'Publishing image to YandexCloud..'
+                sh "docker push $IMAGE_NAME:$IMAGE_TAG"
             }
         }
 
 
         
-        stage('Cleanup Artifacts') {
+        stage('Cleanup Docker Image') {
             steps {
-                sh "sudo docker rmi 51.250.111.109:8082/:$IMAGE_TAG"    
+                sh "sudo docker rmi $IMAGE_NAME:$IMAGE_TAG "    
             }
         }   
     }
