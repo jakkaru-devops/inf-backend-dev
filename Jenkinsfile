@@ -80,6 +80,10 @@ pipeline {
             }
         }
 
-        
+        stage('List derictory backend') {
+            steps {
+                sh "ls -la"
+            }
+        }        
     }
 }
