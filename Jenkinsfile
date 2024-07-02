@@ -87,7 +87,7 @@ pipeline {
             }
         }
 
-        stage('List derictory fronted') {
+        stage('Update helm chart values version backend ') {
             steps {
                 sh "cd $CI_PROJECT_NAME"
                 sh "ls -la"
