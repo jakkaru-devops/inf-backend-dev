@@ -94,7 +94,7 @@ pipeline {
                 echo 'list derectory'
                 sh "ls -la"
                 echo 'used yq'
-                sh "yq -i '.api.version ="${{ IMAGE_TAG }}"' values.yaml"
+                // sh "yq -i '.api.version ="${{ IMAGE_TAG }}"' values.yaml"
             }
         }            
     }
