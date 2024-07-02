@@ -78,7 +78,7 @@ pipeline {
             steps {
                 echo 'Checkout from SCM Helm Chart..'
                 git branch: 'main', credentialsId: 'jenkins-github', url: 'git@github.com:jakkaru-devops/inf-argocd.git'
-                sh "cd HelmCharts"
+                sh 'cd HelmCharts'
             }
         }
 
