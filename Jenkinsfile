@@ -21,7 +21,6 @@ pipeline {
 
 
     stages {
-
         stage("Cleanup Workspace"){
             steps {
                 cleanWs()
@@ -85,7 +84,7 @@ pipeline {
         }
 
 
-        stage('Trivy FS Scane Backend Project') {
+        stage('Trivy FS Image Scane Backend Project') {
             steps {
                 sh "trivy image --format table -o fs-report.html $IMAGE_NAME:$IMAGE_TAG"
             }
