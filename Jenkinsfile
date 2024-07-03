@@ -39,6 +39,19 @@ pipeline {
         }
 
 
+        stage('Install Dependensice') {
+            steps {
+                sh "npm install"
+            }
+        }
+
+        stage('Trivy FS Scane Backend Project') {
+            steps {
+                sh "trivy fs --format table -o fs-report.html ."
+            }
+        }
+
+
         stage('Docker login') {
              steps {
                  echo 'Initializing..'
@@ -57,6 +70,13 @@ pipeline {
         //     steps {
         //         echo 'Building image..'
         //         sh "docker build -t $IMAGE_NAME:$IMAGE_TAG ."
+        //     }
+        // }
+
+
+        // stage('Trivy FS Scane Backend Project') {
+        //     steps {
+        //         sh "trivy image --format table -o fs-report.html $IMAGE_NAME:$IMAGE_TAG"
         //     }
         // }
 
