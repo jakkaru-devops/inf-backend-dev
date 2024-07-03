@@ -93,6 +93,8 @@ pipeline {
                 sh 'git config --global user.email "savamedvedevvv@gmail.com"'
                 sh 'git config --global user.name "jakkaru-devops"'
                 sh 'git config --list --show-origin'
+                sh 'git config --global push.autoSetupRemote true'
+
 
             }
         }
@@ -105,7 +107,7 @@ pipeline {
                     sh "yq -i '.api.version =\"${IMAGE_TAG}\"' values.yaml"
                     sh "git add values.yaml"
                     sh 'git diff-index --quiet HEAD || git commit -m "CI: Update app version to $(echo \"$IMAGE_TAG\")" && git push'
-                    sh "git push origin main"
+                    sh "git push"
                     
                 }
             }
