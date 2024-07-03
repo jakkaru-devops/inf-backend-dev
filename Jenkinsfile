@@ -104,12 +104,11 @@ pipeline {
                     sh 'ls -la'
                     sh "yq -i '.api.version =\"${IMAGE_TAG}\"' values.yaml"
                     sh "git add values.yaml"
-                    sh 'git commit -m "CI: Update app version to $(echo \"$IMAGE_TAG\")" && git push'
-                    sh 'git remote set-url origin git@github.com:jakkaru-devops/inf-argocd.git'
-                    sh 'git push -u origin main'
-                    // sh 'git push -u origin master'
+                    sh "git commit -m 'CI: Update app version to ${IMAGE_TAG}'"
+                    sh 'git branch --set-upstream-to origin/main main'
+                    sh 'git push'
                 }
             }
-       }          
+        }
     }
 }
