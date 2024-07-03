@@ -106,7 +106,7 @@ pipeline {
                     sh "git add values.yaml"
                     sh "git commit -m 'CI: Update app version to ${IMAGE_TAG}'"
                     sh 'git branch --set-upstream-to origin/main main'
-                    sh 'git push'
+                    sh 'git push  origin main'
                 }
             }
         }
