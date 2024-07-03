@@ -108,7 +108,7 @@ pipeline {
                     sh "git add values.yaml"
                     sh 'git commit -m "CI: Update app version to $(echo \"$IMAGE_TAG\")" && git push'
                     // sh "git push -u origin head"
-                    sh 'git diff-index --quiet HEAD || git push origin/main'
+                    sh 'sudo git push origin/main'
                 }
             }
        }          
