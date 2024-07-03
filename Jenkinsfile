@@ -85,6 +85,15 @@ pipeline {
             steps {
                 sh "ls -la"
             }
+        } 
+           
+
+        stage('Configure Git') {
+            steps {
+                sh 'git config --global user.email "savamedvedevvv@gmail.com"'
+                sh 'git config --global user.name "jakkaru-devops"'
+
+            }
         }
 
        stage('Update helm chart values version backend ') {
