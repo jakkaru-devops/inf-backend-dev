@@ -107,8 +107,8 @@ pipeline {
                     sh "yq -i '.api.version =\"${IMAGE_TAG}\"' values.yaml"
                     sh "git add values.yaml"
                     sh 'git commit -m "CI: Update app version to $(echo \"$IMAGE_TAG\")" && git push'
-                    // sh "git push -u origin head"
-                    sh 'git push -u origin master'
+                    sh "git push -u origin main"
+                    // sh 'git push -u origin master'
                 }
             }
        }          
