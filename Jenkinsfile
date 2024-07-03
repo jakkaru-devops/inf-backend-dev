@@ -4,12 +4,14 @@ pipeline {
     environment {
         DOCKER_ID = credentials('DOCKER_ID')
         DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
+        GITHUB_TOKEN = credentials('GITHUB_TOKEN')
         RELEASE = "1.0.0"
         IMAGE_TAG = "${BUILD_NUMBER}"
         CR_REGISTRY = "cr.yandex/crpn9ikb6hp5v19o9957"
         CR_REPOSITORY = "inf-backend-dev"
         IMAGE_NAME = "${CR_REGISTRY}" + "/" + "${CR_REPOSITORY}"
         CI_PROJECT_NAME =  "/HelmCharts"
+
     }
 
 
@@ -108,6 +110,8 @@ pipeline {
                     sh "git add values.yaml"
                     sh "git commit -m 'CI: Update app version to ${IMAGE_TAG}'"
                     sh 'git branch --set-upstream-to origin/main main'
+                    sh 'git config --global credential.helper store'
+                    sh 'echo "https://${jakkaru-devops}:${GITHUB_TOKEN}@github.com" > ~/.git-credentials'
                     sh 'git push  origin main'
                 }
             }
