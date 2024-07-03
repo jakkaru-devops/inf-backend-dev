@@ -94,7 +94,7 @@ pipeline {
                     sh 'ls -la'
                     sh "yq -i '.api.version =\"${IMAGE_TAG}\"' values.yaml"
                     sh "git add values.yaml"
-                    sh "git diff-index --quiet HEAD || git commit -m ' CI: Update app version to $(echo $IMAGE_TAG) '" git push
+                    sh 'git diff-index --quiet HEAD || git commit -m "CI: Update app version to $(echo \"$IMAGE_TAG\")" && git push'
                     sh "git push"
                 }
             }
