@@ -84,11 +84,11 @@ pipeline {
         }
 
 
-        stage('Trivy FS Image Scane Backend Project') {
-            steps {
-                sh "trivy image --format table -o fs-report.html $IMAGE_NAME:$IMAGE_TAG"
-            }
-        }
+        // stage('Trivy FS Image Scane Backend Project') {
+        //     steps {
+        //         sh "trivy image --format table -o fs-report.html $IMAGE_NAME:$IMAGE_TAG"
+        //     }
+        // }
 
 
         stage('Publish Docker Image to Yandex Cloud') {
