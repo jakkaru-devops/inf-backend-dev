@@ -56,6 +56,13 @@ pipeline {
         }
 
 
+        stage('Trivy отчёт') {
+            steps {
+                sh "cat fs-report.html"
+            }
+        }
+
+
         stage('Docker login') {
              steps {
                  echo 'Initializing..'
@@ -70,35 +77,35 @@ pipeline {
              }
          }
 
-        // stage('Build Docker Image') {
-        //     steps {
-        //         echo 'Building image..'
-        //         sh "docker build -t $IMAGE_NAME:$IMAGE_TAG ."
-        //     }
-        // }
+        stage('Build Docker Image') {
+            steps {
+                echo 'Building image..'
+                sh "docker build -t $IMAGE_NAME:$IMAGE_TAG ."
+            }
+        }
 
 
-        // stage('Trivy FS Scane Backend Project') {
-        //     steps {
-        //         sh "trivy image --format table -o fs-report.html $IMAGE_NAME:$IMAGE_TAG"
-        //     }
-        // }
+        stage('Trivy FS Scane Backend Project') {
+            steps {
+                sh "trivy image --format table -o fs-report.html $IMAGE_NAME:$IMAGE_TAG"
+            }
+        }
 
 
-        // stage('Publish Docker Image to Yandex Cloud') {
-        //     steps {
-        //         echo 'Publishing image to YandexCloud..'
-        //         sh "docker push $IMAGE_NAME:$IMAGE_TAG"
-        //     }
-        // }
+        stage('Publish Docker Image to Yandex Cloud') {
+            steps {
+                echo 'Publishing image to YandexCloud..'
+                sh "docker push $IMAGE_NAME:$IMAGE_TAG"
+            }
+        }
 
 
         
-        // stage('Cleanup Docker Image') {
-        //     steps {
-        //         sh "sudo docker rmi $IMAGE_NAME:$IMAGE_TAG "    
-        //     }
-        // }   
+        stage('Cleanup Docker Image') {
+            steps {
+                sh "sudo docker rmi $IMAGE_NAME:$IMAGE_TAG "    
+            }
+        }   
 
         stage("Checkout from SCM Helm Chart"){
             steps {
