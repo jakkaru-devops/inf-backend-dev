@@ -6,6 +6,7 @@ pipeline {
     }
 
     environment {
+        SCANNER_HOME =  tool 'sonar-scanner'
         DOCKER_ID = credentials('DOCKER_ID')
         DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
         GITHUB_TOKEN = credentials('GITHUB_TOKEN')
@@ -62,6 +63,15 @@ pipeline {
         }
 
 
+        stage('SonaQube Scanner Backend') {
+            steps {
+                withSonarQubeEnv('sonar') {
+                    sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF -Dsonar.projectName=INF"
+                }
+            }
+        }
+
+
         stage('Docker login') {
              steps {
                  echo 'Initializing..'
@@ -84,12 +94,12 @@ pipeline {
         }
 
 
-        stage('Trivy FS Image Scane Backend Project') {
-            steps {
-                // sh "trivy image --format table -o fs-report.html --timeout 20m  --scanners vuln  $IMAGE_NAME:$IMAGE_TAG"
-                sh "trivy image $IMAGE_NAME:$IMAGE_TAG"
-            }
-        }
+        // stage('Trivy FS Image Scane Backend Project') {
+        //     steps {
+        //         // sh "trivy image --format table -o fs-report.html --timeout 20m  --scanners vuln  $IMAGE_NAME:$IMAGE_TAG"
+        //         sh "trivy image $IMAGE_NAME:$IMAGE_TAG"
+        //     }
+        // }
 
 
         stage('Publish Docker Image to Yandex Cloud') {
