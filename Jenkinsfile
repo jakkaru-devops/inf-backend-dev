@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        // SCANNER_HOME =  tool 'sonar-scanner'
+        SCANNER_HOME =  tool 'sonar-scanner'
         DOCKER_ID_NEXUS = credentials('DOCKER_ID_NEXUS')
         DOCKER_PASSWORD_NEXUS = credentials('DOCKER_PASSWORD_NEXUS')
         NEXUS_URL = credentials('NEXUS_URL')
@@ -44,11 +44,11 @@ pipeline {
         }
 
 
-        stage('Install Dependensice') {
-            steps {
-                sh "npm install"
-            }
-        }
+        // stage('Install Dependensice') {
+        //     steps {
+        //         sh "npm install"
+        //     }
+        // }
 
         stage('Trivy FS Scane Backend Project') {
             steps {
@@ -64,13 +64,13 @@ pipeline {
         }
 
 
-        // stage('SonaQube Scanner Backend') {
-        //     steps {
-        //         withSonarQubeEnv('sonar') {
-        //             sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF -Dsonar.projectName=INF"
-        //         }
-        //     }
-        // }
+        stage('SonaQube Scanner Backend') {
+            steps {
+                withSonarQubeEnv('sonar') {
+                    sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF -Dsonar.projectName=INF"
+                }
+            }
+        }
 
 
         stage('Docker login') {
