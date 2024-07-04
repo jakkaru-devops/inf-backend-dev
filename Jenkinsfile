@@ -67,7 +67,7 @@ pipeline {
         stage('SonaQube Scanner Backend') {
             steps {
                 withSonarQubeEnv('sonar') {
-                    sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF -Dsonar.projectName=INF"
+                    sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF-BACKEND -Dsonar.projectName=INF-BACKEND"
                 }
             }
         }
