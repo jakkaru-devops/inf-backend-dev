@@ -6,10 +6,9 @@ pipeline {
     }
 
     environment {
-        // SCANNER_HOME =  tool 'sonar-scanner'
-        DOCKER_ID_NEXUS = credentials('DOCKER_ID_NEXUS')
-        DOCKER_PASSWORD_NEXUS = credentials('DOCKER_PASSWORD_NEXUS')
-        NEXUS_URL = credentials('NEXUS_URL')
+        SCANNER_HOME =  tool 'sonar-scanner'
+        DOCKER_ID = credentials('DOCKER_ID')
+        DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
         GITHUB_TOKEN = credentials('GITHUB_TOKEN')
         RELEASE = "1.0.0"
         IMAGE_TAG = "${BUILD_NUMBER}"
@@ -78,14 +77,19 @@ pipeline {
                  echo 'Initializing..'
                  echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                  echo "Current branch: ${env.BRANCH_NAME}"
-                 sh "docker login -u $DOCKER_ID_NEXUS -p $DOCKER_PASSWORD_NEXUS $NEXUS_URL"
+                //  sh 'echo $DOCKER_PASSWORD | docker login \
+                //     --username $DOCKER_ID \
+                //     --password --password-stdin \
+                //     cr.yandex'
+                 sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_ID --password-stdin cr.yandex'
+
              }
          }
 
         stage('Build Docker Image') {
             steps {
                 echo 'Building image..'
-                sh "docker build -t $NEXUS_URL/inf-backend-dev:$IMAGE_TAG ."
+                sh "docker build -t $IMAGE_NAME:$IMAGE_TAG ."
             }
         }
 
@@ -98,10 +102,10 @@ pipeline {
         // }
 
 
-        stage('Publish Docker Image to Nexus HUB') {
+        stage('Publish Docker Image to Yandex Cloud') {
             steps {
                 echo 'Publishing image to YandexCloud..'
-                sh "docker push $NEXUS_URL/inf-backend-dev:$IMAGE_TAG"
+                sh "docker push $IMAGE_NAME:$IMAGE_TAG"
             }
         }
 
@@ -109,7 +113,7 @@ pipeline {
         
         stage('Cleanup Docker Image') {
             steps {
-                sh "sudo docker rmi $NEXUS_URL/inf-backend-dev:$IMAGE_TAG "    
+                sh "sudo docker rmi $IMAGE_NAME:$IMAGE_TAG "    
             }
         }   
 
