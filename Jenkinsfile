@@ -86,7 +86,8 @@ pipeline {
 
         stage('Trivy FS Image Scane Backend Project') {
             steps {
-                sh "trivy image --format table -o fs-report.html --timeout 20m  --scanners vuln  $IMAGE_NAME:$IMAGE_TAG"
+                // sh "trivy image --format table -o fs-report.html --timeout 20m  --scanners vuln  $IMAGE_NAME:$IMAGE_TAG"
+                sh "trivy image $IMAGE_NAME:$IMAGE_TAG"
             }
         }
 
