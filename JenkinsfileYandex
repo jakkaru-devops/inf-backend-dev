@@ -96,7 +96,7 @@ pipeline {
 
         stage('Trivy Image Scane Backend Project') {
             steps {
-                sh "trivy image --format table -o image-report.html --timeout 20m  --scanners vuln $NEXUS_URL/inf-backend-dev:$IMAGE_TAG"
+                sh "trivy image --format table -o image-report.html --timeout 20m  --scanners vuln $IMAGE_NAME:$IMAGE_TAG"
             }
         }
         
