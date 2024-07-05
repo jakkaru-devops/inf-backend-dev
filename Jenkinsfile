@@ -57,7 +57,7 @@ pipeline {
         }
 
 
-        stage('Trivy отчёт') {
+        stage('Trivy FS отчёт') {
             steps {
                 sh "cat fs-report.html"
             }
@@ -90,16 +90,23 @@ pipeline {
         }
 
 
-        stage('Trivy FS Image Scane Backend Project') {
+        stage('Trivy Image Scane Backend Project') {
             steps {
-                sh "trivy image --format table -o fs-report.html --timeout 20m  --scanners vuln $NEXUS_URL/inf-backend-dev:$IMAGE_TAG"
+                sh "trivy image --format table -o image-report.html --timeout 20m  --scanners vuln $NEXUS_URL/inf-backend-dev:$IMAGE_TAG"
+            }
+        }
+        
+        stage('Trivy Image отчёт ') {
+            steps {
+                sh "cat image-report.html"
             }
         }
 
 
-        stage('Publish Docker Image to Nexus HUB') {
+
+        stage('Publish Docker Image to NexusHUB') {
             steps {
-                echo 'Publishing image to YandexCloud..'
+                echo 'Publishing image to NexusHUB..'
                 sh "docker push $NEXUS_URL/inf-backend-dev:$IMAGE_TAG"
             }
         }
