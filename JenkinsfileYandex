@@ -63,13 +63,13 @@ pipeline {
         }
 
 
-        // stage('SonaQube Scanner Backend') {
-        //     steps {
-        //         withSonarQubeEnv('sonar') {
-        //             sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF -Dsonar.projectName=INF"
-        //         }
-        //     }
-        // }
+        stage('SonaQube Scanner Backend') {
+            steps {
+                withSonarQubeEnv('sonar') {
+                    sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF-BACKEND -Dsonar.projectName=INF-BACKEND"
+                }
+            }
+        }
 
 
         stage('Docker login') {
@@ -94,12 +94,17 @@ pipeline {
         }
 
 
-        // stage('Trivy FS Image Scane Backend Project') {
-        //     steps {
-        //         // sh "trivy image --format table -o fs-report.html --timeout 20m  --scanners vuln  $IMAGE_NAME:$IMAGE_TAG"
-        //         sh "trivy image $IMAGE_NAME:$IMAGE_TAG"
-        //     }
-        // }
+        stage('Trivy Image Scane Backend Project') {
+            steps {
+                sh "trivy image --format table -o image-report.html --timeout 20m  --scanners vuln $NEXUS_URL/inf-backend-dev:$IMAGE_TAG"
+            }
+        }
+        
+        stage('Trivy Image отчёт ') {
+            steps {
+                sh "cat image-report.html"
+            }
+        }
 
 
         stage('Publish Docker Image to Yandex Cloud') {
