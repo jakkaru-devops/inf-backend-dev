@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        // SCANNER_HOME =  tool 'sonar-scanner'
+        SCANNER_HOME =  tool 'sonar-scanner'
         DOCKER_ID_NEXUS = credentials('DOCKER_ID_NEXUS')
         DOCKER_PASSWORD_NEXUS = credentials('DOCKER_PASSWORD_NEXUS')
         NEXUS_URL = credentials('NEXUS_URL')
@@ -64,13 +64,13 @@ pipeline {
         }
 
 
-        // stage('SonaQube Scanner Backend') {
-        //     steps {
-        //         withSonarQubeEnv('sonar') {
-        //             sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF-BACKEND -Dsonar.projectName=INF-BACKEND"
-        //         }
-        //     }
-        // }
+        stage('SonaQube Scanner Backend') {
+            steps {
+                withSonarQubeEnv('sonar') {
+                    sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF-BACKEND -Dsonar.projectName=INF-BACKEND"
+                }
+            }
+        }
 
 
         stage('Docker login') {
@@ -90,12 +90,11 @@ pipeline {
         }
 
 
-        // stage('Trivy FS Image Scane Backend Project') {
-        //     steps {
-        //         // sh "trivy image --format table -o fs-report.html --timeout 20m  --scanners vuln  $IMAGE_NAME:$IMAGE_TAG"
-        //         sh "trivy image $IMAGE_NAME:$IMAGE_TAG"
-        //     }
-        // }
+        stage('Trivy FS Image Scane Backend Project') {
+            steps {
+                sh "trivy image --format table -o fs-report.html --timeout 20m  --scanners vuln $NEXUS_URL/inf-backend-dev:$IMAGE_TAG"
+            }
+        }
 
 
         stage('Publish Docker Image to Nexus HUB') {
@@ -107,11 +106,11 @@ pipeline {
 
 
         
-        // stage('Cleanup Docker Image') {
-        //     steps {
-        //         sh "sudo docker rmi $NEXUS_URL/inf-backend-dev:$IMAGE_TAG "    
-        //     }
-        // }   
+        stage('Cleanup Docker Image') {
+            steps {
+                sh "sudo docker rmi $NEXUS_URL/inf-backend-dev:$IMAGE_TAG "    
+            }
+        }   
 
         stage("Checkout from SCM Helm Chart"){
             steps {
