@@ -107,11 +107,11 @@ pipeline {
 
 
         
-        stage('Cleanup Docker Image') {
-            steps {
-                sh "sudo docker rmi $NEXUS_URL/inf-backend-dev:$IMAGE_TAG "    
-            }
-        }   
+        // stage('Cleanup Docker Image') {
+        //     steps {
+        //         sh "sudo docker rmi $NEXUS_URL/inf-backend-dev:$IMAGE_TAG "    
+        //     }
+        // }   
 
         stage("Checkout from SCM Helm Chart"){
             steps {
