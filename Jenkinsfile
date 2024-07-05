@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        SCANNER_HOME =  tool 'sonar-scanner'
+        // SCANNER_HOME =  tool 'sonar-scanner'
         DOCKER_ID_NEXUS = credentials('DOCKER_ID_NEXUS')
         DOCKER_PASSWORD_NEXUS = credentials('DOCKER_PASSWORD_NEXUS')
         NEXUS_URL = credentials('NEXUS_URL')
@@ -64,13 +64,13 @@ pipeline {
         }
 
 
-        stage('SonaQube Scanner Backend') {
-            steps {
-                withSonarQubeEnv('sonar') {
-                    sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF-BACKEND -Dsonar.projectName=INF-BACKEND"
-                }
-            }
-        }
+        // stage('SonaQube Scanner Backend') {
+        //     steps {
+        //         withSonarQubeEnv('sonar') {
+        //             sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF-BACKEND -Dsonar.projectName=INF-BACKEND"
+        //         }
+        //     }
+        // }
 
 
         stage('Docker login') {
