@@ -165,7 +165,7 @@ pipeline {
 
         stage('Deploy To Kubernetes Helm Chart inf-project') {
             steps {
-               withKubeConfig(caCertificate: '', clusterName: 'yc-managed-k8s-cat8eh5c4jffsphve4n6', contextName: '', credentialsId: 'K8S_CRED', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://51.250.85.83') {
+               withKubeConfig(caCertificate: '', clusterName: 'yc-managed-k8s-cat8eh5c4jffsphve4n6', contextName: '', credentialsId: 'K8S_CRED', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://158.160.104.216') {
                         sh "helm upgrade inf-project ./Production/ -n webapps"
                 }
             }
@@ -174,7 +174,7 @@ pipeline {
 
         stage('Kubernetes List Test') {
             steps {
-                withKubeConfig(caCertificate: '', clusterName: 'yc-managed-k8s-cat8eh5c4jffsphve4n6', contextName: '', credentialsId: 'K8S_CRED', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://51.250.85.83') {
+                withKubeConfig(caCertificate: '', clusterName: 'yc-managed-k8s-cat8eh5c4jffsphve4n6', contextName: '', credentialsId: 'K8S_CRED', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://158.160.104.216') {
                     sh "kubectl get pods -n webapps"
                 }
             }
