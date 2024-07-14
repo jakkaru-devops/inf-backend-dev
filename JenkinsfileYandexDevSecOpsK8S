@@ -36,9 +36,9 @@ pipeline {
         }
 
 
-        stage('Pre-build Secret Detection Backend Project') {
+       stage('Pre-build Secret Detection Frontend Project') {
             steps {
-                sh "sudo trufflehog --json git https://github.com/jakkaru-devops/inf-backend-dev.git"
+                sh "sudo trufflehog --json git https://github.com/jakkaru-devops/inf-frontend-dev.git"
                 // script {
                 //     def result = sh(returnStdout: true, script: 'sudo trufflehog --json  git https://github.com/jakkaru-devops/inf-frontend-dev.git').trim()
                 //     if (result != '') {
@@ -48,14 +48,38 @@ pipeline {
             }
         }
 
-
-        stage('Pre-build SAST SonaQube Scaning Backend Project Code') {
+        stage('Install Dependensice Frontend Project') {
             steps {
-                withSonarQubeEnv('sonar') {
-                    sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF-BACKEND -Dsonar.projectName=INF-BACKEND"
-                }
+                sh "npm install"
             }
         }
+
+
+
+        // stage('Pre-build SAST SonarQube Scaning Frontend Project Code') {
+        //     steps {
+        //         withSonarQubeEnv('sonar') {
+        //             sh "$SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=INF-FRONTEND -Dsonar.projectName=INF-FRONTEND"
+        //         }
+        //     }
+        // }
+
+        // stage('Pre-build SAST SonarQube Quality Gate') {
+        //     steps {
+        //         script {
+        //             waitForQualityGate abortPipeline: false, credentialsId: 'SONAR_TOKEN' 
+        //         }
+        //     } 
+        // }
+
+
+        stage('OWASP FS SCAN') {
+            steps {
+                dependencyCheck additionalArguments: '--scan ./ --disableYarnAudit --disableNodeAudit', odcInstallation: 'DP-Check'
+                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+            }
+        }
+
 
 
          stage('Pre-build Source SCA Trivy DC Scaning Backend Project') {
@@ -93,7 +117,7 @@ pipeline {
 
        stage('Post-build Binary SCA Trivy Image Scane Backend Project') {
             steps {
-                sh "trivy image --format table -o image-report.html --timeout 20m  --scanners vuln $IMAGE_NAME:$IMAGE_TAG"
+                sh "trivy image --format table -o image-report.html --timeout 60m  --scanners vuln $IMAGE_NAME:$IMAGE_TAG"
             }
         }
         
@@ -123,67 +147,71 @@ pipeline {
 
 
 
-    //     stage("Checkout from SCM Helm Chart"){
-    //         steps {
-    //             echo 'Checkout from SCM Helm Chart..'
-    //             git branch: 'main', credentialsId: 'jenkins-github', url: 'https://github.com/jakkaru-devops/inf-helm.git'
-    //         }
-    //     }
+        stage("Checkout from SCM Helm Chart"){
+            steps {
+                echo 'Checkout from SCM Helm Chart..'
+                git branch: 'main', credentialsId: 'jenkins-github', url: 'https://github.com/jakkaru-devops/inf-helm.git'
+            }
+        }
 
 
-    //     stage('List derictory Helm Chart') {
-    //         steps {
-    //             sh "ls -la"
-    //         }
-    //     } 
            
-
-    //     stage('Configure Git') {
-    //         steps {
-    //             sh 'git config --global user.email "savamedvedevvv@gmail.com"'
-    //             sh 'git config --global user.name "jakkaru-devops"'
-    //             sh 'git config --list --show-origin'
-    //             sh 'git config --global push.autoSetupRemote true'
-    //         }
-    //     }
-
-    //    stage('Update helm chart values version Backend ') {
-    //         steps {
-    //             dir('Production') {
-    //                 sh 'echo "Current directory: $(pwd)"'
-    //                 sh 'ls -la'
-    //                 sh "yq -i '.api.version =\"${IMAGE_TAG}\"' values.yaml"
-    //                 sh "git add values.yaml"
-    //                 sh "git commit -m 'CI: Update app version to ${IMAGE_TAG}'"
-    //                 sh 'git branch --set-upstream-to origin/main main'
-    //                 sh 'git config --global credential.helper store'
-    //                 sh 'echo "https://${jakkaru-devops}:${GITHUB_TOKEN}@github.com" > ~/.git-credentials'
-    //                 sh 'git push  origin main'
-    //             }
-    //         }
-    //     }
-
-    //     stage('List derictory Helm ') {
-    //         steps {
-    //             sh "ls -la"
-    //         }
-    //     } 
-
-    //     stage('Deploy To Kubernetes Helm Chart inf-project') {
-    //         steps {
-    //            withKubeConfig(caCertificate: '', clusterName: 'yc-managed-k8s-cat8eh5c4jffsphve4n6', contextName: '', credentialsId: 'K8S_CRED', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://158.160.104.216') {
-    //                 sh "helm upgrade --install inf-project ./Production/ -n webapps"
-    //             }
-    //         }
-    //     }
+        stage('Configure Git') {
+            steps {
+                sh 'git config --global user.email "savamedvedevvv@gmail.com"'
+                sh 'git config --global user.name "jakkaru-devops"'
+                sh 'git config --list --show-origin'
+                sh 'git config --global push.autoSetupRemote true'
+            }
+        }
 
 
-    //     stage('Kubernetes List Test') {
-    //         steps {
-    //             withKubeConfig(caCertificate: '', clusterName: 'yc-managed-k8s-cat8eh5c4jffsphve4n6', contextName: '', credentialsId: 'K8S_CRED', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://158.160.104.216') {
-    //                 sh "kubectl get pods -n webapps"
-    //             }
-    //         }
-    //     } 
+
+       stage('Update helm chart values version Backend ') {
+            steps {
+                dir('Production') {
+                    sh 'echo "Current directory: $(pwd)"'
+                    sh 'ls -la'
+                    sh "yq -i '.api.version =\"${IMAGE_TAG}\"' values.yaml"
+                    sh "git add values.yaml"
+                    sh "git commit -m 'CI: Update app version to ${IMAGE_TAG}'"
+                    sh 'git branch --set-upstream-to origin/main main'
+                    sh 'git config --global credential.helper store'
+                    sh 'echo "https://${jakkaru-devops}:${GITHUB_TOKEN}@github.com" > ~/.git-credentials'
+                    sh 'git push  origin main'
+                }
+            }
+        }
+
+       
+
+        stage('Deploy To Kubernetes Helm Chart inf-project') {
+            steps {
+               withKubeConfig(caCertificate: '', clusterName: 'yc-managed-k8s-cat8eh5c4jffsphve4n6', contextName: '', credentialsId: 'K8S_CRED', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://178.154.220.190') {
+                        sh "helm upgrade --install inf-project ./Production/ -n webapps"
+
+                }
+            }
+        }
+
+
+        stage('Kubernetes List Test') {
+            steps {
+                withKubeConfig(caCertificate: '', clusterName: 'yc-managed-k8s-cat8eh5c4jffsphve4n6', contextName: '', credentialsId: 'K8S_CRED', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://178.154.220.190') {
+                    sh "kubectl get pods -n webapps"
+                }
+            }
+        } 
+
+
+        stage('Trivy Scaning cluster'){
+            steps{
+                withKubeConfig(caCertificate: '', clusterName: 'yc-managed-k8s-cat8eh5c4jffsphve4n6', contextName: '', credentialsId: 'K8S_CRED', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://178.154.220.190') {
+                    sh 'trivy k8s --include-namespaces webapps --report summary'
+                }
+            }
+        }
+
+
     }
 }
