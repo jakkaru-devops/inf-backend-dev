@@ -207,7 +207,8 @@ pipeline {
         stage('Trivy Scaning cluster'){
             steps{
                 withKubeConfig(caCertificate: '', clusterName: 'yc-managed-k8s-cat8eh5c4jffsphve4n6', contextName: '', credentialsId: 'K8S_CRED', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://178.154.220.190') {
-                    sh 'trivy k8s --include-namespaces webapps --report summary'
+                    // sh 'trivy k8s --include-namespaces webapps --report summary'
+                    sh 'trivy k8s --report summary cluster'
                 }
             }
         }
